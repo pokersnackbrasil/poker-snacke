@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Avrova:wght@400&family=Kulderin:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Avrova:wght@500&family=Kulderin:wght@500&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--gray-200);
+	border-radius: 10px;
+}
+
+body,
+input,
+textarea {
+	font-family: "Avrova", sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+button {
+	font-family: "Kulderin", sans-serif;
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+
+:root {
+	/* Z-INDEX padrão */
+	--z-base: 0;
+	--z-content: 10;
+	--z-floating: 100;
+	--z-header: 200;
+	--z-modal: 300;
+	--z-toast: 400;
+	--z-tooltip: 500;
+	--z-loading: 600;
+
+	/* Fontes */
+	/* --font-Avrova: "Avrova", sans-serif; */
+	--font-Avrova: "Avrova";
+	/* --font-Kulderin: "Kulderin", sans-serif; */
+	--font-Kulderin: "Kulderin";
+
+	/* Pesos das Fontes */
+	--font-regular: 400;
+	--font-medium: 500;
+	--font-semibold: 600;
+	--font-bold: 700;
+
+	/* Tamanhos padrão das Fontes */
+	--font-size-base: 1rem;
+
+	/* Cores Principais */
+	--white: #ffffff;
+	--black: #000000;
+
+	--primary-yellow: #FDBC2D;
+	--primary-green: #00a85aad;
+	--primary-blue: #1EC1E8;
+	--primary-red: #CB3448;
+
+	/* Tons derivados (opcional, se precisar mais variações) */
+	--yellow-light: #fedc7e;
+	--green-light: #7fddb0;
+	--blue-light: #90e0f4;
+	--red-light: #e98894;
+
+	--gray-100: #fbf9f9;
+	--gray-200: #d9d9d9;
+	--gray-shadow: #b1b0b0;
+	--gray-300: #838383;
+	--gray-400: #646464;
+	--gray-500: #475e6e;
+	--gray-700: #34434e;
+	--gray-800: #587080;
+	--gray-900: #3c404b;
+	--gray-overlay: #1c1c1dcc;
+
+	font-size: 1rem;
+}

@@ -1,0 +1,165 @@
+.defaultCelula {
+
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 10%;
+  margin-left: 10%;
+  position: relative;
+  
+}
+
+
+
+.defaultStyle {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.verdeStyle {
+  color: #fff;
+  background-color: #4CAF50;
+}
+
+.marronStyle {
+  color: #fff;
+  background-color: #bb7d12;
+}
+
+.marronvermelhoStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, #bb7d12 50%, rgb(175, 1, 44) 50%);
+}
+
+.roxovermelhoStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, rgb(138, 3, 115) 50%, rgb(175, 1, 44) 50%);
+}
+
+
+.pinkStyle {
+  color: #fff;
+  background-color: #ff0077;
+}
+
+.amareloStyle {
+  color: #000000;
+  background-color: #ffee00;
+}
+
+.laranjaStyle {
+  color: #fff;
+  background-color: #ff5100;
+}
+
+.amarelo1Style {
+  color: #000000;
+  background: linear-gradient(to top, #ffee00 50%, white 50%);
+}
+
+
+.roxolaranjaStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, #e67c03 50%, rgb(207, 6, 174) 50%);
+}
+
+.roxoStyle {
+  color: #ffffff;
+  background-color: rgb(138, 3, 115);
+}
+
+.vermelhoescuroStyle {
+  color: #ffffff;
+  background-color: rgb(175, 1, 44);
+}
+
+.verdeStyle {
+  color: #000000;
+  background-color: rgb(6, 255, 18);
+}
+
+.azulmStyle {
+  color: #000000;
+  background-color: rgb(200, 243, 248);
+}
+
+.roxomarronStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, rgb(138, 3, 115) 50%, #bb7d12 50%);
+}
+
+.roxopinkStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, rgb(138, 3, 115) 50%, #ff0077 50%);
+}
+
+.roxoamareloStyle {
+  color: #000000;
+  background: linear-gradient(to top, rgb(138, 3, 115) 50%, #ffee00 50%);
+}
+
+.roxobrancoStyle {
+  color: #000000;
+  background: linear-gradient(to top, rgb(138, 3, 115) 50%, #ffffff 50%);
+}
+
+.azulclaroStyle {
+  color: #000000;
+  background-color: rgb(1, 230, 255);
+}
+
+.cinzaStyle {
+  color: #ffffff;
+  background-color: grey;
+  /* cinza claro (aproximado da imagem) */
+}
+
+.azulStyle {
+  color: #ffffff;
+  background-color: rgb(4, 0, 255);
+}
+
+.azulmarinhoStyle {
+  color: #000000;
+  background-color: #00b8b8;
+  /* cinza claro (aproximado da imagem) */
+}
+
+.azulamareloStyle {
+
+  color: #000000;
+  background: linear-gradient(to top, #ffee00 50%, rgb(1, 230, 255) 50%);
+
+}
+
+.roxoverdeStyle {
+
+  color: #000000;
+  background: linear-gradient(to top, #34ff01 50%, rgb(138, 3, 115) 50%);
+
+}
+
+.rosabebeStyle {
+  color: #ffffff;
+  background-color: #f075a8;
+  /* cinza claro (aproximado da imagem) */
+}
+
+.verdebrancoStyle {
+
+  color: #000000;
+  background: linear-gradient(to top,  #34ff01  50%, rgb(255, 255, 255) 50%);
+
+}
+
+.azulbrancoStyle {
+
+  color: #000000;
+  background: linear-gradient(to top,  rgb(4, 0, 255)  50%, rgb(255, 255, 255) 50%);
+
+}

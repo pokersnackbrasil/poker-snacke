@@ -1,0 +1,66 @@
+.body{
+ display: flex;
+ flex-direction: row;
+ align-items: flex-start;
+ justify-content: start;
+ height: 100vh;
+}
+.menuOptions{
+ display: flex;
+ flex-direction: column;
+ padding: 20px;
+ background-color: #000000;
+ height: 100vh;
+}
+
+.buttonPosition{
+ width: 200px;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ margin-top: 10px;
+ background-color: #555555;
+ color: white;
+ cursor:pointer;
+ border-radius: 5px;
+
+}
+.bodyConteudo{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+ height: 50vh;
+ /* background-color: #430000; */
+ padding: 0 50px;
+
+}
+
+.menuBlinds{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ padding: 20px;
+ background-color: transparent;
+ height: 50vh;
+ gap: 20px;
+ 
+}
+
+.buttonBlinds {
+    width: 80px; /* Largura fixa de 80px */
+    height: 80px; /* Altura fixa de 80px */
+    display: flex; /* Define como flexbox */
+    flex-direction: row; /* Alinha os itens em linha horizontal */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    margin-top: 10px; /* Espaço acima dos botões */
+    background-color: #555555; /* Cor de fundo cinza escuro */
+    color: white; /* Cor do texto branca */
+    cursor: pointer; /* Altera o cursor para ponteiro ao passar */
+    border-radius: 5px; /* Arredonda os cantos dos botões */
+  }
+  
+ 
