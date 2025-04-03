@@ -1,0 +1,98 @@
+.body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: start;
+  height: 100vh;
+}
+
+.menuOptions {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #000000;
+  height: 100vh;
+  
+}
+
+.menuOptions button:focus {
+  /* Estilo quando o botão estiver selecionado */
+  border: 2px solid #09ff00; /* Borda roxa */
+  outline: none; /* Remove o contorno padrão */
+}
+
+
+.buttonPosition {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: #555555;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+.bodyConteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  /* Responsivo: ajusta a largura com base na tela */
+  max-width: 1200px;
+  /* Limita a largura máxima */
+  height: auto;
+  /* Permite que a altura se ajuste ao conteúdo */
+  min-height: 50vh;
+  /* Garantia de altura mínima */
+  padding: 0 5%;
+  /* Ajuste de espaçamento proporcional */
+  position: fixed;
+  /* Para fixá-lo na tela */
+  top: 15%;
+  /* Adaptação dinâmica à posição vertical */
+  margin-left: 30%;
+  /* Centraliza horizontalmente */
+  box-sizing: border-box;
+  /* Inclui padding dentro da largura/altura */
+}
+
+
+
+.menuBlinds {
+  display: flex;
+  margin-left: 5%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 20px;
+  background-color: transparent;
+  height: auto;
+  gap: 10px; /* Espaço entre os itens reduzido */
+  position: fixed;
+  top: 0;
+  width: 60%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+
+
+
+.buttonBlinds {
+  width: 80px; /* Largura fixa */
+  height: 80px; /* Altura fixa */
+  display: flex; /* Define como flexbox */
+  flex-direction: row; /* Alinha os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  margin-top: 10px; /* Reduz o espaço acima dos botões */
+  background-color: #555555; /* Cor de fundo cinza escuro */
+  color: rgb(255, 255, 255); /* Cor do texto branca */
+  cursor: pointer; /* Altera o cursor para ponteiro ao passar */
+  border-radius: 5px; /* Arredonda os cantos dos botões */
+}
+
