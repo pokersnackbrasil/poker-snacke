@@ -43,20 +43,28 @@ export default function Login() {
     }
   };
 
-  const saveUserSession = async (userData: DocumentData | null,rememberPassword: any) => {
+  const saveUserSession = async (userData: DocumentData | null, rememberPassword: boolean) => {
     if (typeof userData !== "object" || userData === null) {
       console.error("userData inválido:", userData);
       return;
     }
+
     const sessionData = JSON.stringify(userData);
+    const levelAccess = userData.acesso;
+
     if (rememberPassword) {
       localStorage.setItem("userData", sessionData);
+      localStorage.setItem("levelAccess", levelAccess);
     } else {
-      sessionStorage.setItem("userData", sessionData); // Apenas para a sessão atual
+      sessionStorage.setItem("userData", sessionData);
+      sessionStorage.setItem("levelAccess", levelAccess);
     }
-    Cookies.set("user", sessionData, { expires: rememberPassword ? 30 : undefined });
 
+    Cookies.set("user", sessionData, {
+      expires: rememberPassword ? 30 : undefined,
+    });
   };
+  
 
 
   const handleLogin = async ()=>{
@@ -110,14 +118,8 @@ export default function Login() {
 
       await saveUserSession(userData,rememberPassword);
 
-      dispatch(
-        setUserData({
-          userData: userData,
-        }),
-        // setLevelAccess({
-        //   n: userData.acesso,
-        // })
-      );
+      dispatch(setUserData(userData));
+      dispatch(setLevelAccess(userData.acesso));
 
       navigate("/home");
       toast.success("Login realizado com sucesso!");

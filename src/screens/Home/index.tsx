@@ -94,7 +94,7 @@ export function Home() {
             ))}
           </div>
           <div>
-            <Table objectColors={objectColors.styles} />
+            <Table objectColors={objectColors.styles || {}} />
             <Legend objectLegends = {objectColors.legends||null}/>
           </div>
         </div>
