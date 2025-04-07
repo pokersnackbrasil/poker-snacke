@@ -26,6 +26,8 @@ textarea {
 	font-family: "Avrova", sans-serif;
 	font-weight: 400;
 	font-size: 1rem;
+	margin: 0;
+	padding: 0;
 }
 
 button {
