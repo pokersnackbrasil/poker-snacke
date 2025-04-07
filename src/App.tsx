@@ -1,5 +1,5 @@
 import {RoutesApp} from './Routes';
-import './global.module.css'
+// import './global.module.css'
 import { useEffect, useState } from 'react';
 import { useAppDispatch } from './hooks';
 import { setUserData, setLevelAccess, setLoading } from './slices';

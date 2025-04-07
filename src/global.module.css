@@ -36,7 +36,6 @@ button {
 	font-size: 1rem;
 }
 
-
 :root {
 	/* Z-INDEX padrão */
 	--z-base: 0;
@@ -49,9 +48,7 @@ button {
 	--z-loading: 600;
 
 	/* Fontes */
-	/* --font-Avrova: "Avrova", sans-serif; */
 	--font-Avrova: "Avrova";
-	/* --font-Kulderin: "Kulderin", sans-serif; */
 	--font-Kulderin: "Kulderin";
 
 	/* Pesos das Fontes */
@@ -72,7 +69,7 @@ button {
 	--primary-blue: #1EC1E8;
 	--primary-red: #CB3448;
 
-	/* Tons derivados (opcional, se precisar mais variações) */
+	/* Tons derivados */
 	--yellow-light: #fedc7e;
 	--green-light: #7fddb0;
 	--blue-light: #90e0f4;
