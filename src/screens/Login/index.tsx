@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./style.module.css";
 import Fundo from "../../assets/fundo2.jpg"
 import PersonIcon from "../../assets/person_24px.png"
@@ -9,20 +9,24 @@ import {HandleError} from "../../componentes/error/Error"
 import { toast } from "react-toastify";
 import { db,auth } from "../../Server/firebase"
 import Cookies from "js-cookie";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../hooks";
 import { setUserData, setLevelAccess } from "../../slices";
 
 import { useNavigate } from "react-router-dom";
 import { Loading } from "../../componentes/Load";
 import { sendEmailVerification, signInWithEmailAndPassword, signOut, User } from "firebase/auth";
 import { collection, DocumentData, getDocs, query, where } from "firebase/firestore";
-
+import { useAppSelector } from "../../hooks";
 
 
 export default function Login() {
+  const userData = useAppSelector(state => state.user.userData);
 
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+
 
   const [loadingLogin, setLoadingLogin] = useState(false);
 
@@ -32,7 +36,13 @@ export default function Login() {
   const [password,setPassword]=useState("")
 
 
-  const [rememberPassword, setRememberPassword] = useState(true);
+  const rememberPassword = true;  
+
+  useEffect(() => {
+    if (userData && Object.keys(userData).length) {
+      navigate("/Home");
+    }
+  }, [userData, navigate]);
 
 
   const verifyEmail = async (user: User) => {
@@ -43,14 +53,14 @@ export default function Login() {
     }
   };
 
-  const saveUserSession = async (userData: DocumentData | null, rememberPassword: boolean) => {
-    if (typeof userData !== "object" || userData === null) {
+  const saveUserSession = async (userData: DocumentData | null,acesso: string, rememberPassword: boolean) => {
+    if (typeof userData !== "object" || acesso || userData === null) {
       console.error("userData inválido:", userData);
       return;
     }
 
     const sessionData = JSON.stringify(userData);
-    const levelAccess = userData.acesso;
+    const levelAccess = acesso;
 
     if (rememberPassword) {
       localStorage.setItem("userData", sessionData);
@@ -66,8 +76,8 @@ export default function Login() {
   };
   
 
-
-  const handleLogin = async ()=>{
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>)=>{
+    e.preventDefault();
     setLoadingLogin(true);
     console.log("e-mail",email)
     console.log("senha",password)
@@ -82,7 +92,6 @@ export default function Login() {
 
       if (!currentUser.user.emailVerified) {
         await verifyEmail(currentUser.user);
-        toast.error("E-mail não verificado");
         toast.error("Verifique sua conta, pelo link enviado por e-mail, e tente novamente!");
         throw new Error("E-mail não verificado.");
       }
@@ -91,8 +100,14 @@ export default function Login() {
         collection(db, "usuario"),
         where("email", "==", currentUser.user.email)
       );
+      const acessQuery = query(
+        collection(db, "acesso"),
+        where("uid", "==", currentUser.user.uid),
+        where("status", "==", true)
+      );
 
       const querySnapshot = await getDocs(userQuery);
+      const querySnapshotAcess = await getDocs(acessQuery);
 
       if (querySnapshot.empty) {
         toast.error("Usuário não encontrado.");
@@ -100,26 +115,32 @@ export default function Login() {
         setLoadingLogin(false);
         return;
       }
+      if (querySnapshotAcess.empty) {
+        toast.error("Usuário não possui acesso atribuído.");
+        await signOut(auth);
+        setLoadingLogin(false);
+        return;
+      }
 
       const userData = querySnapshot.docs[0].data();
+      const acessData = querySnapshotAcess.docs[0].data();
       if (!userData.status) {
         toast.error("Usuário inativo na plataforma");
         await signOut(auth);
         setLoadingLogin(false);
         return;
       }
-
-      if (!userData.validacao) {
-        toast.error("Certifique-se de ser validado antes de tentar novamente!");
+      if(!acessData.status) {
+        toast.error("Usuário sem acesso ativo.");
         await signOut(auth);
         setLoadingLogin(false);
         return;
       }
 
-      await saveUserSession(userData,rememberPassword);
+      await saveUserSession(userData,acessData.nivel,rememberPassword);
 
       dispatch(setUserData(userData));
-      dispatch(setLevelAccess(userData.acesso));
+      dispatch(setLevelAccess(acessData.nivel));
 
       navigate("/home");
       toast.success("Login realizado com sucesso!");
@@ -143,7 +164,7 @@ export default function Login() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <form className={style.formulario} onSubmit={()=>handleLogin()}>
+      <form className={style.formulario} onSubmit={handleLogin}>
         <h2 className={style.title}>Login</h2>
 
         <div className={style.inputGroup}>

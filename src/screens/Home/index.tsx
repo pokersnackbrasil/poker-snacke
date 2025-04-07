@@ -14,9 +14,13 @@ function mapStyleKeys(styles: Record<string, string>, styleModule: Record<string
   return mapped;
 }
 
-function mapObjectsColors(jsonData: typeof rawObjectsColors, styleModule: typeof style) {
-  const mappedData: any = {};
-  for (const position in jsonData) {
+type RawObjectsColors = typeof rawObjectsColors;
+type RawPositionKey = keyof RawObjectsColors;
+
+function mapObjectsColors(jsonData: RawObjectsColors, styleModule: typeof style) {
+  const mappedData: Record<string, any> = {};
+
+  (Object.keys(jsonData) as RawPositionKey[]).forEach((position) => {
     mappedData[position] = {
       ...jsonData[position],
       blinds: jsonData[position].blinds.map((blind: any) => ({
@@ -38,9 +42,42 @@ function mapObjectsColors(jsonData: typeof rawObjectsColors, styleModule: typeof
           : undefined,
       })),
     };
-  }
+  });
+
   return mappedData;
 }
+
+
+
+// function mapObjectsColors(jsonData: typeof rawObjectsColors, styleModule: typeof style) {
+//   type RawObjectsColors = typeof rawObjectsColors;
+//   type RawPositionKey = keyof RawObjectsColors;
+//   const mappedData: any = {};
+//   for (const position in jsonData) {
+//     mappedData[position] = {
+//       ...jsonData[position],
+//       blinds: jsonData[position].blinds.map((blind: any) => ({
+//         ...blind,
+//         styles: mapStyleKeys(blind.styles, styleModule),
+//         legends: blind.legends
+//           ? {
+//               ...blind.legends,
+//               values: Object.fromEntries(
+//                 Object.entries(blind.legends.values).map(([key, val]: any) => [
+//                   key,
+//                   {
+//                     ...val,
+//                     color: styleModule[val.color] || val.color,
+//                   },
+//                 ])
+//               ),
+//             }
+//           : undefined,
+//       })),
+//     };
+//   }
+//   return mappedData;
+// }
 
 const objectsColors = mapObjectsColors(rawObjectsColors, style);
 
@@ -58,7 +95,7 @@ export function Home() {
   }, [position]);
 
   useEffect(() => {
-    const selectedBlind = objectsColors[position]?.blinds.find((b) => b.id === blind);
+    const selectedBlind = objectsColors[position]?.blinds.find((b:{id:string}) => b.id === blind);
     if (selectedBlind) {
       setObjectColors(selectedBlind);
     } else {
@@ -82,7 +119,7 @@ export function Home() {
         </div>
         <div className={Style.bodyConteudo}>
           <div className={Style.menuBlinds}>
-            {listBlinds.map((blind) => (
+            {listBlinds.map((blind: { id: string; name: string; styles?: any }) => (
               <button
                 key={blind.id}
                 className={Style.buttonBlinds}

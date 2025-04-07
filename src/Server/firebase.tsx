@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import { initializeApp, getApps } from 'firebase/app';
+import { initializeApp, getApps, getApp } from 'firebase/app';
 import { onAuthStateChanged, getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
@@ -23,28 +23,22 @@ const firebaseConfig = {
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
-if (!getApps().length) {
- initializeApp(firebaseConfig);
-}
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+const auth = getAuth(app);
+const db = getFirestore(app);
 
-const auth = getAuth();
-const db = getFirestore();
-
-let authCheckPromise;
-
-const waitForAuthCheck = new Promise((resolve) => {
- onAuthStateChanged(auth, (user) => {
-   if (user) {
-     console.log("Firebase inicializado e usuário autenticado.");
-   } else {
-     console.log("Firebase inicializado, mas nenhum usuário autenticado.");
-   }
-   resolve();
- });
+const authCheckPromise: Promise<void> = new Promise((resolve) => {
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      console.log("Firebase inicializado e usuário autenticado.");
+    } else {
+      console.log("Firebase inicializado, mas nenhum usuário autenticado.");
+    }
+    resolve();
+  });
 });
 
 const authIsReady = () => authCheckPromise;
 
-authCheckPromise = waitForAuthCheck;
-
 export { db, auth, authIsReady };
+

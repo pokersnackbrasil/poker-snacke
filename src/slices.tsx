@@ -14,30 +14,27 @@ const initialState: UserState = {
 	error: null,
 };
 
-
-
 export const userSlice = createSlice({
-	name: "user",
-  	initialState,
+  name: "user",
+  initialState,
   reducers: {
-	setUserData: (state, action) => {
-	  state.userData = action.payload;
-	},
-	setLoading: (state, action) => {
-	  state.loading = action.payload;
-	},
-	setError: (state, action) => {
-	  state.error = action.payload;
-	},
+    setUserData: (state, action) => {
+      state.userData = action.payload;
+    },
+    setLoading: (state, action) => {
+      state.loading = action.payload;
+    },
+    setError: (state, action) => {
+      state.error = action.payload;
+    },
 
-	setLevelAccess: (state, action) => {
-		state.levelAccess = action.payload;
-	},
+    setLevelAccess: (state, action) => {
+      state.levelAccess = action.payload;
+    },
 
-	clearUserData: (state) => {
-		state.userData = {};
-	},
-
+    clearUserData: (state) => {
+      state.userData = {};
+    },
   },
 });
 

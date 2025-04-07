@@ -1,9 +1,7 @@
-import React from 'react';
+
 import styles from './style.module.css'
 import Lottie from 'lottie-react';
 import spinnerAnimation from './animation.json';
-
-import logo from "../../assets/ficha.png";
 
 export function Loading() {
     return (
