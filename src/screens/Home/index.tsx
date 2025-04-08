@@ -4,6 +4,7 @@ import Style from "./home.module.css";
 import rawObjectsColors from "../../componentes/globalStyles/styles.json";
 import style from "../../componentes/globalStyles/Table.module.css"
 import { Legend } from "../../componentes/Legend";
+import CabecalhoVerde from "../../componentes/CabecalhoVerde";
 
 
 function mapStyleKeys(styles: Record<string, string>, styleModule: Record<string, string>) {
@@ -48,37 +49,6 @@ function mapObjectsColors(jsonData: RawObjectsColors, styleModule: typeof style)
 }
 
 
-
-// function mapObjectsColors(jsonData: typeof rawObjectsColors, styleModule: typeof style) {
-//   type RawObjectsColors = typeof rawObjectsColors;
-//   type RawPositionKey = keyof RawObjectsColors;
-//   const mappedData: any = {};
-//   for (const position in jsonData) {
-//     mappedData[position] = {
-//       ...jsonData[position],
-//       blinds: jsonData[position].blinds.map((blind: any) => ({
-//         ...blind,
-//         styles: mapStyleKeys(blind.styles, styleModule),
-//         legends: blind.legends
-//           ? {
-//               ...blind.legends,
-//               values: Object.fromEntries(
-//                 Object.entries(blind.legends.values).map(([key, val]: any) => [
-//                   key,
-//                   {
-//                     ...val,
-//                     color: styleModule[val.color] || val.color,
-//                   },
-//                 ])
-//               ),
-//             }
-//           : undefined,
-//       })),
-//     };
-//   }
-//   return mappedData;
-// }
-
 const objectsColors = mapObjectsColors(rawObjectsColors, style);
 
 export function Home() {
@@ -104,9 +74,11 @@ export function Home() {
   }, [blind, position]);
 
   return (
-    <div className="home">
+    <div className={Style.home}>
+      <CabecalhoVerde />
       <div className={Style.body}>
         <div className={Style.menuOptions}>
+        <div className={Style.menuOptionsbox}>
           {Object.keys(objectsColors).map((pos) => (
             <button
               key={pos}
@@ -117,20 +89,23 @@ export function Home() {
             </button>
           ))}
         </div>
+        </div>
         <div className={Style.bodyConteudo}>
           <div className={Style.menuBlinds}>
-            {listBlinds.map((blind: { id: string; name: string; styles?: any }) => (
-              <button
-                key={blind.id}
-                className={Style.buttonBlinds}
-                onClick={() => setBlind(blind.id)}
-                style={{ backgroundColor: blind.styles?.A1 || undefined }}
-              >
-                {blind.name}
-              </button>
-            ))}
+            {listBlinds.map(
+              (blind: { id: string; name: string; styles?: any }) => (
+                <button
+                  key={blind.id}
+                  className={Style.buttonBlinds}
+                  onClick={() => setBlind(blind.id)}
+                  style={{ backgroundColor: blind.styles?.A1 || undefined }}
+                >
+                  {blind.name}
+                </button>
+              )
+            )}
           </div>
-          <div>
+          <div className={Style.containerTable}>
             <Table objectColors={objectColors.styles || {}} />
             <Legend objectLegends = {objectColors.legends||null}/>
           </div>
