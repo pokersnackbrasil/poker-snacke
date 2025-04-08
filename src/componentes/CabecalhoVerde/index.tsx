@@ -14,7 +14,7 @@ export default function CabecalhoVerde({ children }: CardProps) {
   return (
 	<div className={style.green_header__body}>
 		<div className={style.green_header__icons}>
-			<Icon icon={User} link={globalValues.linkFacebook} alt={"Facebook Icon"}/>
+			<Icon icon={User}  alt={"Person"}/>
 			{/* <Icon icon={InstagramIcon} link={globalValues.linkIntagram} alt={"Intagram Icon"}/>
 			<Icon icon={linkedinIcon} link={globalValues.linkLinkedin} alt={"Linkedin Icon"}/> */}
 	  		{children}
