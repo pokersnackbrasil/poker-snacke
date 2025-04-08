@@ -4,7 +4,6 @@ import {Icon} from "../IconsSocialMidia/icon";
 // import facebookIcon from "../../assets/facebook.png";
 // import linkedinIcon from "../../assets/linkedin.png";
 import User from "../../assets/user.png";
-import { globalValues } from "../../globalValues";
 
 type CardProps = {
 	children?: React.ReactNode;
