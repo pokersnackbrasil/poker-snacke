@@ -18,8 +18,10 @@ export function Legend ({objectLegends}: LegendProps) {
     ? objectLegends.values
     : Object.values(objectLegends.values) as { id: string; color: string; text1: string; text2: string }[];
   return (
-    <div>
-      <div>Legendas</div>
+    <div className={styles.legenda}>
+      <div className={styles.titleLegenda}>
+        <span>Legendas</span>
+      </div>
       <div>
         {values != null
           ? values.map((legend) => (
@@ -33,7 +35,7 @@ export function Legend ({objectLegends}: LegendProps) {
             ))
           : null}
       </div>
-      <div>
+      <div className={styles.titleFooter}>
         <p>{objectLegends.legend}</p>
       </div>
     </div>

@@ -5,14 +5,9 @@ type TableProps = {
 export function Table ({objectColors}: TableProps) {
 
  return (
-   // <div>
-   //  <div>
-   //   <div>
-   //    <div>
-   //     <div>
-   <div>
+   <div className={styles.contaynerTable2}>
      <table>
-       <thead>
+      <tbody>
          <tr>
            <td
              className={`${objectColors.A1 || styles.defaultStyle} ${
@@ -106,8 +101,6 @@ export function Table ({objectColors}: TableProps) {
              A2s
            </td>
          </tr>
-       </thead>
-       <tbody>
          <tr>
            <td
              className={`${objectColors.B1 || styles.defaultStyle} ${

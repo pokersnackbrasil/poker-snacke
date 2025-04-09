@@ -73,16 +73,26 @@ export function Home() {
     }
   }, [blind, position]);
 
+  const [color,setColor]=useState("#fff")
+  const listColor = ["#ffffff","#1C1C1E","#292D32","#232323","#31353D","#181818","#2B2B2B","#98989e54"]
+
+
+
   return (
-    <div className={Style.home}>
+    <div className={Style.home} style={{backgroundColor:color}}>
       <CabecalhoVerde />
+      {/* <div style={{height:"1rem", width:"100%", display:'flex',flexDirection:'row', justifyContent:'flex-start',gap:'0.5rem'}}>
+        {listColor.map((color)=>{
+          return <span onClick={()=>setColor(color)} style={{backgroundColor:color ,width: "1rem",height:"1rem"}}></span>
+        })}
+      </div> */}
       <div className={Style.body}>
         <div className={Style.menuOptions}>
         <div className={Style.menuOptionsbox}>
           {Object.keys(objectsColors).map((pos) => (
             <button
               key={pos}
-              className={Style.buttonPosition}
+              className={ position == pos ? Style.buttonPositionSelected:Style.buttonPosition}
               onClick={() => setPosition(pos as PositionKey)}
             >
               {pos}
@@ -93,14 +103,14 @@ export function Home() {
         <div className={Style.bodyConteudo}>
           <div className={Style.menuBlinds}>
             {listBlinds.map(
-              (blind: { id: string; name: string; styles?: any }) => (
+              (item: { id: string; name: string; styles?: any }) => (
                 <button
-                  key={blind.id}
-                  className={Style.buttonBlinds}
-                  onClick={() => setBlind(blind.id)}
-                  style={{ backgroundColor: blind.styles?.A1 || undefined }}
+                  key={item.id}
+                  className={blind === item.id ? Style.buttonBlindsSelected : Style.buttonBlinds}
+                  onClick={() => setBlind(item.id)}
+                  style={{ backgroundColor: item.styles?.A1 || undefined }}
                 >
-                  {blind.name}
+                  {item.name}
                 </button>
               )
             )}
