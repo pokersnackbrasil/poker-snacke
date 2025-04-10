@@ -1,5 +1,5 @@
 {
-  "3WBTN": {
+  "3 W BTN": {
     "blinds": [
       {
         "id": "blind1",
@@ -1983,7 +1983,7 @@
       }
     ]
   },
-  "3WBTNXREG": {
+  "3 W BTN X REG": {
     "blinds": [
       {
         "id": "blind11",
@@ -2924,7 +2924,7 @@
       }
     ]
   },
-  "3WSBXBB": {
+  "3 W SB X BB": {
     "blinds": [
       {
         "id": "blind19",
@@ -4401,7 +4401,7 @@
       }
     ]
   },
-  "3WSBXBBREG": {
+  "3 W SB X BB REG": {
     "blinds": [
       {
         "id": "blind27",
@@ -5989,7 +5989,7 @@
       }
     ]
   },
-  "3WSBXBTNALL-INREG": {
+  "3 W SB X BTN ALL-IN REG": {
     "blinds": [
       {
         "id": "blind36",
@@ -6518,7 +6518,7 @@
       }
     ]
   },
-  "3WSBXBTNALL-IN": {
+  "3 W SB X BTN ALL-IN": {
     "blinds": [
       {
         "id": "blind47",
@@ -7306,7 +7306,7 @@
       }
     ]
   },
-  "3WSBXBTNLIMP": {
+  "3 W SB X BTN LIMP": {
     "blinds": [
       {
         "id": "blind47",
@@ -7783,7 +7783,7 @@
       }
     ]
   },
-  "3WSBXBTNMR": {
+  "3 W SB X BTN MR": {
     "blinds": [
       {
         "id": "blind50",
@@ -8068,7 +8068,7 @@
       }
     ]
   },
-  "3WSBXBTNMR-REG": {
+  "3 W SB X BTN MR - REG": {
     "blinds": [
       {
         "id": "blind53",
@@ -8458,7 +8458,7 @@
       }
     ]
   },
-  "3WBBXBTN3X": {
+  "3 W BB X BTN 3X": {
     "blinds": [
       {
         "id": "blind53",
@@ -8784,7 +8784,7 @@
       }
     ]
   },
-  "3WBBXBTNALL-IN": {
+  "3 W BB X BTN ALL-IN": {
     "blinds": [
       {
         "id": "blind57",
@@ -9727,7 +9727,7 @@
       }
     ]
   },
-  "3WBBXBTNLIMP": {
+  "3 W BB X BTN LIMP": {
     "blinds": [
       {
         "id": "blind69",
@@ -10337,7 +10337,7 @@
       }
     ]
   },
-  "3WBBXBTNMR": {
+  "3 W BB X BTN MR": {
     "blinds": [
       {
         "id": "blind72",
@@ -10946,7 +10946,7 @@
       }
     ]
   },
-  "3WBBXBTNMRREG": {
+  "3 W BB X BTN MR REG": {
     "blinds": [
       {
         "id": "blind76",
@@ -11709,7 +11709,7 @@
       }
     ]
   },
-  "3WBBXBTNXSBALLIN": {
+  "3 W BB X BTN X SB ALL-IN": {
     "blinds": [
       {
         "id": "blind81",
@@ -12367,7 +12367,7 @@
       }
     ]
   },
-  "3WBBXLIMP2P": {
+  "3 W BB X LIMP 2P": {
     "blinds": [
       {
         "id": "blind92",
@@ -13379,7 +13379,7 @@
       }
     ]
   },
-  "3WBBXMR2P": {
+  "3 W BB X MR 2P": {
     "blinds": [
       {
         "id": "blind97",
@@ -14036,7 +14036,7 @@
       }
     ]
   },
-  "3WBBXMR2PREG": {
+  "3 W BB X MR 2P REG": {
     "blinds": [
       {
         "id": "blind99",
@@ -15207,7 +15207,7 @@
       }
     ]
   },
-  "3WBBXSBALL-IN": {
+  "3 W BB X SB ALL-IN": {
     "blinds": [
       {
         "id": "blind108",
@@ -16349,7 +16349,7 @@
       }
     ]
   },
-  "3WBBXSBLIMP": {
+  "3 W BB X SB LIMP": {
     "blinds": [
       {
         "id": "blind121",
@@ -17577,7 +17577,7 @@
       }
     ]
   },
-  "3WBBXSBLIMPREG": {
+  "3 W BB X SB LIMP REG": {
     "blinds": [
       {
         "id": "blind127",
@@ -18805,7 +18805,7 @@
       }
     ]
   },
-  "3WBBXSBMR": {
+  "3 W BB X SB MR": {
     "blinds": [
       {
         "id": "blind133",
@@ -19628,7 +19628,7 @@
       }
     ]
   },
-  "HUXSB": {
+  "HU X SB": {
     "blinds": [
       {
         "id": "blind138",
@@ -22152,7 +22152,7 @@
       }
     ]
   },
-  "HUXSBVSREG": {
+  "HU X SB VS REG": {
     "blinds": [
       {
         "id": "blind150",
@@ -24387,7 +24387,7 @@
       }
     ]
   },
-  "HU*BBVSLIMP": {
+  "HU * BB VS LIMP": {
     "blinds": [
       {
         "id": "blind161",
@@ -25976,7 +25976,7 @@
       }
     ]
   },
-  "HU*BBVSLIMPREG": {
+  "HU * BB VS LIMP REG": {
     "blinds": [
       {
         "id": "blind169",
@@ -27031,7 +27031,7 @@
       }
     ]
   },
-  "HU*SBVSMR": {
+  "HU * SB VS MR": {
     "blinds": [
       {
         "id": "blind174",
@@ -27973,7 +27973,7 @@
       }
     ]
   },
-  "HU*BBVSMRREG": {
+  "HU * BB VS MR REG": {
     "blinds": [
       {
         "id": "blind180",
@@ -28814,7 +28814,7 @@
       }
     ]
   },
-  "HU*BBVSALL-IN": {
+  "HU * BB VS ALL-IN": {
     "blinds": [
       {
         "id": "blind185",
@@ -30265,7 +30265,7 @@
       }
     ]
   },
-  "HU*BBVS3X": {
+  "HU * BB VS 3X": {
     "blinds": [
       {
         "id": "blind202",
