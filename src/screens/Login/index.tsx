@@ -54,7 +54,7 @@ export default function Login() {
   };
 
   const saveUserSession = async (userData: DocumentData | null,acesso: string, rememberPassword: boolean) => {
-    if (typeof userData !== "object" || acesso || userData === null) {
+    if (typeof userData !== "object" || !acesso || userData === null) {
       console.error("userData inválido:", userData);
       return;
     }

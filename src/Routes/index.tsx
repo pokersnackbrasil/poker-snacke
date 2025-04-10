@@ -13,15 +13,14 @@ export const RoutesApp = () => {
       <Fragment>
         <Routes>
 
-        	<Route path="/Login" element={<Login/>} />
+          <Route path="/Login" element={<Login />} />
 
           <Route element={<PrivateRoute requiredLevel="1" />}>
             <Route path="/Home" element={<Home />} />
           </Route>
+          
+          <Route path="*" element={<Login />} />
 
-
-
-        	<Route path="*" element={<Login/>} /> 
         </Routes>
       </Fragment>
     </BrowserRouter>

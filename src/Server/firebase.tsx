@@ -2,7 +2,7 @@
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 import { initializeApp, getApps, getApp } from 'firebase/app';
-import { onAuthStateChanged, getAuth } from 'firebase/auth';
+import { setPersistence,onAuthStateChanged, getAuth ,browserLocalPersistence} from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -25,6 +25,14 @@ const firebaseConfig = {
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const auth = getAuth(app);
+setPersistence(auth, browserLocalPersistence)
+  .then(() => {
+    console.log("Persistência definida com sucesso.");
+  })
+  .catch((error) => {
+    console.error("Erro ao definir persistência: ", error);
+  });
+  
 const db = getFirestore(app);
 
 const authCheckPromise: Promise<void> = new Promise((resolve) => {
@@ -37,6 +45,7 @@ const authCheckPromise: Promise<void> = new Promise((resolve) => {
     resolve();
   });
 });
+
 
 const authIsReady = () => authCheckPromise;
 
