@@ -73,13 +73,13 @@ export function Home() {
     }
   }, [blind, position]);
 
-  const [color,setColor]=useState("#fff")
-  const listColor = ["#ffffff","#1C1C1E","#292D32","#232323","#31353D","#181818","#2B2B2B","#98989e54"]
+  // const [color,setColor]=useState("#fff")
+  // const listColor = ["#ffffff","#1C1C1E","#292D32","#232323","#31353D","#181818","#2B2B2B","#98989e54"]
 
 
 
   return (
-    <div className={Style.home} style={{backgroundColor:color}}>
+    <div className={Style.home} style={{backgroundColor:#ece9e9}}>
       <CabecalhoVerde />
       {/* <div style={{height:"1rem", width:"100%", display:'flex',flexDirection:'row', justifyContent:'flex-start',gap:'0.5rem'}}>
         {listColor.map((color)=>{
