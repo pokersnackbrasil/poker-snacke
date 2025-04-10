@@ -79,7 +79,7 @@ export function Home() {
 
 
   return (
-    <div className={Style.home} style={{backgroundColor:#ece9e9}}>
+    <div className={Style.home} style={{backgroundColor:"#ece9e9"}}>
       <CabecalhoVerde />
       {/* <div style={{height:"1rem", width:"100%", display:'flex',flexDirection:'row', justifyContent:'flex-start',gap:'0.5rem'}}>
         {listColor.map((color)=>{
