@@ -3,6 +3,8 @@ import { Table } from "../../componentes/Table";
 import Style from "./home.module.css";
 import rawObjectsColors from "../../componentes/globalStyles/styles.json";
 import style from "../../componentes/globalStyles/Table.module.css"
+import iconMenu from "../../assets/menu.png"
+import iconMenuVoltar from "../../assets/voltar.png"
 import { Legend } from "../../componentes/Legend";
 import CabecalhoVerde from "../../componentes/CabecalhoVerde";
 
@@ -58,6 +60,8 @@ export function Home() {
   const [blind, setBlind] = useState(listBlinds[0]?.id || "");
   const [objectColors, setObjectColors] = useState(listBlinds[0] || {});
 
+  const [showMenu,setShowMenu]=useState(false)
+
   useEffect(() => {
     const blinds = objectsColors[position]?.blinds || [];
     setListBlinds(blinds);
@@ -80,25 +84,37 @@ export function Home() {
 
   return (
     <div className={Style.home} style={{backgroundColor:"#ece9e9"}}>
-      <CabecalhoVerde />
+      {showMenu && <CabecalhoVerde />}
       {/* <div style={{height:"1rem", width:"100%", display:'flex',flexDirection:'row', justifyContent:'flex-start',gap:'0.5rem'}}>
         {listColor.map((color)=>{
           return <span onClick={()=>setColor(color)} style={{backgroundColor:color ,width: "1rem",height:"1rem"}}></span>
         })}
       </div> */}
       <div className={Style.body}>
-        <div className={Style.menuOptions}>
-        <div className={Style.menuOptionsbox}>
-          {Object.keys(objectsColors).map((pos) => (
-            <button
-              key={pos}
-              className={ position == pos ? Style.buttonPositionSelected:Style.buttonPosition}
-              onClick={() => setPosition(pos as PositionKey)}
-            >
-              {pos}
-            </button>
-          ))}
-        </div>
+        <div className={Style.menuEOptions}>
+          {!showMenu?
+          <div style={{display:'flex',flexDirection:'row', alignItems:'center',gap:'1rem',cursor:'pointer' ,transition: 'opacity 1s ease, transform 1s ease',}} onClick={()=>setShowMenu(true)}>
+            <img style={{height:'10vh', width:'3rem' ,marginTop:"-2.5%",marginLeft:"-2.5%"}} src={iconMenu} alt="" />
+            <span style={{fontSize:'2rem',color:"#787878"}}>Menu</span>
+          </div>:
+          <div style={{display:'flex',flexDirection:'row', alignItems:'center',gap:'1rem',cursor:'pointer',transition: 'opacity 1s ease, transform 1s ease',}} onClick={()=>setShowMenu(false)}>
+            <img style={{height:'10vh', width:'3rem' ,marginTop:"-2.5%",marginLeft:"-2.5%" , zIndex:"9999999999"}} src={iconMenuVoltar} alt="" />
+            <span style={{fontSize:'2rem',color:"#ffffff",zIndex:"9999999999"}}>Esconder</span>
+          </div>}
+          <div className={Style.menuOptions}>
+            <div className={Style.menuOptionsbox}>
+              {Object.keys(objectsColors).map((pos) => (
+                <button
+                  key={pos}
+                  className={ position == pos ? Style.buttonPositionSelected:Style.buttonPosition}
+                  onClick={() => setPosition(pos as PositionKey)}
+                >
+                  {pos}
+                </button>
+              ))}
+            </div>
+          </div>
+
         </div>
         <div className={Style.bodyConteudo}>
           <div className={Style.menuBlinds}>
