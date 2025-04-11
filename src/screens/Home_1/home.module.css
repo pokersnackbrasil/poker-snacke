@@ -1,0 +1,172 @@
+.home{
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ justify-content: flex-start;
+ height: 100vh;
+ width: 100%;
+ overflow-x:hidden;
+ box-sizing: border-box;
+}
+.body{
+  position: relative;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+ height: 100vh;
+ width: 100%;
+ padding: 0.5%;
+ box-sizing: border-box;
+ /* background-color: aqua; */
+}
+.menuEOptions{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.menuOptions{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #2b2b2b;
+  height: 88%;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.menuOptionsbox{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #2b2b2b;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.menuOptionsbox::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Opera */
+}
+
+.buttonPosition{
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 10px;
+ background-color: #555555;
+ color: white;
+ cursor:pointer;
+ border-radius: 5px;
+ padding: 5px;
+ user-select: none;
+ cursor: pointer;
+}
+.buttonPositionSelected{
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 10px;
+ background-color: #31ce1cdb;
+ color: rgb(255, 255, 255);
+ /* font-weight: 600; */
+ cursor:pointer;
+ border-radius: 5px;
+ padding: 5px;
+ user-select: none;
+ cursor: pointer;
+}
+.bodyConteudo{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+ width: 80%;
+ height: 98%;
+ /* background-color: #430000; */
+ padding: 0 2%;
+  box-sizing: border-box;
+  /* gap:5% */
+}
+
+.menuBlinds{
+  width: 100%;
+  position: relative;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ /* padding: 10px; */
+ background-color: transparent;
+ height: max-content;
+ /* gap: 10px; */
+ /* background-color: aqua; */
+ box-sizing: border-box;
+ max-height: 10%;
+}
+
+.buttonBlinds {
+    width: 80px; /* Largura fixa de 80px */
+    height: max-content;
+      /* Altura fixa de 80px */
+    display: flex; /* Define como flexbox */
+    flex-direction: row; /* Alinha os itens em linha horizontal */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    /* margin-top: 10px; Espaço acima dos botões */
+    background-color: #555555; /* Cor de fundo cinza escuro */
+    color: white; /* Cor do texto branca */
+    cursor: pointer; /* Altera o cursor para ponteiro ao passar */
+    border-radius: 5px; /* Arredonda os cantos dos botões */
+    user-select: none;
+    cursor: pointer;
+    padding: 0.6rem 0;
+}
+
+.buttonBlindsSelected {
+    width: 80px; /* Largura fixa de 80px */
+    height: max-content;
+      /* Altura fixa de 80px */
+    display: flex; /* Define como flexbox */
+    flex-direction: row; /* Alinha os itens em linha horizontal */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    /* margin-top: 10px; Espaço acima dos botões */
+    background-color: #31ce1cdb; /* Cor de fundo cinza escuro */
+    color: rgb(255, 255, 255); /* Cor do texto branca */
+    /* font-weight: 800; */
+    cursor: pointer; /* Altera o cursor para ponteiro ao passar */
+    border-radius: 5px; /* Arredonda os cantos dos botões */
+    user-select: none;
+    cursor: pointer;
+    padding: 0.6rem 0;
+}
+  
+ .containerTable{
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  position: relative;
+  /* background-color: bisque; */
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
