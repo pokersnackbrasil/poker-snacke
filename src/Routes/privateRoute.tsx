@@ -16,7 +16,7 @@ export const PrivateRoute = ({ requiredLevel }: { requiredLevel?: string }) => {
   }
 
   if (requiredLevel && levelAccess !== requiredLevel) {
-    return <Navigate to="/Login" replace />;
+    return <Navigate to="/Home" replace />;
   }
 
   return <Outlet />;

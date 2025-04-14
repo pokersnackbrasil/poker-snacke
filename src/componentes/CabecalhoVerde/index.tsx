@@ -12,10 +12,9 @@ import style from './style.module.css';
 
 type CardProps = {
 	children?: React.ReactNode;
-	page:string;
 };
 
-export default function CabecalhoVerde({ children,page }: CardProps) {
+export default function CabecalhoVerde({ children }: CardProps) {
 	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
 
@@ -46,9 +45,8 @@ export default function CabecalhoVerde({ children,page }: CardProps) {
       }
   return (
 	<div className={style.green_header__body}>
-		<div className={style.green_header__icons}>
-			<span className={style.title}>{page}</span>
 			<span className={style.sair} style={{cursor:'pointer'}} onClick={()=>handleLogout()}>Sair</span>
+		<div className={style.green_header__icons}>
 			{/* <Icon icon={User}  alt={"Person"}/> */}
 			{/* <Icon icon={InstagramIcon} link={globalValues.linkIntagram} alt={"Intagram Icon"}/>
 			<Icon icon={linkedinIcon} link={globalValues.linkLinkedin} alt={"Linkedin Icon"}/> */}

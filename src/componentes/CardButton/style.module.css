@@ -1,0 +1,60 @@
+.btn {
+ position: relative;
+ width: 400px;
+ height: 600px;
+ background-image: url('../../assets/3.png');
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ border: none;
+ background-color: transparent;
+ cursor: pointer;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+}
+
+.btn img { 
+ width: 200px;
+ background-color: transparent;
+}
+
+.btn_1:hover {
+ background-image: url('../../assets/4.png');
+}
+
+.btn_2:hover {
+ background-image: url('../../assets/5.png');
+}
+.btnText {
+ position: absolute;
+ top: -85px;
+ left: 50%;
+ transform: translateX(-50%);
+ font-size: 32px;
+ color: #fff;
+ font-family: 'Cinzel', serif;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+ overflow: hidden; /* Importante para esconder o brilho fora do texto */
+ cursor: pointer;
+}
+
+/* Adiciona esse código para o efeito de luz */
+.btnText::after {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: -75%;
+ width: 50%;
+ height: 100%;
+ background: linear-gradient(
+   120deg,
+   rgba(255, 255, 255, 0) 0%,
+   rgba(255, 255, 255, 0.6) 50%,
+   rgba(255, 255, 255, 0) 100%
+ );
+ transform: skewX(-20deg);
+ animation: shine 2s infinite;
+ cursor: pointer;
+}
