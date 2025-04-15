@@ -12,10 +12,16 @@ export function Home() {
 
   const levelAccess = useSelector((state: RootState) => state.user.levelAccess);
 
-  const handleAcess = (acesso:string,page:string)=>{
-    if(levelAccess && acesso.split(",").map(item => item.trim()).includes(levelAccess)) navigate(page)
-    else setShowModal(true)
-  }
+  const handleAccess = (requiredAccess: string | string[], page: string) => {
+    if (!levelAccess) return setShowModal(true);
+
+    const requiredLevels = Array.isArray(requiredAccess) ? requiredAccess : [requiredAccess];
+
+    const hasPermission = requiredLevels.some((level) => levelAccess.includes(level));
+
+    if (hasPermission) navigate(page);
+    else setShowModal(true);
+  };
 
   const [ showModal, setShowModal] = useState(false)
 
@@ -25,17 +31,17 @@ export function Home() {
       <CardButton
         classe="btn_1"
         text="Sping & Go vs Fish"
-        action={() => handleAcess("1", "/spin&go")}
+        action={() => handleAccess(["1","4"], "/spin&go")}
       />
       <CardButton
         classe="btn_2"
         text="Sping & Go vs Reg"
-        action={() => handleAcess("2", "/bountybuilders")}
+        action={() => handleAccess(["2","4"], "/bountybuilders")}
       />
       <CardButton 
         classe="btn_3" 
         text="Outras Modalidades" 
-        action={() => handleAcess("3", "/bountybuilders")} 
+        action={() => handleAccess("3", "/bountybuilders")} 
       />
       {showModal && <div className={styles.modal} onClick={()=>setShowModal(false)}>
         <span className={styles.span1}>Olá!</span>
