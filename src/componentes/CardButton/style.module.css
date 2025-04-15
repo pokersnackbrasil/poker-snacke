@@ -1,7 +1,7 @@
 .btn {
  position: relative;
- width: 400px;
- height: 600px;
+ height: 70%;
+ aspect-ratio: 0.6;
  background-image: url('../../assets/3.png');
  background-size: cover;
  background-position: center;
@@ -13,6 +13,7 @@
  justify-content: center;
  align-items: center;
  cursor: pointer;
+ border-radius: 10px;
 }
 
 .btn img { 
@@ -29,10 +30,10 @@
 }
 .btnText {
  position: absolute;
- top: -85px;
+ top: -4rem;
  left: 50%;
  transform: translateX(-50%);
- font-size: 32px;
+ font-size: 1.5rem;
  color: #fff;
  font-family: 'Cinzel', serif;
  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);

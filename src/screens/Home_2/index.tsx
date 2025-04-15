@@ -3,10 +3,9 @@ import { Table } from "../../componentes/Table";
 import Style from "./home.module.css";
 import rawObjectsColors from "../../componentes/globalStyles/styles.json";
 import style from "../../componentes/globalStyles/Table.module.css"
-import iconMenu from "../../assets/menu.png"
-import iconMenuVoltar from "../../assets/voltar.png"
 import { Legend } from "../../componentes/Legend";
-import CabecalhoVerde from "../../componentes/CabecalhoVerde";
+import { useNavigate } from "react-router-dom";
+
 
 
 function mapStyleKeys(styles: Record<string, string>, styleModule: Record<string, string>) {
@@ -54,13 +53,13 @@ function mapObjectsColors(jsonData: RawObjectsColors, styleModule: typeof style)
 const objectsColors = mapObjectsColors(rawObjectsColors, style);
 
 export function Home_2() {
+  const navigate = useNavigate();
   type PositionKey = keyof typeof objectsColors;
   const [position, setPosition] = useState<PositionKey>(Object.keys(objectsColors)[0] as PositionKey);
   const [listBlinds, setListBlinds] = useState(objectsColors[position]?.blinds || []);
   const [blind, setBlind] = useState(listBlinds[0]?.id || "");
   const [objectColors, setObjectColors] = useState(listBlinds[0] || {});
 
-  const [showMenu,setShowMenu]=useState(false)
 
   useEffect(() => {
     const blinds = objectsColors[position]?.blinds || [];
@@ -77,30 +76,10 @@ export function Home_2() {
     }
   }, [blind, position]);
 
-  // const [color,setColor]=useState("#fff")
-  // const listColor = ["#ffffff","#1C1C1E","#292D32","#232323","#31353D","#181818","#2B2B2B","#98989e54"]
-
-
-
   return (
     <div className={Style.home} style={{backgroundColor:"#ece9e9"}}>
-      {showMenu && <CabecalhoVerde />}
-      {/* <div style={{height:"1rem", width:"100%", display:'flex',flexDirection:'row', justifyContent:'flex-start',gap:'0.5rem'}}>
-        {listColor.map((color)=>{
-          return <span onClick={()=>setColor(color)} style={{backgroundColor:color ,width: "1rem",height:"1rem"}}></span>
-        })}
-      </div> */}
       <div className={Style.body}>
         <div className={Style.menuEOptions}>
-          {!showMenu?
-          <div style={{display:'flex',flexDirection:'row', alignItems:'center',gap:'1rem',cursor:'pointer' ,transition: 'opacity 1s ease, transform 1s ease',}} onClick={()=>setShowMenu(true)}>
-            <img style={{height:'10vh', width:'3rem' ,marginTop:"-2.5%",marginLeft:"-2.5%", borderTopRightRadius:'5px',borderBottomRightRadius:'5px'}} src={iconMenu} alt="" />
-            <span style={{fontSize:'2rem',color:"#787878"}}>Menu</span>
-          </div>:
-          <div style={{display:'flex',flexDirection:'row', alignItems:'center',gap:'1rem',cursor:'pointer',transition: 'opacity 1s ease, transform 1s ease',}} onClick={()=>setShowMenu(false)}>
-            <img style={{height:'10vh', width:'3rem' ,marginTop:"-2.5%",marginLeft:"-2.5%" , zIndex:"9999999999"}} src={iconMenuVoltar} alt="" />
-            <span style={{fontSize:'2rem',color:"#ffffff",zIndex:"9999999999"}}>Esconder</span>
-          </div>}
           <div className={Style.menuOptions}>
             <div className={Style.menuOptionsbox}>
               {Object.keys(objectsColors).map((pos) => (
@@ -130,7 +109,9 @@ export function Home_2() {
                 </button>
               )
             )}
+            <span className={Style.positionTitleVoltar} onClick={()=>navigate("/Home")}>Voltar</span>
           </div>
+          <span className={Style.positionTitle}>{position}</span>
           <div className={Style.containerTable}>
             <Table objectColors={objectColors.styles || {}} />
             <Legend objectLegends = {objectColors.legends||null}/>
