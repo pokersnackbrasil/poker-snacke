@@ -1,5 +1,5 @@
 {
-  "3 W BTN": {
+  "3W BTN": {
     "blinds": [
       {
         "id": "blind1",
@@ -1983,7 +1983,7 @@
       }
     ]
   },
-  "3 W BTN X REG": {
+  "3W BTN X REG": {
     "blinds": [
       {
         "id": "blind11",
@@ -2924,7 +2924,7 @@
       }
     ]
   },
-  "3 W SB X BB": {
+  "3W SB X BB": {
     "blinds": [
       {
         "id": "blind19",
@@ -4401,7 +4401,7 @@
       }
     ]
   },
-  "3 W SB X BB REG": {
+  "3W SB X BB REG": {
     "blinds": [
       {
         "id": "blind27",
@@ -5989,7 +5989,7 @@
       }
     ]
   },
-  "3 W SB X BTN ALL-IN REG": {
+  "3W SB X BTN ALL-IN REG": {
     "blinds": [
       {
         "id": "blind36",
@@ -6518,7 +6518,7 @@
       }
     ]
   },
-  "3 W SB X BTN ALL-IN": {
+  "3W SB X BTN ALL-IN": {
     "blinds": [
       {
         "id": "blind47",
@@ -7306,7 +7306,7 @@
       }
     ]
   },
-  "3 W SB X BTN LIMP": {
+  "3W SB X BTN LIMP": {
     "blinds": [
       {
         "id": "blind47",
@@ -7783,7 +7783,7 @@
       }
     ]
   },
-  "3 W SB X BTN MR": {
+  "3W SB X BTN MR": {
     "blinds": [
       {
         "id": "blind50",
@@ -8068,7 +8068,7 @@
       }
     ]
   },
-  "3 W SB X BTN MR - REG": {
+  "3W SB X BTN MR - REG": {
     "blinds": [
       {
         "id": "blind53",
@@ -8458,7 +8458,7 @@
       }
     ]
   },
-  "3 W BB X BTN 3X": {
+  "3W BB X BTN 3X": {
     "blinds": [
       {
         "id": "blind53",
@@ -8784,7 +8784,7 @@
       }
     ]
   },
-  "3 W BB X BTN ALL-IN": {
+  "3W BB X BTN ALL-IN": {
     "blinds": [
       {
         "id": "blind57",
@@ -9727,7 +9727,7 @@
       }
     ]
   },
-  "3 W BB X BTN LIMP": {
+  "3W BB X BTN LIMP": {
     "blinds": [
       {
         "id": "blind69",
@@ -10337,7 +10337,7 @@
       }
     ]
   },
-  "3 W BB X BTN MR": {
+  "3W BB X BTN MR": {
     "blinds": [
       {
         "id": "blind72",
@@ -10946,7 +10946,7 @@
       }
     ]
   },
-  "3 W BB X BTN MR REG": {
+  "3W BB X BTN MR REG": {
     "blinds": [
       {
         "id": "blind76",
@@ -11709,7 +11709,7 @@
       }
     ]
   },
-  "3 W BB X BTN X SB ALL-IN": {
+  "3W BB X BTN X SB ALL-IN": {
     "blinds": [
       {
         "id": "blind81",
@@ -12367,7 +12367,7 @@
       }
     ]
   },
-  "3 W BB X LIMP 2P": {
+  "3W BB X LIMP 2P": {
     "blinds": [
       {
         "id": "blind92",
@@ -13379,7 +13379,7 @@
       }
     ]
   },
-  "3 W BB X MR 2P": {
+  "3W BB X MR 2P": {
     "blinds": [
       {
         "id": "blind97",
@@ -14036,7 +14036,7 @@
       }
     ]
   },
-  "3 W BB X MR 2P REG": {
+  "3W BB X MR 2P REG": {
     "blinds": [
       {
         "id": "blind99",
@@ -15207,7 +15207,7 @@
       }
     ]
   },
-  "3 W BB X SB ALL-IN": {
+  "3W BB X SB ALL-IN": {
     "blinds": [
       {
         "id": "blind108",
@@ -16349,7 +16349,7 @@
       }
     ]
   },
-  "3 W BB X SB LIMP": {
+  "3W BB X SB LIMP": {
     "blinds": [
       {
         "id": "blind121",
@@ -17577,7 +17577,7 @@
       }
     ]
   },
-  "3 W BB X SB LIMP REG": {
+  "3W BB X SB LIMP REG": {
     "blinds": [
       {
         "id": "blind127",
@@ -18805,7 +18805,7 @@
       }
     ]
   },
-  "3 W BB X SB MR": {
+  "3W BB X SB MR": {
     "blinds": [
       {
         "id": "blind133",
