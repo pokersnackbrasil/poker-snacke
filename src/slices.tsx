@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface UserState {
 	userData: object;
-	levelAccess: string | null;
+	levelAccess: string[] | null;
 	loading: boolean;
 	error: string | null;
 }
@@ -29,7 +29,7 @@ export const userSlice = createSlice({
     },
 
     setLevelAccess: (state, action) => {
-      state.levelAccess = action.payload;
+      state.levelAccess = [String(action.payload).trim()];
     },
 
     clearUserData: (state) => {
