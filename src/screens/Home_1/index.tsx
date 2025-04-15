@@ -84,7 +84,7 @@ export function Home_1() {
 
   return (
     <div className={Style.home} style={{backgroundColor:"#ece9e9"}}>
-      {showMenu && <CabecalhoVerde page={"Spin & Go"}/>}
+      {showMenu && <CabecalhoVerde/>}
       {/* <div style={{height:"1rem", width:"100%", display:'flex',flexDirection:'row', justifyContent:'flex-start',gap:'0.5rem'}}>
         {listColor.map((color)=>{
           return <span onClick={()=>setColor(color)} style={{backgroundColor:color ,width: "1rem",height:"1rem"}}></span>
