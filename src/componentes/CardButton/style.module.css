@@ -30,6 +30,9 @@
 .btn_2:hover {
  background-image: url('../../assets/5.png');
 }
+.btn_3:hover {
+ background-image: url('../../assets/6.png');
+}
 .btnText {
  position: absolute;
  top: -2rem;
