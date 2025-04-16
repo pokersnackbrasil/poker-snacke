@@ -11,6 +11,7 @@ export function Home() {
   const navigate = useNavigate();
 
   const levelAccess = useSelector((state: RootState) => state.user.levelAccess);
+  const userData = useSelector((state: RootState) => state.user.userData);
 
   const handleAccess = (requiredAccess: string | string[], page: string) => {
     if (!levelAccess) return setShowModal(true);
@@ -28,7 +29,9 @@ export function Home() {
   return (
     <>
       <div className={styles.background}>
-        <CabecalhoVerde />
+        <CabecalhoVerde>
+          {userData && <span style={{color:'#ffff', fontSize:'2rem'}}>{userData.nome}</span>}
+        </CabecalhoVerde>
         <CardButton
           classe="btn_1"
           text="Sping & Go vs Fish"
