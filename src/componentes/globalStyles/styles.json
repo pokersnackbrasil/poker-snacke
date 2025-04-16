@@ -20815,14 +20815,14 @@
             {
               "id": "color4",
               "color": "vermelhoescuroStyle",
-              "text1": "Limp-Fold",
-              "text2": "44% (580 combos)"
+              "text1": "Limp-Call",
+              "text2": "4% (52 combos)"
             },
             {
               "id": "color5",
               "color": "roxoStyle",
-              "text1": "Limp-Fold",
-              "text2": "7% (84 combos)"
+              "text1": "Openshove",
+              "text2": "37% (478 combos)"
             }
           ]
         },
@@ -21025,7 +21025,7 @@
             {
               "id": "color4",
               "color": "verdeStyle",
-              "text1": "Limp-Fold",
+              "text1": "Limp-Shove",
               "text2": "2% (24 combos)"
             },
             {
@@ -21242,7 +21242,7 @@
               "id": "color4",
               "color": "roxoStyle",
               "text1": "Openshove",
-              "text2": "66% (366 combos)"
+              "text2": "66% (866 combos)"
             }
           ]
         },
@@ -21992,7 +21992,7 @@
         },
         "styles": {
           "A1": "verdeStyle",
-          "A2": "verdeStyle",
+          "A2": "roxoStyle",
           "A3": "roxoStyle",
           "A4": "roxoStyle",
           "A5": "roxoStyle",
@@ -22068,7 +22068,7 @@
           "F10": "roxoStyle",
           "F11": "roxoStyle",
           "F12": "roxoStyle",
-          "F13": "cinzaStyle",
+          "F13": "roxoStyle",
           "G1": "roxoStyle",
           "G2": "roxoStyle",
           "G3": "roxoStyle",
