@@ -52,7 +52,7 @@ export function Home() {
         <div className={styles.modal} onClick={() => setShowModal(false)}>
           <span className={styles.span1}>Olá!</span>
           <span className={styles.span2}>
-            Ainda não possui acesso a essa modalidade.
+            Você ainda não possui acesso a essa modalidade.
           </span>
           <span className={styles.span3}>
             Por favor, entre em contato com a equipe para aquisição, Abraços!
