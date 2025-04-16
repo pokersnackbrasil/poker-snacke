@@ -1,14 +1,20 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+export interface UserData {
+	email: string;
+	status: boolean;
+	uid: string;
+	nome: string;
+}
 interface UserState {
-	userData: object;
+	userData: UserData|null;
 	levelAccess: string[] | null;
 	loading: boolean;
 	error: string | null;
 }
 
 const initialState: UserState = {
-	userData: {},
+	userData: null,
 	levelAccess: null,
 	loading: false,
 	error: null,
@@ -18,7 +24,7 @@ export const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setUserData: (state, action) => {
+    setUserData: (state, action:PayloadAction<UserData>) => {
       state.userData = action.payload;
     },
     setLoading: (state, action) => {
@@ -33,7 +39,10 @@ export const userSlice = createSlice({
     },
 
     clearUserData: (state) => {
-      state.userData = {};
+      state.userData = null;
+      state.error=null;
+      state.levelAccess=null;
+      state.loading=false;
     },
   },
 });

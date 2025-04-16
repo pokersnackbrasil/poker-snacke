@@ -18,13 +18,27 @@ function App() {
       if (user) {
         const userDataStored = localStorage.getItem('userData') || sessionStorage.getItem('userData');
         const levelAccessStored = localStorage.getItem('levelAccess') || sessionStorage.getItem('levelAccess');
-
+  
+        // ⚠️ Só reidrata se dados forem válidos
         if (userDataStored && levelAccessStored) {
-          dispatch(setUserData(JSON.parse(userDataStored)));
-          dispatch(setLevelAccess(levelAccessStored));
+          try {
+            const parsedUser = JSON.parse(userDataStored);
+  
+            // Garante que os campos essenciais existem
+            if (parsedUser?.email && parsedUser?.uid && parsedUser?.nome) {
+              dispatch(setUserData(parsedUser));
+              dispatch(setLevelAccess(levelAccessStored));
+            }
+          } catch (err) {
+            console.error("Erro ao parsear dados da sessão:", err);
+          }
         }
+      } else {
+        // ⚠️ Se não há usuário logado no Firebase, limpa Redux
+        dispatch(setUserData(null));
+        dispatch(setLevelAccess(null));
       }
-
+  
       dispatch(setLoading(false));
       setAuthLoading(false);
     });

@@ -11,13 +11,14 @@ import { db,auth } from "../../Server/firebase"
 import Cookies from "js-cookie";
 // import { useDispatch } from "react-redux";
 import { useAppDispatch } from "../../hooks";
-import { setUserData, setLevelAccess } from "../../slices";
+import { setUserData, setLevelAccess, UserData } from "../../slices";
 
 import { useNavigate } from "react-router-dom";
 import { Loading } from "../../componentes/Load";
 import { sendEmailVerification, signInWithEmailAndPassword, signOut, User } from "firebase/auth";
 import { collection, DocumentData, getDocs, query, where } from "firebase/firestore";
 import { useAppSelector } from "../../hooks";
+import { ParseUserData } from "../../utils/ParseUserData";
 
 
 export default function Login() {
@@ -122,7 +123,7 @@ export default function Login() {
         return;
       }
 
-      const userData = querySnapshot.docs[0].data();
+      const userData = ParseUserData(querySnapshot.docs[0].data());
       const acessData = querySnapshotAcess.docs[0].data();
       if (!userData.status) {
         toast.error("Usuário inativo na plataforma");
