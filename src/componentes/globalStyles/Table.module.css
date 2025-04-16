@@ -165,7 +165,7 @@
 
 .vermelhoescuroStyle {
   color: #ffffff;
-  background-color: rgb(175, 1, 44);
+  background-color: #d01c1c;
 }
 
 .verdeStyle {
@@ -216,7 +216,7 @@
 
 .azulmarinhoStyle {
   color: #000000;
-  background-color: #00b8b8;
+  background-color: #00b5b8;
   /* cinza claro (aproximado da imagem) */
 }
 
@@ -236,7 +236,7 @@
 
 .rosabebeStyle {
   color: #ffffff;
-  background-color: #f075a8;
+  background-color: #ff69b8;
   /* cinza claro (aproximado da imagem) */
 }
 

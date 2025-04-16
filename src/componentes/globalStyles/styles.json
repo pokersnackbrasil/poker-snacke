@@ -19663,13 +19663,13 @@
             {
               "id": "color5",
               "color": "cinzaStyle",
-              "text1": "2x-Call3b-callAllin",
-              "text2": "26% (336 combos)"
+              "text1": "Limp-Fold",
+              "text2": "13% (166 combos)"
             },
             {
               "id": "color6",
               "color": "azulmarinhoStyle",
-              "text1": "Limp-Fold",
+              "text1": "Limp-call - FoldvsAllin",
               "text2": "13% (166 combos)"
             },
             {
@@ -19753,8 +19753,8 @@
           "E6": "laranjaStyle",
           "E7": "laranjaStyle",
           "E8": "laranjaStyle",
-          "E9": "amareloStyle",
-          "E10": "amareloStyle",
+          "E9": "azulmarinhoStyle",
+          "E10": "azulmarinhoStyle",
           "E11": "amareloStyle",
           "E12": "amareloStyle",
           "E13": "amareloStyle",
