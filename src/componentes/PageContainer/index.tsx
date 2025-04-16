@@ -1,7 +1,6 @@
-import styles from "./style.module.css"
+import Style from "./style.module.css"
 import { useEffect, useState } from "react";
 import { Table } from "../../componentes/Table";
-import Style from "./home.module.css";
 // import rawObjectsColors from "../../componentes/globalStyles/styles.json";
 import style from "../../componentes/globalStyles/Table.module.css"
 import { Legend } from "../../componentes/Legend";
@@ -20,7 +19,8 @@ export const PageContainer = ({json}:Props) => {
     return mapped;
   }
   
-  type RawObjectsColors = typeof json;
+  // type RawObjectsColors = typeof json;
+  type RawObjectsColors = Record<string, any>;;
   type RawPositionKey = keyof RawObjectsColors;
   
   function mapObjectsColors(jsonData: RawObjectsColors, styleModule: typeof style) {
