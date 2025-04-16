@@ -11,7 +11,7 @@ import { db,auth } from "../../Server/firebase"
 import Cookies from "js-cookie";
 // import { useDispatch } from "react-redux";
 import { useAppDispatch } from "../../hooks";
-import { setUserData, setLevelAccess, UserData } from "../../slices";
+import { setUserData, setLevelAccess} from "../../slices";
 
 import { useNavigate } from "react-router-dom";
 import { Loading } from "../../componentes/Load";
