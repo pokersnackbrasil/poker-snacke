@@ -173,7 +173,7 @@
 
 .roxomarronStyle {
   color: #ffffff;
-  background: linear-gradient(to top, rgb(138, 3, 115) 50%, #bb7d12 50%);
+  background: linear-gradient(to top, #bb7d12 50%, rgb(138, 3, 115) 50%);
 }
 
 .roxopinkStyle {
