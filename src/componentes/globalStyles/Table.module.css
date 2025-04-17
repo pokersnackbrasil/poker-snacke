@@ -39,6 +39,10 @@
 
 .titleLegenda{
   margin-bottom: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .titleLegenda span{

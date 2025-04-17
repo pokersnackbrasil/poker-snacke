@@ -13,7 +13,8 @@ type Props = {
 
 export const PageContainer = ({json}:Props) => {
 
-  const [highlightedClass, setHighlightedClass] = useState<string | null>(null);
+  const [highlightedClasses, setHighlightedClasses] = useState<string[] | null>(null);
+
 
 
   function mapStyleKeys(styles: Record<string, string>, styleModule: Record<string, string>) {
@@ -124,8 +125,8 @@ export const PageContainer = ({json}:Props) => {
       </div>
       <span className={Style.positionTitle}>{position}</span>
       <div className={Style.containerTable}>
-        <Table onHoverClass={setHighlightedClass} objectColors={objectColors.styles||{}}/>
-        <Legend highlightedClass={highlightedClass} objectLegends={objectColors.legends||null}/>
+        <Table onHoverClasses={setHighlightedClasses} objectColors={objectColors.styles||{}}/>
+        <Legend highlightedClasses={highlightedClasses} objectLegends={objectColors.legends||null}/>
       </div>
     </div>
   </div>

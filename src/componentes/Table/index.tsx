@@ -1,15 +1,20 @@
+import { gradientColorMap } from "../globalStyles/DePara";
 import styles from "../globalStyles/Table.module.css";
 type TableProps = {
   objectColors: { [key: string]: string };
-  onHoverClass?: (hoveredClass: string | null) => void;
+  onHoverClasses?: (hoveredClasses: string[] | null) => void;
 };
-export function Table({ objectColors, onHoverClass }: TableProps) {
+export function Table({ objectColors, onHoverClasses }: TableProps) {
   const handleMouseEnter = (colorClass: string) => {
-    if (onHoverClass) onHoverClass(colorClass);
+    const relatedColors = gradientColorMap[colorClass]
+      ? gradientColorMap[colorClass]
+      : [colorClass];
+
+    if (onHoverClasses) onHoverClasses(relatedColors);
   };
 
   const handleMouseLeave = () => {
-    if (onHoverClass) onHoverClass(null);
+    if (onHoverClasses) onHoverClasses(null);
   };
 
   return (
