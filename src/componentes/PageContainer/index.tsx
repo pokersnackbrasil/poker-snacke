@@ -7,10 +7,15 @@ import { Legend } from "../../componentes/Legend";
 import { useNavigate } from "react-router-dom";
 
 type Props = {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	json: any;
 };
 
 export const PageContainer = ({json}:Props) => {
+
+  const [highlightedClass, setHighlightedClass] = useState<string | null>(null);
+
+
   function mapStyleKeys(styles: Record<string, string>, styleModule: Record<string, string>) {
     const mapped: Record<string, string> = {};
     for (const key in styles) {
@@ -20,15 +25,18 @@ export const PageContainer = ({json}:Props) => {
   }
   
   // type RawObjectsColors = typeof json;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   type RawObjectsColors = Record<string, any>;;
   type RawPositionKey = keyof RawObjectsColors;
   
   function mapObjectsColors(jsonData: RawObjectsColors, styleModule: typeof style) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const mappedData: Record<string, any> = {};
   
     (Object.keys(jsonData) as RawPositionKey[]).forEach((position) => {
       mappedData[position] = {
         ...jsonData[position],
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         blinds: jsonData[position].blinds.map((blind: any) => ({
           ...blind,
           styles: mapStyleKeys(blind.styles, styleModule),
@@ -36,6 +44,7 @@ export const PageContainer = ({json}:Props) => {
             ? {
                 ...blind.legends,
                 values: Object.fromEntries(
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   Object.entries(blind.legends.values).map(([key, val]: any) => [
                     key,
                     {
@@ -65,6 +74,7 @@ export const PageContainer = ({json}:Props) => {
       const blinds = objectsColors[position]?.blinds || [];
       setListBlinds(blinds);
       setBlind(blinds[0]?.id || "");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [position]);
   
     useEffect(() => {
@@ -74,6 +84,7 @@ export const PageContainer = ({json}:Props) => {
       } else {
         setObjectColors({});
       }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [blind, position]);
  return (
   <div className={Style.home} style={{backgroundColor:"#ece9e9"}}>
@@ -97,6 +108,7 @@ export const PageContainer = ({json}:Props) => {
     <div className={Style.bodyConteudo}>
       <div className={Style.menuBlinds}>
         {listBlinds.map(
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (item: { id: string; name: string; styles?: any }) => (
             <button
               key={item.id}
@@ -112,8 +124,8 @@ export const PageContainer = ({json}:Props) => {
       </div>
       <span className={Style.positionTitle}>{position}</span>
       <div className={Style.containerTable}>
-        <Table objectColors={objectColors.styles || {}} />
-        <Legend objectLegends = {objectColors.legends||null}/>
+        <Table onHoverClass={setHighlightedClass} objectColors={objectColors.styles||{}}/>
+        <Legend highlightedClass={highlightedClass} objectLegends={objectColors.legends||null}/>
       </div>
     </div>
   </div>
