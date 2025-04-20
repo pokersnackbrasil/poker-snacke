@@ -1,7 +1,7 @@
 export const gradientColorMap: Record<string, string[]> = {
  marronvermelhoStyle: ['marronStyle', 'vermelhoescuroStyle'],
  roxovermelhoStyle: ['roxoStyle', 'vermelhoescuroStyle'],
- amarelo1Style: ['amareloStyle', 'defaultStyle'],
+ amarelo1Style: ['amareloStyle'],
  roxolaranjaStyle: ['laranjaStyle', 'roxoStyle'],
  roxomarronStyle: ['roxoStyle', 'marronStyle'],
  roxopinkStyle: ['roxoStyle', 'pinkStyle'],

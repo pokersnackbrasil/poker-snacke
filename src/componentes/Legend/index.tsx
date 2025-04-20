@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "../globalStyles/Table.module.css";
 type LegendProps = {
  objectLegends: {
@@ -11,30 +10,33 @@ type LegendProps = {
    }[];
  };
  highlightedClasses?: string[] | null;
+ dinamico:boolean;
+ setDinamico:()=>void;
 };
-export function Legend ({objectLegends,highlightedClasses}: LegendProps) {
-  const[dinamica,setDinamica]=useState(true)
+export function Legend ({objectLegends,highlightedClasses,dinamico,setDinamico}: LegendProps) {
+  
  if(objectLegends === null) {
    return <div>Loading...</div>; 
  }else if(objectLegends !== null) {
   const values = Array.isArray(objectLegends.values)
     ? objectLegends.values
     : Object.values(objectLegends.values) as { id: string; color: string; text1: string; text2: string }[];
-
   const isHighlighted = (color: string) => highlightedClasses?.includes(color);
+
+  
   return (
     <div className={styles.legenda}>
       <div className={styles.titleLegenda}>
         <span>Legendas</span>
         <span style={{fontSize:'1rem', color:"#11110f"}}>
-          DINAMICO <input type="checkbox" checked={dinamica} onChange={(e) => setDinamica(e.target.checked)}/>
+          DINAMICO <input type="checkbox" checked={dinamico}  style={{cursor:'pointer'}} onChange={() => setDinamico()}/>
         </span>
       </div>
       <div>
         {values != null
           ? values.map((legend) => (
               <>
-                {dinamica ? (
+                {dinamico ? (
                   <div
                     key={legend.id}
                     className={`${legend.color || styles.defaultStyle} ${
@@ -54,6 +56,7 @@ export function Legend ({objectLegends,highlightedClasses}: LegendProps) {
                 ) : (
                   <div
                     key={legend.id}
+                    style={{cursor:"none"}}
                     className={`${legend.color || styles.defaultStyle} ${
                       styles.defaultCelulaLegenda
                     }`}

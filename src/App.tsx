@@ -25,7 +25,7 @@ function App() {
             const parsedUser = JSON.parse(userDataStored);
   
             // Garante que os campos essenciais existem
-            if (parsedUser?.email && parsedUser?.uid && parsedUser?.nome) {
+            if (parsedUser?.email && parsedUser?.id && parsedUser?.nome) {
               dispatch(setUserData(parsedUser));
               dispatch(setLevelAccess(levelAccessStored));
             }
