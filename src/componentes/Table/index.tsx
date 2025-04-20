@@ -6,9 +6,10 @@ type TableProps = {
 };
 export function Table({ objectColors, onHoverClasses}: TableProps) {
   const handleMouseEnter = (colorClass: string) => {
-    const relatedColors = gradientColorMap[colorClass]
-      ? gradientColorMap[colorClass]
-      : [colorClass];
+    const color = colorClass.match(/_(.+?)_[^_]*/)?.[1]||""
+    const relatedColors = gradientColorMap[color]
+      ? gradientColorMap[color]
+      : [color];
 
     if (onHoverClasses) onHoverClasses(relatedColors);
   };

@@ -14,6 +14,7 @@ type LegendProps = {
  setDinamico:()=>void;
 };
 export function Legend ({objectLegends,highlightedClasses,dinamico,setDinamico}: LegendProps) {
+  console.log("highlightedClasses: ",highlightedClasses)
   
  if(objectLegends === null) {
    return <div>Loading...</div>; 
@@ -21,7 +22,11 @@ export function Legend ({objectLegends,highlightedClasses,dinamico,setDinamico}:
   const values = Array.isArray(objectLegends.values)
     ? objectLegends.values
     : Object.values(objectLegends.values) as { id: string; color: string; text1: string; text2: string }[];
-  const isHighlighted = (color: string) => highlightedClasses?.includes(color);
+  const isHighlighted = (color: string) => {
+    if(color){
+      return highlightedClasses?.includes(color.match(/_(.+?)_[^_]*/)?.[1]||"")
+    }
+  };
 
   
   return (
