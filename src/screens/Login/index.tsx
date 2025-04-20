@@ -15,7 +15,7 @@ import { setUserData, setLevelAccess} from "../../slices";
 import { useNavigate } from "react-router-dom";
 import { Loading } from "../../componentes/Load";
 import { sendEmailVerification, signInWithEmailAndPassword, signOut, User } from "firebase/auth";
-import { collection, doc, getDocs, query, updateDoc, where } from "firebase/firestore";
+import { collection, getDocs, query, updateDoc, where } from "firebase/firestore";
 import { useAppSelector } from "../../hooks";
 import { ParseUserData } from "../../utils/ParseUserData";
 import { saveUserSession } from "../../utils/saveUser";
