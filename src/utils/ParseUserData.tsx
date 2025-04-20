@@ -6,7 +6,7 @@ export function ParseUserData(data: DocumentData): UserData {
   if (
     typeof data !== "object" ||
     typeof data.email !== "string" ||
-    typeof data.uid !== "string" ||
+    typeof data.id !== "string" ||
     typeof data.nome !== "string" ||
     typeof data.status !== "boolean"
   ) {
@@ -16,7 +16,7 @@ export function ParseUserData(data: DocumentData): UserData {
   return {
     email: data.email,
     status: data.status,
-    uid: data.uid,
+    id: data.id,
     nome: data.nome,
   };
 }

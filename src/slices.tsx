@@ -3,8 +3,9 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 export interface UserData {
 	email: string;
 	status: boolean;
-	uid: string;
+	id: string;
 	nome: string;
+  dinamico:boolean
 }
 interface UserState {
 	userData: UserData|null;

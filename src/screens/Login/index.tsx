@@ -103,7 +103,7 @@ export default function Login() {
       );
       const acessQuery = query(
         collection(db, "acesso"),
-        where("uid", "==", currentUser.user.uid),
+        where("id", "==", currentUser.user.uid),
         where("status", "==", true)
       );
 

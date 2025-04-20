@@ -1,10 +1,15 @@
 import Style from "./style.module.css"
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Table } from "../../componentes/Table";
 // import rawObjectsColors from "../../componentes/globalStyles/styles.json";
 import style from "../../componentes/globalStyles/Table.module.css"
 import { Legend } from "../../componentes/Legend";
 import { useNavigate } from "react-router-dom";
+import { RootState } from "../../store";
+import { useSelector } from "react-redux";
+import { updateDinamico } from "../../Server/update";
+import { useDispatch } from "react-redux";
+import { setUserData } from "../../slices";
 
 type Props = {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -12,6 +17,12 @@ type Props = {
 };
 
 export const PageContainer = ({json}:Props) => {
+
+  const dispatch = useDispatch();
+
+
+  const didMountRef = useRef(false);
+
 
   const [highlightedClasses, setHighlightedClasses] = useState<string[] | null>(null);
 
@@ -87,6 +98,35 @@ export const PageContainer = ({json}:Props) => {
       }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [blind, position]);
+
+    const userData = useSelector((state: RootState) => state.user.userData);
+
+    const [ dinamico,setDinamico]=useState(true)
+
+
+
+    useEffect(()=>{
+      if(userData){
+        setDinamico(userData.dinamico)
+      }
+    },[userData])
+
+
+    useEffect(() => {
+      if (!didMountRef.current) {
+        didMountRef.current = true;
+        return;
+      }
+    
+      if (userData) {
+        updateDinamico(userData.id, dinamico)
+        .then(() => dispatch(setUserData({ ...userData, dinamico })))
+        .catch((err) => console.error("Erro ao atualizar dinamico:", err));
+      }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [dinamico]);
+    
+
  return (
   <div className={Style.home} style={{backgroundColor:"#ece9e9"}}>
   <div className={Style.body}>
@@ -125,8 +165,8 @@ export const PageContainer = ({json}:Props) => {
       </div>
       <span className={Style.positionTitle}>{position}</span>
       <div className={Style.containerTable}>
-        <Table onHoverClasses={setHighlightedClasses} objectColors={objectColors.styles||{}}/>
-        <Legend highlightedClasses={highlightedClasses} objectLegends={objectColors.legends||null}/>
+        <Table dinamico={dinamico} onHoverClasses={setHighlightedClasses} objectColors={objectColors.styles||{}}/>
+        <Legend dinamico={dinamico} setDinamico={()=>{setDinamico(!dinamico)}} highlightedClasses={highlightedClasses} objectLegends={objectColors.legends||null}/>
       </div>
     </div>
   </div>
