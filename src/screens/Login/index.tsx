@@ -8,7 +8,6 @@ import InputText from "../../componentes/IputText";
 import {HandleError} from "../../componentes/error/Error"
 import { toast } from "react-toastify";
 import { db,auth } from "../../Server/firebase"
-import Cookies from "js-cookie";
 // import { useDispatch } from "react-redux";
 import { useAppDispatch } from "../../hooks";
 import { setUserData, setLevelAccess} from "../../slices";
@@ -16,9 +15,10 @@ import { setUserData, setLevelAccess} from "../../slices";
 import { useNavigate } from "react-router-dom";
 import { Loading } from "../../componentes/Load";
 import { sendEmailVerification, signInWithEmailAndPassword, signOut, User } from "firebase/auth";
-import { collection, DocumentData, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { useAppSelector } from "../../hooks";
 import { ParseUserData } from "../../utils/ParseUserData";
+import { saveUserSession } from "../../utils/saveUser";
 
 
 export default function Login() {
@@ -54,27 +54,7 @@ export default function Login() {
     }
   };
 
-  const saveUserSession = async (userData: DocumentData | null,acesso: string, rememberPassword: boolean) => {
-    if (typeof userData !== "object" || !acesso || userData === null) {
-      console.error("userData inválido:", userData);
-      return;
-    }
-
-    const sessionData = JSON.stringify(userData);
-    const levelAccess = acesso;
-
-    if (rememberPassword) {
-      localStorage.setItem("userData", sessionData);
-      localStorage.setItem("levelAccess", levelAccess);
-    } else {
-      sessionStorage.setItem("userData", sessionData);
-      sessionStorage.setItem("levelAccess", levelAccess);
-    }
-
-    Cookies.set("user", sessionData, {
-      expires: rememberPassword ? 30 : undefined,
-    });
-  };
+  
   
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>)=>{

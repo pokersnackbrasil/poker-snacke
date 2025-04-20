@@ -10,6 +10,9 @@ import { useSelector } from "react-redux";
 import { updateDinamico } from "../../Server/update";
 import { useDispatch } from "react-redux";
 import { setUserData } from "../../slices";
+import { saveUserSession } from "../../utils/saveUser";
+// import Cookies from "js-cookie";
+
 
 type Props = {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -101,7 +104,7 @@ export const PageContainer = ({json}:Props) => {
 
     const userData = useSelector((state: RootState) => state.user.userData);
 
-    const [ dinamico,setDinamico]=useState(true)
+    const [ dinamico,setDinamico]=useState(userData?.dinamico ?? true)
 
 
 
@@ -118,13 +121,24 @@ export const PageContainer = ({json}:Props) => {
         return;
       }
     
-      if (userData) {
+      if (userData && userData.dinamico !== dinamico) {
+        const updatedUser = { ...userData, dinamico };
+    
         updateDinamico(userData.id, dinamico)
-        .then(() => dispatch(setUserData({ ...userData, dinamico })))
-        .catch((err) => console.error("Erro ao atualizar dinamico:", err));
+          .then(() => {
+            dispatch(setUserData(updatedUser));
+            saveUserSession(
+              updatedUser,
+              localStorage.getItem("levelAccess") || "",
+              true
+            );
+          })
+          .catch((err) => console.error("Erro ao atualizar dinamico:", err));
       }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dinamico]);
+    
+    
     
 
  return (
