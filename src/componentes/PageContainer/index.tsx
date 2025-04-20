@@ -165,7 +165,7 @@ export const PageContainer = ({json}:Props) => {
       </div>
       <span className={Style.positionTitle}>{position}</span>
       <div className={Style.containerTable}>
-        <Table dinamico={dinamico} onHoverClasses={setHighlightedClasses} objectColors={objectColors.styles||{}}/>
+        <Table onHoverClasses={setHighlightedClasses} objectColors={objectColors.styles||{}}/>
         <Legend dinamico={dinamico} setDinamico={()=>{setDinamico(!dinamico)}} highlightedClasses={highlightedClasses} objectLegends={objectColors.legends||null}/>
       </div>
     </div>
