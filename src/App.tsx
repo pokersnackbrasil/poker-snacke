@@ -1,23 +1,27 @@
 import { RoutesApp } from './Routes';
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 import { useAppDispatch } from './hooks';
-import { setUserData, setLevelAccess, setLoading, clearUserData } from './slices';
+import { setUserData, setLevelAccess, clearUserData } from './slices';
 import { auth, db } from "./Server/firebase";
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { Loading } from './componentes/Load';
 import { collection, query, where, getDocs, onSnapshot } from 'firebase/firestore';
 import { toast } from 'react-toastify';
+import {  useAppSelector } from './hooks';
+import { loginStart, loginSuccess, loginFail } from './slices/authSlice';
 
 function App() {
   const dispatch = useAppDispatch();
-  const [authLoading, setAuthLoading] = useState(true);
+
+  const authLoading = useAppSelector(state => state.auth.loading);
+
 
   useEffect(() => {
-    dispatch(setLoading(true));
-
+    
     let unsubscribeSnapshot: (() => void) | null = null;
 
     const unsubscribeAuth = onAuthStateChanged(auth, async (user) => {
+      dispatch(loginStart());
       if (user) {
         const userDataStored = localStorage.getItem('userData') || sessionStorage.getItem('userData');
         const levelAccessStored = localStorage.getItem('levelAccess') || sessionStorage.getItem('levelAccess');
@@ -40,9 +44,13 @@ function App() {
                   localStorage.clear();
                   sessionStorage.clear();
                   dispatch(clearUserData());
+                  dispatch(loginFail("Sessão expirada."));
+
                 } else {
                   dispatch(setUserData(parsedUser));
                   dispatch(setLevelAccess(levelAccessStored));
+                  dispatch(loginSuccess(parsedUser));
+
 
                   // Ouvir em tempo real o documento do usuário
                   unsubscribeSnapshot = onSnapshot(docRef, (snapshot) => {
@@ -53,25 +61,26 @@ function App() {
                         localStorage.clear();
                         sessionStorage.clear();
                         dispatch(clearUserData());
+                        dispatch(loginFail("Sessão interrompida."));
                       });
                     }
                   });
                 }
               } else {
                 dispatch(clearUserData());
+                dispatch(loginFail("Usuário não encontrado."));
               }
             }
           } catch (err) {
             console.error("Erro ao parsear dados da sessão:", err);
             dispatch(clearUserData());
+            dispatch(loginFail("Erro na leitura da sessão."));
           }
         }
       } else {
         dispatch(clearUserData());
+        dispatch(loginFail("Usuário não encontrado."));
       }
-
-      dispatch(setLoading(false));
-      setAuthLoading(false);
     });
 
     return () => {
