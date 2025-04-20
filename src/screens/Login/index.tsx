@@ -15,10 +15,11 @@ import { setUserData, setLevelAccess} from "../../slices";
 import { useNavigate } from "react-router-dom";
 import { Loading } from "../../componentes/Load";
 import { sendEmailVerification, signInWithEmailAndPassword, signOut, User } from "firebase/auth";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { collection, doc, getDocs, query, updateDoc, where } from "firebase/firestore";
 import { useAppSelector } from "../../hooks";
 import { ParseUserData } from "../../utils/ParseUserData";
 import { saveUserSession } from "../../utils/saveUser";
+import { v4 as uuidv4 } from 'uuid';
 
 
 export default function Login() {
@@ -90,6 +91,8 @@ export default function Login() {
       const querySnapshot = await getDocs(userQuery);
       const querySnapshotAcess = await getDocs(acessQuery);
 
+      const userDocRef = querySnapshot.docs[0].ref;
+
       if (querySnapshot.empty) {
         toast.error("Usuário não encontrado.");
         await signOut(auth);
@@ -105,6 +108,9 @@ export default function Login() {
 
       const userData = ParseUserData(querySnapshot.docs[0].data());
       const acessData = querySnapshotAcess.docs[0].data();
+
+      const sessionToken = uuidv4();
+
       if (!userData.status) {
         toast.error("Usuário inativo na plataforma");
         await signOut(auth);
@@ -117,6 +123,11 @@ export default function Login() {
         setLoadingLogin(false);
         return;
       }
+      await updateDoc(userDocRef, {
+        currentSession: sessionToken
+      });
+
+      userData.currentSession = sessionToken;
 
       await saveUserSession(userData,acessData.nivel,rememberPassword);
 

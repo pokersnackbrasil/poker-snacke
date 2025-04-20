@@ -19,6 +19,7 @@ export function ParseUserData(data: DocumentData): UserData {
     status: data.status,
     id: data.id,
     nome: data.nome,
-    dinamico:data.dinamico
+    dinamico:data.dinamico,
+    currentSession:data.currentSession||null,
   };
 }

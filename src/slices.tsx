@@ -5,7 +5,8 @@ export interface UserData {
 	status: boolean;
 	id: string;
 	nome: string;
-  dinamico:boolean
+  dinamico:boolean;
+  currentSession?:string|null;
 }
 interface UserState {
 	userData: UserData|null;

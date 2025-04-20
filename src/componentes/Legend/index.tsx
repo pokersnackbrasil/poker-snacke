@@ -39,11 +39,10 @@ export function Legend ({objectLegends,highlightedClasses,dinamico,setDinamico}:
       </div>
       <div>
         {values != null
-          ? values.map((legend) => (
-              <>
+          ? values.map((legend,i) => (
+              <div key={i}>
                 {dinamico ? (
                   <div
-                    key={legend.id}
                     className={`${legend.color || styles.defaultStyle} ${
                       styles.defaultCelulaLegenda
                     }`}
@@ -60,7 +59,6 @@ export function Legend ({objectLegends,highlightedClasses,dinamico,setDinamico}:
                   </div>
                 ) : (
                   <div
-                    key={legend.id}
                     style={{cursor:"none"}}
                     className={`${legend.color || styles.defaultStyle} ${
                       styles.defaultCelulaLegenda
@@ -70,7 +68,7 @@ export function Legend ({objectLegends,highlightedClasses,dinamico,setDinamico}:
                     <p>{legend.text2}</p>
                   </div>
                 )}
-              </>
+              </div>
             ))
           : null}
       </div>
