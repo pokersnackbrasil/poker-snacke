@@ -20,11 +20,11 @@ export const RoutesApp = () => {
           <Route element={<PrivateRoute/>}>
             <Route path="/Home" element={<Home/>} />
           </Route>
-          <Route element={<PrivateRoute requiredLevels={["1", "4"]}/>}>
-            <Route path="/spin&go" element={<Home_1 />} />
+          <Route element={<PrivateRoute requiredLevels={["1","4","6","7"]}/>}>
+            <Route path="/spin&go&fish" element={<Home_1 />} />
           </Route>
-          <Route element={<PrivateRoute requiredLevels={["2", "4"]}/>}>
-            <Route path="/bountybuilders" element={<Home_2/>} />
+          <Route element={<PrivateRoute requiredLevels={["2","4","5","7"]}/>}>
+            <Route path="/spin&go&reg" element={<Home_2/>} />
           </Route>
           
           <Route path="*" element={<Login />} />

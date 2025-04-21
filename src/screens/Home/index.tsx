@@ -35,12 +35,12 @@ export function Home() {
         <CardButton
           classe="btn_1"
           text="Sping & Go vs Fish"
-          action={() => handleAccess(["1", "4"], "/spin&go")}
+          action={() => handleAccess(["1","4","6","7"], "/spin&go&fish")}
         />
         <CardButton
           classe="btn_2"
           text="Sping & Go vs Reg"
-          action={() => handleAccess(["2", "4"], "/bountybuilders")}
+          action={() => handleAccess(["2","4","5","7"], "/spin&go&reg")}
         />
         <CardButton
           classe="btn_3"
