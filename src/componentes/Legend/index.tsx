@@ -14,7 +14,7 @@ type LegendProps = {
  setDinamico:()=>void;
 };
 export function Legend ({objectLegends,highlightedClasses,dinamico,setDinamico}: LegendProps) {
-  console.log("highlightedClasses: ",highlightedClasses)
+  // console.log("highlightedClasses: ",highlightedClasses)
   
  if(objectLegends === null) {
    return <div>Loading...</div>; 

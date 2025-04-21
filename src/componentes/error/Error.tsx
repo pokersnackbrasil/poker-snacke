@@ -7,11 +7,11 @@ export function HandleError(error:unknown){
    typeof error === "string"
      ? (errorMessages as Record<string, string>)[error]
      : (errorMessages as Record<string, string>)[(error as any).code];
- console.log("erro: ", error)
- console.log("Código de erro: ", message)
+//  console.log("erro: ", error)
+//  console.log("Código de erro: ", message)
  if (message) {
   toast.error(message);
  } else {
-  console.log(error);
+  // console.log(error);
  }
 }

@@ -27,7 +27,7 @@ const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const auth = getAuth(app);
 setPersistence(auth, browserLocalPersistence)
   .then(() => {
-    console.log("Persistência definida com sucesso.");
+    // console.log("Persistência definida com sucesso.");
   })
   .catch((error) => {
     console.error("Erro ao definir persistência: ", error);
@@ -38,9 +38,9 @@ const db = getFirestore(app);
 const authCheckPromise: Promise<void> = new Promise((resolve) => {
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      console.log("Firebase inicializado e usuário autenticado.");
+      // console.log("Firebase inicializado e usuário autenticado.");
     } else {
-      console.log("Firebase inicializado, mas nenhum usuário autenticado.");
+      // console.log("Firebase inicializado, mas nenhum usuário autenticado.");
     }
     resolve();
   });

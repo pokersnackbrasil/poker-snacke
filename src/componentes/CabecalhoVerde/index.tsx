@@ -17,7 +17,7 @@ export default function CabecalhoVerde({ children }: CardProps) {
   const navigate = useNavigate();
 
   const handleLogout = async () => {
-    console.log("Saindo - 1");
+    // console.log("Saindo - 1");
     try {
       const currentUser = auth.currentUser;
 
