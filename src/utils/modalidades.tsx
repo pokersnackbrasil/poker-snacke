@@ -14,11 +14,8 @@ const botoesSpingGoFish = [
  "3W BB X SB LIMP",
  "3W BB X SB MR",
  "HU X SB",
- "HU X SB VS REG",
  "HU * BB VS LIMP",
- "HU * BB VS LIMP REG",
  "HU * SB VS MR",
- "HU * BB VS MR REG",
  "HU * BB VS ALL-IN",
  "HU * BB VS 3X"
 ];
