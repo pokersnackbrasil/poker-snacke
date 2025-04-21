@@ -3,15 +3,15 @@ import { useAppSelector } from '../hooks';
 import { Loading } from '../componentes/Load';
 
 export const PrivateRoute = ({ requiredLevels }: { requiredLevels?: string[] }) => {
-  const userData = useAppSelector((state) => state.user.userData);
+  const isAuthenticated = useAppSelector((state) => state.auth.isAuthenticated);
+  const loading = useAppSelector((state) => state.auth.loading);
   const levelAccess = useAppSelector((state) => state.user.levelAccess);
-  const loading = useAppSelector((state) => state.user.loading);
 
   if (loading) {
-    return <Loading/>
+    return <Loading />;
   }
 
-  if (!userData || !levelAccess) {
+  if (!isAuthenticated || !levelAccess) {
     return <Navigate to="/Login" replace />;
   }
 
@@ -24,5 +24,3 @@ export const PrivateRoute = ({ requiredLevels }: { requiredLevels?: string[] }) 
 
   return <Outlet />;
 };
-
-
