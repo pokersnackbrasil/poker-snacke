@@ -4125,7 +4125,16 @@
           "I1": "roxoStyle",
           "I2": "amareloStyle",
           "I3": "cinzaStyle",
+<<<<<<< HEAD
           "I9": "cinzaStyle",
+=======
+          "I4": "",
+          "I5": "",
+          "I6": "",
+          "I7": "",
+          "I8": "",
+          "I9": "verdeStyle",
+>>>>>>> 887335708dedca3f84dcecc14a1cc548a2f409a9
           "I10": "roxoStyle",
           "I11": "azulamareloStyle",
           "I12": "azulamareloStyle",
@@ -4308,7 +4317,7 @@
           "H4": "amareloStyle",
           "H5": "amareloStyle",
           "H6": "azulclaroStyle",
-          "H7": "marronStyle",
+          "H7": "roxoStyle",
           "H8": "verdeStyle",
           "H9": "roxoStyle",
           "H10": "roxoStyle",
@@ -4955,7 +4964,7 @@
         "id": "blind36",
         "name": "24+",
         "legends": {
-          "legend": "60.33% de mãos ( 800 combos)",
+          "legend": "9.8% de mãos ( 130 combos)",
           "values": [
             {
               "id": "color1",
@@ -4994,7 +5003,7 @@
         "id": "blind37",
         "name": "22-23",
         "legends": {
-          "legend": "60.33% de mãos ( 800 combos)",
+          "legend": "11,92% de mãos ( 158 combos)",
           "values": [
             {
               "id": "color1",
@@ -5080,7 +5089,7 @@
         "id": "blind39",
         "name": "18-19",
         "legends": {
-          "legend": "60.33% de mãos ( 158 combos)",
+          "legend": "11.92% de mãos ( 158 combos)",
           "values": [
             {
               "id": "color1",
@@ -5146,9 +5155,10 @@
           "B2": "verdeStyle",
           "B3": "verdeStyle",
           "B4": "verdeStyle",
-          "B5": "verdeStyle",
+          "B5": "",
           "C1": "verdeStyle",
           "C3": "verdeStyle",
+          "C4": "verdeStyle",
           "D1": "verdeStyle",
           "D4": "verdeStyle",
           "E1": "verdeStyle",
@@ -5344,6 +5354,7 @@
           "C3": "verdeStyle",
           "C4": "verdeStyle",
           "D1": "verdeStyle",
+          "D2": "verdeStyle",
           "D4": "verdeStyle",
           "E1": "verdeStyle",
           "E5": "verdeStyle",
@@ -5420,7 +5431,7 @@
         "id": "blind46",
         "name": "1-8",
         "legends": {
-          "legend": "22.47% de mãos ( 158 combos)",
+          "legend": "22.47% de mãos ( 298 combos)",
           "values": [
             {
               "id": "color1",
@@ -5526,13 +5537,13 @@
         "id": "blind48",
         "name": "12-14",
         "legends": {
-          "legend": "12% de mãos ( 154 combos)",
+          "legend": "12% de mãos ( 174 combos)",
           "values": [
             {
               "id": "color1",
               "color": "verdeStyle",
               "text1": "Call",
-              "text2": "14% (174 combos)"
+              "text2": "12% (174 combos)"
             }
           ]
         },
@@ -5560,7 +5571,7 @@
           "E5": "verdeStyle",
           "F1": "verdeStyle",
           "F6": "verdeStyle",
-          "G1": "verdeStyle",
+          "G1": "",
           "G7": "verdeStyle",
           "H8": "verdeStyle",
           "I9": "verdeStyle",
@@ -5652,10 +5663,12 @@
           "B6": "verdeStyle",
           "C1": "verdeStyle",
           "C2": "verdeStyle",
+          "C3": "verdeStyle",
           "C4": "verdeStyle",
           "C5": "verdeStyle",
           "D1": "verdeStyle",
           "D2": "verdeStyle",
+          "D4": "verdeStyle",
           "D5": "verdeStyle",
           "E1": "verdeStyle",
           "E2": "verdeStyle",
@@ -5746,8 +5759,11 @@
           "I9": "verdeStyle",
           "J1": "verdeStyle",
           "J10": "verdeStyle",
+          "K1": "verdeStyle",
           "K11": "verdeStyle",
+          "L1": "verdeStyle",
           "L12": "verdeStyle",
+          "M1": "verdeStyle",
           "M13": "verdeStyle"
         }
       },
@@ -6045,7 +6061,7 @@
           "G9": "verdeStyle",
           "G10": "verdeStyle",
           "G11": "verdeStyle",
-          "G12": "verdeStyle",
+          "G12": "",
           "H1": "verdeStyle",
           "H2": "verdeStyle",
           "H3": "verdeStyle",
@@ -6305,7 +6321,7 @@
           "A2": "azulclaroStyle",
           "A3": "azulclaroStyle",
           "A4": "azulclaroStyle",
-          "A5": "azulStyle",
+          "A5": "azulclaroStyle",
           "A6": "azulStyle",
           "A7": "azulStyle",
           "A8": "azulStyle",
@@ -6404,7 +6420,7 @@
           "H13": "cinzaStyle",
           "I1": "azulStyle",
           "I2": "cinzaStyle",
-          "I6": "cinzaStyle",
+          "I6": "",
           "I7": "cinzaStyle",
           "I8": "cinzaStyle",
           "I9": "azulStyle",
@@ -6450,7 +6466,7 @@
             {
               "id": "color2",
               "color": "pinkStyle",
-              "text1": "Call-Fold",
+              "text1": "ISO 3x-Call3b-FoldvsAllin",
               "text2": "3% (36 combos)"
             },
             {
@@ -6603,7 +6619,7 @@
         "id": "blind49",
         "name": "1-13",
         "legends": {
-          "legend": "61% de mãos ( 774 combos)",
+          "legend": "56% de mãos ( 730 combos)",
           "values": [
             {
               "id": "color1",
@@ -6718,6 +6734,7 @@
           "H8": "azulStyle",
           "H9": "cinzaStyle",
           "H10": "cinzaStyle",
+          "H11": "cinzaStyle",
           "I1": "azulStyle",
           "I2": "azulStyle",
           "I9": "azulStyle",
@@ -6857,7 +6874,7 @@
         "id": "blind51",
         "name": "13-17",
         "legends": {
-          "legend": "35% de mãos ( 414 combos)",
+          "legend": "30% de mãos ( 390 combos)",
           "values": [
             {
               "id": "color1",
@@ -7114,7 +7131,7 @@
           "E5": "azulclaroStyle",
           "E6": "azulStyle",
           "E7": "amareloStyle",
-          "F1": "azulclaroStyle",
+          "F1": "azulStyle",
           "F6": "azulStyle",
           "F7": "azulStyle",
           "G1": "amareloStyle",
@@ -7165,7 +7182,7 @@
           "A2": "azulStyle",
           "A3": "azulStyle",
           "A4": "azulStyle",
-          "A5": "azulStyle",
+          "A5": "azulclaroStyle",
           "A6": "azulStyle",
           "A7": "azulStyle",
           "A8": "azulStyle",
@@ -7191,7 +7208,7 @@
           "C7": "amareloStyle",
           "D1": "azulStyle",
           "D2": "amareloStyle",
-          "D3": "amareloclaroStyle",
+          "D3": "amareloStyle",
           "D4": "azulclaroStyle",
           "D5": "azulStyle",
           "D6": "azulStyle",
@@ -7218,7 +7235,7 @@
         "id": "blind55",
         "name": "14-20",
         "legends": {
-          "legend": "23.38% de mãos ( 310 combos)",
+          "legend": "21.57% de mãos ( 286 combos)",
           "values": [
             {
               "id": "color1",
@@ -7307,7 +7324,7 @@
             },
             {
               "id": "color2",
-              "color": "azulclaroStyle",
+              "color": "azulStyle",
               "text1": "All-in",
               "text2": "20.51% (272 combos)"
             }
@@ -7362,7 +7379,7 @@
         "id": "blind57",
         "name": "1-9",
         "legends": {
-          "legend": "23.38% de mãos ( 310 combos)",
+          "legend": "20.36% de mãos ( 270 combos)",
           "values": [
             {
               "id": "color1",
@@ -7412,7 +7429,7 @@
           "I9": "azulStyle",
           "J1": "azulStyle",
           "J10": "azulStyle",
-          "K1": "azulStyle",
+          "K1": "",
           "K11": "azulStyle"
         }
       }
@@ -7434,7 +7451,7 @@
             },
             {
               "id": "color2",
-              "color": "azulclaroStyle",
+              "color": "azulStyle",
               "text1": "All-in",
               "text2": "8% (94 combos)"
             }
@@ -7530,7 +7547,7 @@
             },
             {
               "id": "color2",
-              "color": "azulclaroStyle",
+              "color": "azulStyle",
               "text1": "All-in",
               "text2": "15% (198 combos)"
             }
@@ -7615,9 +7632,9 @@
             },
             {
               "id": "color2",
-              "color": "azulclaroStyle",
+              "color": "azulStyle",
               "text1": "All-in",
-              "text2": "22% (282 combos)"
+              "text2": "28% (350 combos)"
             }
           ]
         },
@@ -7679,7 +7696,7 @@
         "id": "blind56",
         "name": "1-9",
         "legends": {
-          "legend": "23.38% de mãos ( 310 combos)",
+          "legend": "27% de mãos ( 346 combos)",
           "values": [
             {
               "id": "color1",
@@ -7813,6 +7830,7 @@
           "D4": "verdeStyle",
           "E1": "verdeStyle",
           "E5": "verdeStyle",
+          "F1": "verdeStyle",
           "F6": "verdeStyle",
           "G7": "verdeStyle",
           "H8": "verdeStyle",
@@ -7895,6 +7913,8 @@
           "A8": "verdeStyle",
           "A9": "verdeStyle",
           "A10": "verdeStyle",
+          "A11": "verdeStyle",
+          "A12": "",
           "B1": "verdeStyle",
           "B2": "verdeStyle",
           "B3": "verdeStyle",
@@ -7906,10 +7926,11 @@
           "C4": "verdeStyle",
           "D1": "verdeStyle",
           "D2": "verdeStyle",
-          "D3": "verdeStyle",
+          "D3": "",
           "D4": "verdeStyle",
           "E1": "verdeStyle",
-          "E2": "verdeStyle",
+          "E2": "",
+          "E4": "",
           "E5": "verdeStyle",
           "F1": "verdeStyle",
           "F6": "verdeStyle",
@@ -7948,6 +7969,9 @@
           "A8": "verdeStyle",
           "A9": "verdeStyle",
           "A10": "verdeStyle",
+          "A11": "verdeStyle",
+          "A12": "verdeStyle",
+          "A13": "verdeStyle",
           "B1": "verdeStyle",
           "B2": "verdeStyle",
           "B3": "verdeStyle",
@@ -8370,10 +8394,13 @@
           "F8": "verdeStyle",
           "G1": "verdeStyle",
           "G2": "verdeStyle",
+          "G3": "verdeStyle",
           "G7": "verdeStyle",
+          "G8": "verdeStyle",
           "H1": "verdeStyle",
           "H2": "verdeStyle",
           "H8": "verdeStyle",
+          "H9": "verdeStyle",
           "I1": "verdeStyle",
           "I2": "verdeStyle",
           "I9": "verdeStyle",
@@ -8774,7 +8801,7 @@
           "D11": "verdeStyle",
           "D12": "verdeStyle",
           "D13": "verdeStyle",
-          "E1": "verdeStyle",
+          "E1": "azulStyle",
           "E2": "amareloStyle",
           "E3": "amareloStyle",
           "E4": "amareloStyle",
@@ -9478,7 +9505,7 @@
               "id": "color2",
               "color": "marronStyle",
               "text1": "3b 2.5x - Shove",
-              "text2": "2% (24 combos)"
+              "text2": "2% (18 combos)"
             },
             {
               "id": "color3",
@@ -9567,7 +9594,7 @@
           "F11": "verdeStyle",
           "F12": "verdeStyle",
           "F13": "verdeStyle",
-          "G1": "verdeStyle",
+          "G1": "azulStyle",
           "G2": "verdeStyle",
           "G3": "verdeStyle",
           "G4": "verdeStyle",
@@ -9749,21 +9776,22 @@
           "H10": "verdeStyle",
           "H11": "verdeStyle",
           "H12": "verdeStyle",
-          "I1": "verdeStyle",
+          "I1": "azulStyle",
+          "I2": "verdeStyle",
           "I9": "azulStyle",
           "I10": "verdeStyle",
           "I11": "verdeStyle",
           "I12": "verdeStyle",
-          "J1": "verdeStyle",
+          "J1": "azulStyle",
           "J10": "azulStyle",
           "J11": "verdeStyle",
           "J12": "verdeStyle",
-          "K1": "verdeStyle",
+          "K1": "azulStyle",
           "K11": "azulStyle",
           "K12": "verdeStyle",
-          "L1": "verdeStyle",
+          "L1": "azulStyle",
           "L12": "azulStyle",
-          "M1": "verdeStyle",
+          "M1": "azulStyle",
           "M13": "azulStyle"
         }
       },
@@ -9771,7 +9799,7 @@
         "id": "blind75",
         "name": "1-9",
         "legends": {
-          "legend": "60% de mãos ( 766 combos)",
+          "legend": "50% de mãos ( 642 combos)",
           "values": [
             {
               "id": "color1",
@@ -9912,7 +9940,7 @@
         "id": "blind76",
         "name": "21+",
         "legends": {
-          "legend": "60% de mãos ( 766 combos)",
+          "legend": "68.33% de mãos ( 906 combos)",
           "values": [
             {
               "id": "color1",
@@ -9968,7 +9996,7 @@
           "B12": "verdeStyle",
           "B13": "verdeStyle",
           "C1": "azulStyle",
-          "C2": "azulStyle",
+          "C2": "verdeStyle",
           "C3": "marronStyle",
           "C4": "verdeStyle",
           "C5": "verdeStyle",
@@ -10113,8 +10141,8 @@
           "A1": "marronStyle",
           "A2": "marronStyle",
           "A3": "marronStyle",
-          "A4": "marronStyle",
-          "A5": "verdeStyle",
+          "A4": "azulStyle",
+          "A5": "azulStyle",
           "A6": "verdeStyle",
           "A7": "verdeStyle",
           "A8": "verdeStyle",
@@ -10129,9 +10157,9 @@
           "B4": "verdeStyle",
           "B5": "verdeStyle",
           "B6": "verdeStyle",
-          "B7": "verdeStyle",
+          "B7": "azulStyle",
           "B8": "azulStyle",
-          "B9": "verdeStyle",
+          "B9": "azulStyle",
           "B10": "verdeStyle",
           "B11": "verdeStyle",
           "B12": "verdeStyle",
@@ -10141,7 +10169,7 @@
           "C3": "marronStyle",
           "C4": "verdeStyle",
           "C5": "verdeStyle",
-          "C6": "verdeStyle",
+          "C6": "azulStyle",
           "C7": "azulStyle",
           "C8": "verdeStyle",
           "C9": "verdeStyle",
@@ -10181,7 +10209,7 @@
           "F4": "verdeStyle",
           "F5": "verdeStyle",
           "F6": "azulStyle",
-          "F7": "verdeStyle",
+          "F7": "azulStyle",
           "F8": "verdeStyle",
           "F9": "verdeStyle",
           "F10": "verdeStyle",
@@ -10289,7 +10317,7 @@
           "A4": "azulStyle",
           "A5": "azulStyle",
           "A6": "azulStyle",
-          "A7": "azulStyle",
+          "A7": "verdeStyle",
           "A8": "verdeStyle",
           "A9": "verdeStyle",
           "A10": "verdeStyle",
@@ -10673,7 +10701,7 @@
     "blinds": [
       {
         "id": "blind81",
-        "name": "21+++",
+        "name": "21+",
         "legends": {
           "legend": "6% de mãos ( 74 combos)",
           "values": [
@@ -10717,6 +10745,7 @@
           "A1": "verdeStyle",
           "A2": "verdeStyle",
           "A3": "verdeStyle",
+          "A4": "verdeStyle",
           "B1": "verdeStyle",
           "B2": "verdeStyle",
           "B3": "verdeStyle",
@@ -10747,6 +10776,7 @@
           "A1": "verdeStyle",
           "A2": "verdeStyle",
           "A3": "verdeStyle",
+          "A4": "verdeStyle",
           "B1": "verdeStyle",
           "B2": "verdeStyle",
           "B3": "verdeStyle",
@@ -10816,20 +10846,28 @@
           "A3": "verdeStyle",
           "A4": "verdeStyle",
           "A5": "verdeStyle",
+          "A6": "verdeStyle",
           "B1": "verdeStyle",
           "B2": "verdeStyle",
           "B3": "verdeStyle",
           "B4": "verdeStyle",
           "C1": "verdeStyle",
+          "C2": "verdeStyle",
           "C3": "verdeStyle",
+          "C4": "verdeStyle",
           "D1": "verdeStyle",
+          "D2": "verdeStyle",
+          "D3": "verdeStyle",
           "D4": "verdeStyle",
           "E1": "verdeStyle",
           "E5": "verdeStyle",
+          "E6": "verdeStyle",
           "F6": "verdeStyle",
           "G7": "verdeStyle",
           "H8": "verdeStyle",
-          "I9": "verdeStyle"
+          "I9": "verdeStyle",
+          "J10": "verdeStyle",
+          "K11": "verdeStyle"
         }
       },
       {
@@ -10843,53 +10881,6 @@
               "color": "verdeStyle",
               "text1": "Call",
               "text2": "25% (330 combos)"
-            }
-          ]
-        },
-        "styles": {
-          "A1": "verdeStyle",
-          "A2": "verdeStyle",
-          "A3": "verdeStyle",
-          "A4": "verdeStyle",
-          "A5": "verdeStyle",
-          "A6": "verdeStyle",
-          "B1": "verdeStyle",
-          "B2": "verdeStyle",
-          "B3": "verdeStyle",
-          "B4": "verdeStyle",
-          "B5": "verdeStyle",
-          "C1": "verdeStyle",
-          "C2": "verdeStyle",
-          "C3": "verdeStyle",
-          "C4": "verdeStyle",
-          "C5": "verdeStyle",
-          "D1": "verdeStyle",
-          "D2": "verdeStyle",
-          "D3": "verdeStyle",
-          "D4": "verdeStyle",
-          "D5": "verdeStyle",
-          "E1": "verdeStyle",
-          "E5": "verdeStyle",
-          "E6": "verdeStyle",
-          "F6": "verdeStyle",
-          "G7": "verdeStyle",
-          "H8": "verdeStyle",
-          "I9": "verdeStyle",
-          "J10": "verdeStyle",
-          "K11": "verdeStyle"
-        }
-      },
-      {
-        "id": "blind87",
-        "name": "5",
-        "legends": {
-          "legend": "37% de mãos ( 490 combos)",
-          "values": [
-            {
-              "id": "color1",
-              "color": "verdeStyle",
-              "text1": "Call",
-              "text2": "37% (490 combos)"
             }
           ]
         },
@@ -10951,16 +10942,16 @@
         }
       },
       {
-        "id": "blind88",
-        "name": "4",
+        "id": "blind87",
+        "name": "5",
         "legends": {
-          "legend": "53% de mãos ( 694 combos)",
+          "legend": "37% de mãos ( 490 combos)",
           "values": [
             {
               "id": "color1",
               "color": "verdeStyle",
               "text1": "Call",
-              "text2": "53% (694 combos)"
+              "text2": "37% (490 combos)"
             }
           ]
         },
@@ -11025,6 +11016,7 @@
           "F8": "verdeStyle",
           "F9": "verdeStyle",
           "G1": "verdeStyle",
+          "G4": "verdeStyle",
           "G5": "verdeStyle",
           "G6": "verdeStyle",
           "G7": "verdeStyle",
@@ -11046,16 +11038,16 @@
         }
       },
       {
-        "id": "blind89",
-        "name": "3",
+        "id": "blind88",
+        "name": "4",
         "legends": {
-          "legend": "73% de mãos ( 966 combos)",
+          "legend": "53% de mãos ( 694 combos)",
           "values": [
             {
               "id": "color1",
               "color": "verdeStyle",
               "text1": "Call",
-              "text2": "73% (966 combos)"
+              "text2": "53% (694 combos)"
             }
           ]
         },
@@ -11144,6 +11136,9 @@
           "G10": "verdeStyle",
           "G11": "verdeStyle",
           "H1": "verdeStyle",
+          "H2": "",
+          "H3": "",
+          "H4": "",
           "H5": "verdeStyle",
           "H6": "verdeStyle",
           "H7": "verdeStyle",
@@ -11166,6 +11161,165 @@
           "K11": "verdeStyle",
           "K12": "verdeStyle",
           "L12": "verdeStyle",
+          "M13": "verdeStyle"
+        }
+      },
+      {
+        "id": "blind89",
+        "name": "3",
+        "legends": {
+          "legend": "73% de mãos ( 966 combos)",
+          "values": [
+            {
+              "id": "color1",
+              "color": "verdeStyle",
+              "text1": "Call",
+              "text2": "73% (966 combos)"
+            }
+          ]
+        },
+        "styles": {
+          "A1": "verdeStyle",
+          "A2": "verdeStyle",
+          "A3": "verdeStyle",
+          "A4": "verdeStyle",
+          "A5": "verdeStyle",
+          "A6": "verdeStyle",
+          "A7": "verdeStyle",
+          "A8": "verdeStyle",
+          "A9": "verdeStyle",
+          "A10": "verdeStyle",
+          "A11": "verdeStyle",
+          "A12": "verdeStyle",
+          "A13": "verdeStyle",
+          "B1": "verdeStyle",
+          "B2": "verdeStyle",
+          "B3": "verdeStyle",
+          "B4": "verdeStyle",
+          "B5": "verdeStyle",
+          "B6": "verdeStyle",
+          "B7": "verdeStyle",
+          "B8": "verdeStyle",
+          "B9": "verdeStyle",
+          "B10": "verdeStyle",
+          "B11": "verdeStyle",
+          "B12": "verdeStyle",
+          "B13": "verdeStyle",
+          "C1": "verdeStyle",
+          "C2": "verdeStyle",
+          "C3": "verdeStyle",
+          "C4": "verdeStyle",
+          "C5": "verdeStyle",
+          "C6": "verdeStyle",
+          "C7": "verdeStyle",
+          "C8": "verdeStyle",
+          "C9": "verdeStyle",
+          "C10": "verdeStyle",
+          "C11": "verdeStyle",
+          "C12": "verdeStyle",
+          "C13": "verdeStyle",
+          "D1": "verdeStyle",
+          "D2": "verdeStyle",
+          "D3": "verdeStyle",
+          "D4": "verdeStyle",
+          "D5": "verdeStyle",
+          "D6": "verdeStyle",
+          "D7": "verdeStyle",
+          "D8": "verdeStyle",
+          "D9": "verdeStyle",
+          "D10": "verdeStyle",
+          "D11": "verdeStyle",
+          "D12": "verdeStyle",
+          "D13": "verdeStyle",
+          "E1": "verdeStyle",
+          "E2": "verdeStyle",
+          "E3": "verdeStyle",
+          "E4": "verdeStyle",
+          "E5": "verdeStyle",
+          "E6": "verdeStyle",
+          "E7": "verdeStyle",
+          "E8": "verdeStyle",
+          "E9": "verdeStyle",
+          "E10": "verdeStyle",
+          "E11": "verdeStyle",
+          "E12": "verdeStyle",
+          "E13": "verdeStyle",
+          "F1": "verdeStyle",
+          "F2": "verdeStyle",
+          "F3": "verdeStyle",
+          "F4": "verdeStyle",
+          "F5": "verdeStyle",
+          "F6": "verdeStyle",
+          "F7": "verdeStyle",
+          "F8": "verdeStyle",
+          "F9": "verdeStyle",
+          "F10": "verdeStyle",
+          "F11": "verdeStyle",
+          "F12": "verdeStyle",
+          "F13": "verdeStyle",
+          "G1": "verdeStyle",
+          "G2": "verdeStyle",
+          "G3": "verdeStyle",
+          "G4": "verdeStyle",
+          "G5": "verdeStyle",
+          "G6": "verdeStyle",
+          "G7": "verdeStyle",
+          "G8": "verdeStyle",
+          "G9": "verdeStyle",
+          "G10": "verdeStyle",
+          "G11": "verdeStyle",
+          "G12": "verdeStyle",
+          "G13": "verdeStyle",
+          "H1": "verdeStyle",
+          "H2": "verdeStyle",
+          "H3": "verdeStyle",
+          "H4": "verdeStyle",
+          "H5": "verdeStyle",
+          "H6": "verdeStyle",
+          "H7": "verdeStyle",
+          "H8": "verdeStyle",
+          "H9": "verdeStyle",
+          "H10": "verdeStyle",
+          "H11": "verdeStyle",
+          "H12": "verdeStyle",
+          "H13": "verdeStyle",
+          "I1": "verdeStyle",
+          "I2": "verdeStyle",
+          "I3": "verdeStyle",
+          "I4": "verdeStyle",
+          "I5": "verdeStyle",
+          "I6": "verdeStyle",
+          "I7": "verdeStyle",
+          "I8": "verdeStyle",
+          "I9": "verdeStyle",
+          "I10": "verdeStyle",
+          "I11": "verdeStyle",
+          "I12": "verdeStyle",
+          "I13": "verdeStyle",
+          "J1": "verdeStyle",
+          "J2": "verdeStyle",
+          "J3": "verdeStyle",
+          "J4": "",
+          "J5": "",
+          "J6": "",
+          "J7": "verdeStyle",
+          "J8": "verdeStyle",
+          "J9": "verdeStyle",
+          "J10": "verdeStyle",
+          "J11": "verdeStyle",
+          "J12": "verdeStyle",
+          "J13": "verdeStyle",
+          "K1": "verdeStyle",
+          "K8": "verdeStyle",
+          "K9": "verdeStyle",
+          "K10": "verdeStyle",
+          "K11": "verdeStyle",
+          "K12": "verdeStyle",
+          "K13": "verdeStyle",
+          "L1": "verdeStyle",
+          "L12": "verdeStyle",
+          "L13": "verdeStyle",
+          "M1": "verdeStyle",
           "M13": "verdeStyle"
         }
       },
@@ -11304,6 +11458,9 @@
           "J1": "verdeStyle",
           "J2": "verdeStyle",
           "J3": "verdeStyle",
+          "J4": "verdeStyle",
+          "J5": "verdeStyle",
+          "J6": "verdeStyle",
           "J7": "verdeStyle",
           "J8": "verdeStyle",
           "J9": "verdeStyle",
@@ -11312,6 +11469,12 @@
           "J12": "verdeStyle",
           "J13": "verdeStyle",
           "K1": "verdeStyle",
+          "K2": "verdeStyle",
+          "K3": "verdeStyle",
+          "K4": "verdeStyle",
+          "K5": "verdeStyle",
+          "K6": "verdeStyle",
+          "K7": "verdeStyle",
           "K8": "verdeStyle",
           "K9": "verdeStyle",
           "K10": "verdeStyle",
@@ -11319,9 +11482,30 @@
           "K12": "verdeStyle",
           "K13": "verdeStyle",
           "L1": "verdeStyle",
+          "L2": "verdeStyle",
+          "L3": "verdeStyle",
+          "L4": "verdeStyle",
+          "L5": "verdeStyle",
+          "L6": "verdeStyle",
+          "L7": "verdeStyle",
+          "L8": "verdeStyle",
+          "L9": "verdeStyle",
+          "L10": "verdeStyle",
+          "L11": "verdeStyle",
           "L12": "verdeStyle",
           "L13": "verdeStyle",
           "M1": "verdeStyle",
+          "M2": "verdeStyle",
+          "M3": "verdeStyle",
+          "M4": "verdeStyle",
+          "M5": "verdeStyle",
+          "M6": "verdeStyle",
+          "M7": "verdeStyle",
+          "M8": "verdeStyle",
+          "M9": "verdeStyle",
+          "M10": "verdeStyle",
+          "M11": "verdeStyle",
+          "M12": "verdeStyle",
           "M13": "verdeStyle"
         }
       }
@@ -11333,7 +11517,7 @@
         "id": "blind92",
         "name": "20-25",
         "legends": {
-          "legend": "10% de mãos ( 126 combos)",
+          "legend": "100% de mãos ( 1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -12656,7 +12840,10 @@
       }
     ]
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 887335708dedca3f84dcecc14a1cc548a2f409a9
   "3W BB X MR 2P REG": {
     "blinds": [
       {
@@ -12973,7 +13160,7 @@
           "I12": "verdeStyle",
           "I13": "verdeStyle",
           "J1": "azulStyle",
-          "J7": "verdeStyle",
+          "J7": "",
           "J8": "verdeStyle",
           "J9": "verdeStyle",
           "J10": "azulStyle",
@@ -12981,14 +13168,14 @@
           "J12": "verdeStyle",
           "J13": "verdeStyle",
           "K1": "azulStyle",
-          "K8": "verdeStyle",
+          "K8": "",
           "K9": "verdeStyle",
           "K10": "verdeStyle",
           "K11": "azulStyle",
           "K12": "verdeStyle",
           "K13": "verdeStyle",
           "L1": "verdeStyle",
-          "L9": "verdeStyle",
+          "L9": "",
           "L10": "verdeStyle",
           "L11": "verdeStyle",
           "L12": "azulStyle",
@@ -13004,7 +13191,7 @@
           "values": [
             {
               "id": "color1",
-              "color": "azulStyle",
+              "color": "verdeStyle",
               "text1": "Call",
               "text2": "54.75% (726 combos)"
             },
@@ -13116,7 +13303,7 @@
           "G5": "verdeStyle",
           "G6": "verdeStyle",
           "G7": "azulStyle",
-          "G8": "azulStyle",
+          "G8": "verdeStyle",
           "G9": "verdeStyle",
           "G10": "verdeStyle",
           "G11": "verdeStyle",
@@ -13264,6 +13451,9 @@
           "E11": "verdeStyle",
           "E12": "verdeStyle",
           "F1": "azulStyle",
+          "F2": "verdeStyle",
+          "F3": "verdeStyle",
+          "F5": "verdeStyle",
           "F6": "azulStyle",
           "F7": "verdeStyle",
           "F8": "verdeStyle",
@@ -13280,7 +13470,7 @@
           "G12": "verdeStyle",
           "G13": "verdeStyle",
           "H1": "vermelhoescuroStyle",
-          "H6": "verdeStyle",
+          "H6": "",
           "H7": "verdeStyle",
           "H8": "azulStyle",
           "H9": "verdeStyle",
@@ -13289,7 +13479,7 @@
           "H12": "verdeStyle",
           "H13": "verdeStyle",
           "I1": "verdeStyle",
-          "I7": "verdeStyle",
+          "I7": "",
           "I8": "verdeStyle",
           "I9": "azulStyle",
           "I10": "verdeStyle",
@@ -13303,7 +13493,7 @@
           "J12": "verdeStyle",
           "J13": "verdeStyle",
           "K1": "azulStyle",
-          "K9": "verdeStyle",
+          "K9": "",
           "K10": "verdeStyle",
           "K11": "azulStyle",
           "K12": "verdeStyle",
@@ -13458,7 +13648,7 @@
         "id": "blind104",
         "name": "12-13",
         "legends": {
-          "legend": "47.21% de mãos (626 combos)",
+          "legend": "41.48% de mãos (550 combos)",
           "values": [
             {
               "id": "color1",
@@ -13766,13 +13956,13 @@
           "values": [
             {
               "id": "color1",
-              "color": "verdeStyle",
+              "color": "azulStyle",
               "text1": "All-in",
               "text2": "21.12% (280 combos)"
             },
             {
               "id": "color2",
-              "color": "azulStyle",
+              "color": "verdeStyle",
               "text1": "All-in",
               "text2": "3.17% (42 combos)"
             }
@@ -13832,9 +14022,9 @@
     "blinds": [
       {
         "id": "blind108",
-        "name": "21++",
+        "name": "21+",
         "legends": {
-          "legend": "10.28% de mãos (128 combos)",
+          "legend": "10% de mãos (128 combos)",
           "values": [
             {
               "id": "color1",
@@ -14038,6 +14228,7 @@
           "F6": "verdeStyle",
           "G1": "verdeStyle",
           "G7": "verdeStyle",
+          "H1": "verdeStyle",
           "H8": "verdeStyle",
           "I9": "verdeStyle",
           "J10": "verdeStyle",
@@ -14072,6 +14263,7 @@
           "A10": "verdeStyle",
           "A11": "verdeStyle",
           "A12": "verdeStyle",
+          "A13": "verdeStyle",
           "B1": "verdeStyle",
           "B2": "verdeStyle",
           "B3": "verdeStyle",
@@ -14170,7 +14362,9 @@
           "J10": "verdeStyle",
           "K1": "verdeStyle",
           "K11": "verdeStyle",
+          "L1": "verdeStyle",
           "L12": "verdeStyle",
+          "M1": "verdeStyle",
           "M13": "verdeStyle"
         }
       },
@@ -14246,7 +14440,9 @@
           "J10": "verdeStyle",
           "K1": "verdeStyle",
           "K11": "verdeStyle",
+          "L1": "verdeStyle",
           "L12": "verdeStyle",
+          "M1": "verdeStyle",
           "M13": "verdeStyle"
         }
       },
@@ -14304,17 +14500,20 @@
           "D4": "verdeStyle",
           "D5": "verdeStyle",
           "D6": "verdeStyle",
+          "D7": "verdeStyle",
           "E1": "verdeStyle",
           "E2": "verdeStyle",
           "E3": "verdeStyle",
           "E4": "verdeStyle",
           "E5": "verdeStyle",
           "E6": "verdeStyle",
+          "E7": "verdeStyle",
           "F1": "verdeStyle",
           "F2": "verdeStyle",
           "F3": "verdeStyle",
           "F4": "verdeStyle",
           "F6": "verdeStyle",
+          "F7": "verdeStyle",
           "G1": "verdeStyle",
           "G2": "verdeStyle",
           "G7": "verdeStyle",
@@ -16340,8 +16539,8 @@
           "I1": "amareloStyle",
           "I2": "verdeStyle",
           "I3": "verdeStyle",
-          "I4": "amareloStyle",
-          "I5": "verdeStyle",
+          "I4": "verdeStyle",
+          "I5": "amareloStyle",
           "I6": "verdeStyle",
           "I7": "verdeStyle",
           "I8": "verdeStyle",
@@ -16572,7 +16771,7 @@
           "K3": "amareloStyle",
           "K4": "amareloStyle",
           "K5": "verdeStyle",
-          "K6": "amareloStyle",
+          "K6": "verdeStyle",
           "K7": "verdeStyle",
           "K8": "amareloStyle",
           "K9": "verdeStyle",
@@ -16958,7 +17157,7 @@
           "I7": "verdeStyle",
           "I8": "azulStyle",
           "I9": "azulStyle",
-          "I10": "verdeStyle",
+          "I10": "amareloStyle",
           "I11": "verdeStyle",
           "I12": "amareloStyle",
           "I13": "verdeStyle",
@@ -16990,7 +17189,7 @@
           "K13": "verdeStyle",
           "L1": "azulStyle",
           "L2": "verdeStyle",
-          "L3": "verdeStyle",
+          "L3": "amareloStyle",
           "L4": "verdeStyle",
           "L5": "verdeStyle",
           "L6": "verdeStyle",
@@ -17414,7 +17613,7 @@
           "M3": "verdeStyle",
           "M4": "verdeStyle",
           "M5": "verdeStyle",
-          "M6": "verdeStyle",
+          "M6": "amareloStyle",
           "M7": "verdeStyle",
           "M8": "verdeStyle",
           "M9": "verdeStyle",
@@ -17804,18 +18003,6 @@
             },
             {
               "id": "color2",
-              "color": "marronStyle",
-              "text1": "3b 2.5x - Shove",
-              "text2": "0% (0 combos)"
-            },
-            {
-              "id": "color3",
-              "color": "verdeStyle",
-              "text1": "3b 2.5x - Fold",
-              "text2": "0% (0 combos)"
-            },
-            {
-              "id": "color4",
               "color": "verdeStyle",
               "text1": "Call",
               "text2": "46% (610 combos)"
@@ -17963,12 +18150,6 @@
             },
             {
               "id": "color2",
-              "color": "marronStyle",
-              "text1": "3b 2.5x - Call",
-              "text2": "0% (0 combos)"
-            },
-            {
-              "id": "color3",
               "color": "verdeStyle",
               "text1": "Call",
               "text2": "38% (494 combos)"
@@ -18039,6 +18220,8 @@
           "E9": "verdeStyle",
           "E10": "verdeStyle",
           "E11": "verdeStyle",
+          "E12": "verdeStyle",
+          "E13": "verdeStyle",
           "F1": "azulStyle",
           "F2": "azulStyle",
           "F3": "verdeStyle",
@@ -18051,7 +18234,7 @@
           "F10": "verdeStyle",
           "F11": "verdeStyle",
           "G1": "azulStyle",
-          "G2": "verdeStyle",
+          "G2": "azulStyle",
           "G3": "verdeStyle",
           "G4": "verdeStyle",
           "G5": "verdeStyle",
@@ -18114,7 +18297,7 @@
             },
             {
               "id": "color2",
-              "color": "marronStyle",
+              "color": "verdeStyle",
               "text1": "Call",
               "text2": "33% (434 combos)"
             }
@@ -18285,7 +18468,7 @@
               "id": "color5",
               "color": "cinzaStyle",
               "text1": "Limp-Fold",
-              "text2": "13% (166 combos)"
+              "text2": "26% (166 combos)"
             },
             {
               "id": "color6",
@@ -18375,7 +18558,7 @@
           "E7": "laranjaStyle",
           "E8": "laranjaStyle",
           "E9": "azulmarinhoStyle",
-          "E10": "azulm",
+          "E10": "azulmarinhoStyle",
           "E11": "amareloStyle",
           "E12": "amareloStyle",
           "E13": "amareloStyle",
@@ -19528,10 +19711,10 @@
           "F13": "cinzaStyle",
           "G1": "roxoStyle",
           "G2": "roxoStyle",
-          "G3": "roxoStyle",
-          "G4": "roxoStyle",
-          "G5": "roxoStyle",
-          "G6": "roxoStyle",
+          "G3": "cinzaStyle",
+          "G4": "cinzaStyle",
+          "G5": "cinzaStyle",
+          "G6": "cinzaStyle",
           "G7": "verdeStyle",
           "G8": "roxoStyle",
           "G9": "roxoStyle",
@@ -19795,7 +19978,7 @@
           "J12": "cinzaStyle",
           "J13": "cinzaStyle",
           "K1": "roxoStyle",
-          "K2": "cinzaStyle",
+          "K2": "roxoStyle",
           "K3": "cinzaStyle",
           "K4": "cinzaStyle",
           "K5": "cinzaStyle",
@@ -19808,7 +19991,7 @@
           "K12": "cinzaStyle",
           "K13": "cinzaStyle",
           "L1": "roxoStyle",
-          "L2": "cinzaStyle",
+          "L2": "roxoStyle",
           "L3": "cinzaStyle",
           "L4": "cinzaStyle",
           "L5": "cinzaStyle",
@@ -19821,7 +20004,7 @@
           "L12": "roxoStyle",
           "L13": "cinzaStyle",
           "M1": "roxoStyle",
-          "M2": "cinzaStyle",
+          "M2": "roxoStyle",
           "M3": "cinzaStyle",
           "M4": "cinzaStyle",
           "M5": "cinzaStyle",
@@ -20774,9 +20957,9 @@
     "blinds": [
       {
         "id": "blind150",
-        "name": "22~25",
+        "name": "22-25",
         "legends": {
-          "legend": "94.57% de mãos (1250 combos)",
+          "legend": "91.86% de mãos (1218 combos)",
           "values": [
             {
               "id": "color1",
@@ -20798,7 +20981,7 @@
             },
             {
               "id": "color4",
-              "color": "rosabebeStyle",
+              "color": "pinkStyle",
               "text1": "2x-Allinvs3b-CallAllin",
               "text2": "6.18% (82 combos)"
             },
@@ -20877,12 +21060,12 @@
           "D1": "marronStyle",
           "D2": "laranjaStyle",
           "D3": "laranjaStyle",
-          "D4": "vermelhoescuroStyle",
+          "D4": "pinkStyle",
           "D5": "vermelhoescuroStyle",
-          "D6": "laranjaStyle",
+          "D6": "vermelhoescuroStyle",
           "D7": "laranjaStyle",
-          "D8": "laranjaStyle",
-          "D9": "azulclaroStyle",
+          "D8": "azulclaroStyle",
+          "D9": "laranjaStyle",
           "D10": "azulclaroStyle",
           "D11": "azulclaroStyle",
           "D12": "azulclaroStyle",
@@ -21001,7 +21184,7 @@
         "id": "blind151",
         "name": "19-21",
         "legends": {
-          "legend": "94.57% de mãos (1250 combos)",
+          "legend": "94.57% de mãos (1254 combos)",
           "values": [
             {
               "id": "color1",
@@ -21235,7 +21418,7 @@
         "id": "blind152",
         "name": "15-18",
         "legends": {
-          "legend": "92.76% de mãos (1230 combos)",
+          "legend": "93.67% de mãos (1242 combos)",
           "values": [
             {
               "id": "color1",
@@ -21263,7 +21446,7 @@
             },
             {
               "id": "color5",
-              "color": "rosabebeStyle",
+              "color": "pinkStyle",
               "text1": "2x-Call3b-CallAllin",
               "text2": "5.58% (74 combos)"
             },
@@ -21366,9 +21549,9 @@
           "E12": "azulclaroStyle",
           "E13": "amareloStyle",
           "F1": "verdeStyle",
-          "F2": "laranjaStyle",
+          "F2": "azulclaroStyle",
           "F3": "azulclaroStyle",
-          "F4": "amareloStyle",
+          "F4": "laranjaStyle",
           "F5": "amareloStyle",
           "F6": "azulclaroStyle",
           "F7": "vermelhoescuroStyle",
@@ -21444,7 +21627,7 @@
           "K12": "azulclaroStyle",
           "K13": "azulclaroStyle",
           "L1": "roxoStyle",
-          "L2": "azulclaroStyle",
+          "L2": "cinzaStyle",
           "L3": "cinzaStyle",
           "L4": "cinzaStyle",
           "L5": "cinzaStyle",
@@ -21454,7 +21637,7 @@
           "L10": "cinzaStyle",
           "L11": "cinzaStyle",
           "L12": "roxoStyle",
-          "L13": "azulclaroStyle",
+          "L13": "cinzaStyle",
           "M1": "azulmarinhoStyle",
           "M2": "cinzaStyle",
           "M3": "cinzaStyle",
@@ -21485,31 +21668,31 @@
             {
               "id": "color3",
               "color": "laranjaStyle",
-              "text1": "2x-Call3b-CallAllin",
+              "text1": "2x-Call3b-FoldvsAllin",
               "text2": " 1.81% (24 combos)"
             },
             {
               "id": "color4",
               "color": "marronStyle",
-              "text1": "Limp-Shove - CallvsAllin",
+              "text1": "2x-Allinvs3b-CallAllin",
               "text2": " 2.71% (36 combos)"
             },
             {
               "id": "color5",
-              "color": "rosabebeStyle",
+              "color": "pinkStyle",
               "text1": "2x-Call3b-CallAllin",
               "text2": "2.26% (30 combos)"
             },
             {
               "id": "color6",
               "color": "verdeStyle",
-              "text1": "Limp-Call ISO - FoldvsAllin",
+              "text1": "Limp Shove Call vs Allin",
               "text2": "6.03% (80 combos)"
             },
             {
               "id": "color7",
               "color": "azulmarinhoStyle",
-              "text1": "Limp-Fold",
+              "text1": "Limp-Shove - CallvsAllin",
               "text2": "1.21% (16 combos)"
             },
             {
@@ -21716,7 +21899,7 @@
             },
             {
               "id": "color3",
-              "color": "rosabebeStyle",
+              "color": "pinkStyle",
               "text1": "2x-Call3b-CallAllin",
               "text2": " 2.56% (34 combos)"
             },
@@ -21917,7 +22100,7 @@
               "id": "color1",
               "color": "roxoStyle",
               "text1": "Openshove",
-              "text2": "28.25% (242 combos)"
+              "text2": "18.25% (242 combos)"
             },
             {
               "id": "color2",
@@ -22641,7 +22824,7 @@
           "I5": "cinzaStyle",
           "I6": "cinzaStyle",
           "I7": "cinzaStyle",
-          "I8": "cinzaStyle",
+          "I8": "roxoStyle",
           "I9": "vermelhoescuroStyle",
           "I10": "roxoStyle",
           "I11": "roxoStyle",
@@ -22792,7 +22975,7 @@
           "G8": "roxoStyle",
           "G9": "roxoStyle",
           "G10": "roxoStyle",
-          "G11": "roxoStyle",
+          "G11": "cinzaStyle",
           "G12": "cinzaStyle",
           "H1": "roxoStyle",
           "H2": "roxoStyle",
@@ -22804,7 +22987,7 @@
           "H8": "vermelhoescuroStyle",
           "H9": "roxoStyle",
           "H10": "roxoStyle",
-          "H11": "cinzaStyle",
+          "H11": "roxoStyle",
           "H12": "cinzaStyle",
           "I1": "roxoStyle",
           "I2": "roxoStyle",
@@ -22813,7 +22996,7 @@
           "I5": "cinzaStyle",
           "I6": "cinzaStyle",
           "I7": "cinzaStyle",
-          "I8": "cinzaStyle",
+          "I8": "roxoStyle",
           "I9": "roxoStyle",
           "I10": "roxoStyle",
           "I11": "roxoStyle",
@@ -22822,7 +23005,7 @@
           "J2": "roxoStyle",
           "J3": "roxoStyle",
           "J4": "roxoStyle",
-          "J5": "cinzaStyle",
+          "J5": "",
           "J10": "roxoStyle",
           "J11": "roxoStyle",
           "J12": "roxoStyle",
@@ -22830,12 +23013,14 @@
           "K1": "roxoStyle",
           "K2": "roxoStyle",
           "K3": "roxoStyle",
-          "K4": "roxoStyle",
+          "K4": "cinzaStyle",
+          "K5": "",
           "K11": "roxoStyle",
           "K12": "cinzaStyle",
           "L1": "roxoStyle",
           "L2": "roxoStyle",
           "L3": "roxoStyle",
+          "L4": "",
           "L12": "roxoStyle",
           "M1": "roxoStyle",
           "M2": "roxoStyle",
@@ -22946,8 +23131,8 @@
           "F9": "roxoStyle",
           "F10": "roxoStyle",
           "F11": "roxoStyle",
-          "F12": "roxoStyle",
-          "F13": "roxoStyle",
+          "F12": "",
+          "F13": "",
           "G1": "roxoStyle",
           "G2": "roxoStyle",
           "G3": "roxoStyle",
@@ -22985,11 +23170,12 @@
           "J4": "roxoStyle",
           "J10": "roxoStyle",
           "J11": "roxoStyle",
+          "J12": "roxoStyle",
           "K1": "roxoStyle",
           "K2": "roxoStyle",
           "K3": "roxoStyle",
           "K4": "roxoStyle",
-          "K10": "roxoStyle",
+          "K10": "",
           "K11": "roxoStyle",
           "K12": "roxoStyle",
           "L1": "roxoStyle",
@@ -23248,7 +23434,7 @@
           "A2": "azulclaroStyle",
           "A3": "azulclaroStyle",
           "A4": "azulclaroStyle",
-          "A5": "azulStyle",
+          "A5": "azulclaroStyle",
           "A6": "azulStyle",
           "A7": "azulStyle",
           "A8": "azulStyle",
@@ -23737,7 +23923,7 @@
           "G5": "verdeStyle",
           "G6": "azulclaroStyle",
           "G7": "azulStyle",
-          "G8": "verdeStyle",
+          "G8": "azulStyle",
           "G9": "verdeStyle",
           "G10": "verdeStyle",
           "G11": "verdeStyle",
@@ -24173,7 +24359,7 @@
           "I13": "verdeStyle",
           "J1": "azulStyle",
           "J2": "azulStyle",
-          "J3": "azulStyle",
+          "J3": "verdeStyle",
           "J4": "verdeStyle",
           "J5": "verdeStyle",
           "J6": "verdeStyle",
@@ -24228,6 +24414,23 @@
       {
         "id": "blind167",
         "name": "4-5",
+        "legends": {
+          "legend": "100% de mãos (1326 combos)",
+          "values": [
+            {
+              "id": "color1",
+              "color": "azulStyle",
+              "text1": "All-in",
+              "text2": "63% (830 combos)"
+            },
+            {
+              "id": "color2",
+              "color": "verdeStyle",
+              "text1": "ISO-2x - Call - Shove",
+              "text2": "38% (496 combos)"
+            }
+          ]
+        },
         "styles": {
           "A1": "azulStyle",
           "A2": "azulStyle",
@@ -25672,7 +25875,7 @@
               "id": "color3",
               "color": "verdeStyle",
               "text1": "Call",
-              "text2": "53.24% (706 combos)"
+              "text2": "56.24% (732 combos)"
             }
           ]
         },
@@ -25825,13 +26028,13 @@
         "id": "blind175",
         "name": "18-21",
         "legends": {
-          "legend": "73% de mãos (954 combos)",
+          "legend": "75% de mãos (978 combos)",
           "values": [
             {
               "id": "color1",
               "color": "azulStyle",
               "text1": "All-in",
-              "text2": "22% (288 combos)"
+              "text2": "20% (260 combos)"
             },
             {
               "id": "color2",
@@ -25843,7 +26046,7 @@
               "id": "color3",
               "color": "verdeStyle",
               "text1": "Call",
-              "text2": "48% (636 combos)"
+              "text2": "52% (688 combos)"
             }
           ]
         },
@@ -25992,13 +26195,13 @@
         "id": "blind176",
         "name": "14-17",
         "legends": {
-          "legend": "75% de mãos (978 combos)",
+          "legend": "73% de mãos (954 combos)",
           "values": [
             {
               "id": "color1",
               "color": "azulStyle",
               "text1": "All-in",
-              "text2": "20% (260 combos)"
+              "text2": "22% (288 combos)"
             },
             {
               "id": "color2",
@@ -26010,7 +26213,7 @@
               "id": "color3",
               "color": "verdeStyle",
               "text1": "Call",
-              "text2": "52% (688 combos)"
+              "text2": "48% (636 combos)"
             }
           ]
         },
@@ -26315,7 +26518,7 @@
         "id": "blind178",
         "name": "7-10",
         "legends": {
-          "legend": "73% de mãos (954 combos)",
+          "legend": "62% de mãos (814 combos)",
           "values": [
             {
               "id": "color1",
@@ -26432,7 +26635,7 @@
           "I1": "azulStyle",
           "I2": "azulStyle",
           "I3": "verdeStyle",
-          "I8": "verdeStyle",
+          "I8": "",
           "I9": "azulStyle",
           "I10": "verdeStyle",
           "I11": "verdeStyle",
@@ -26710,7 +26913,7 @@
           "G11": "verdeStyle",
           "G12": "verdeStyle",
           "G13": "verdeStyle",
-          "H1": "azulStyle",
+          "H1": "verdeStyle",
           "H2": "verdeStyle",
           "H3": "verdeStyle",
           "H4": "verdeStyle",
@@ -26723,7 +26926,7 @@
           "H11": "verdeStyle",
           "H12": "verdeStyle",
           "H13": "verdeStyle",
-          "I1": "azulStyle",
+          "I1": "verdeStyle",
           "I2": "verdeStyle",
           "I3": "verdeStyle",
           "I4": "verdeStyle",
@@ -26760,9 +26963,9 @@
           "L3": "verdeStyle",
           "L12": "azulStyle",
           "L13": "verdeStyle",
-          "M1": "azulStyle",
-          "M2": "azulStyle",
-          "M3": "azulStyle",
+          "M1": "verdeStyle",
+          "M2": "verdeStyle",
+          "M3": "verdeStyle",
           "M13": "azulStyle"
         }
       },
@@ -26776,7 +26979,7 @@
               "id": "color1",
               "color": "verdeStyle",
               "text1": "Call",
-              "text2": "60.33% (900 combos)"
+              "text2": "60.33% (800 combos)"
             },
             {
               "id": "color2",
@@ -26938,7 +27141,7 @@
         "id": "blind182",
         "name": "14-16",
         "legends": {
-          "legend": "73% de mãos (954 combos)",
+          "legend": "71.95% de mãos (954 combos)",
           "values": [
             {
               "id": "color1",
@@ -26968,12 +27171,12 @@
           "A5": "azulStyle",
           "A6": "azulStyle",
           "A7": "azulStyle",
-          "A8": "verdeStyle",
-          "A9": "verdeStyle",
-          "A10": "verdeStyle",
-          "A11": "verdeStyle",
-          "A12": "verdeStyle",
-          "A13": "verdeStyle",
+          "A8": "azulStyle",
+          "A9": "azulStyle",
+          "A10": "azulStyle",
+          "A11": "azulStyle",
+          "A12": "azulStyle",
+          "A13": "azulStyle",
           "B1": "azulStyle",
           "B2": "marronStyle",
           "B3": "azulStyle",
@@ -27128,24 +27331,24 @@
           ]
         },
         "styles": {
-          "A1": "marronStyle",
-          "A2": "azulStyle",
-          "A3": "azulStyle",
-          "A4": "azulStyle",
-          "A5": "azulStyle",
-          "A6": "azulStyle",
-          "A7": "azulStyle",
-          "A8": "verdeStyle",
-          "A9": "verdeStyle",
-          "A10": "verdeStyle",
-          "A11": "verdeStyle",
-          "A12": "verdeStyle",
-          "A13": "verdeStyle",
+          "A1":  "marronStyle",
+          "A2":  "azulStyle",
+          "A3":  "azulStyle",
+          "A4":  "azulStyle",
+          "A5":  "azulStyle",
+          "A6":  "azulStyle",
+          "A7":  "azulStyle",
+          "A8":  "azulStyle",
+          "A9":  "azulStyle",
+          "A10": "azulStyle",
+          "A11": "azulStyle",
+          "A12": "azulStyle",
+          "A13": "azulStyle",
           "B1": "azulStyle",
           "B2": "marronStyle",
           "B3": "azulStyle",
-          "B4": "verdeStyle",
-          "B5": "verdeStyle",
+          "B4": "azulStyle",
+          "B5": "azulStyle",
           "B6": "verdeStyle",
           "B7": "verdeStyle",
           "B8": "verdeStyle",
@@ -27272,13 +27475,13 @@
         "id": "blind184",
         "name": "10",
         "legends": {
-          "legend": "71.95% de mãos (954 combos)",
+          "legend": "58,37% de mãos (774 combos)",
           "values": [
             {
               "id": "color1",
               "color": "verdeStyle",
               "text1": "Call",
-              "text2": "47.96% (636 combos)"
+              "text2": "25.34% (438 combos)"
             },
             {
               "id": "color2",
@@ -27302,6 +27505,7 @@
           "A11": "azulStyle",
           "A12": "azulStyle",
           "A13": "azulStyle",
+
           "B1": "azulStyle",
           "B2": "azulStyle",
           "B3": "azulStyle",
@@ -27315,12 +27519,13 @@
           "B11": "azulStyle",
           "B12": "verdeStyle",
           "B13": "verdeStyle",
+
           "C1": "azulStyle",
           "C2": "azulStyle",
-          "C3": "marronStyle",
-          "C4": "verdeStyle",
-          "C5": "verdeStyle",
-          "C6": "verdeStyle",
+          "C3": "azulStyle",
+          "C4": "azulStyle",
+          "C5": "azulStyle",
+          "C6": "azulStyle",
           "C7": "verdeStyle",
           "C8": "verdeStyle",
           "C9": "verdeStyle",
@@ -27328,12 +27533,13 @@
           "C11": "verdeStyle",
           "C12": "verdeStyle",
           "C13": "verdeStyle",
+
           "D1": "azulStyle",
           "D2": "azulStyle",
-          "D3": "verdeStyle",
+          "D3": "azulStyle",
           "D4": "azulStyle",
-          "D5": "verdeStyle",
-          "D6": "verdeStyle",
+          "D5": "azulStyle",
+          "D6": "azulStyle",
           "D7": "verdeStyle",
           "D8": "verdeStyle",
           "D9": "verdeStyle",
@@ -27343,10 +27549,10 @@
           "D13": "verdeStyle",
           "E1": "azulStyle",
           "E2": "azulStyle",
-          "E3": "verdeStyle",
-          "E4": "verdeStyle",
+          "E3": "azulStyle",
+          "E4": "azulStyle",
           "E5": "azulStyle",
-          "E6": "verdeStyle",
+          "E6": "azulStyle",
           "E7": "verdeStyle",
           "E8": "verdeStyle",
           "E9": "verdeStyle",
@@ -27355,8 +27561,8 @@
           "E12": "verdeStyle",
           "E13": "verdeStyle",
           "F1": "azulStyle",
-          "F2": "verdeStyle",
-          "F3": "verdeStyle",
+          "F2": "azulStyle",
+          "F3": "azulStyle",
           "F4": "verdeStyle",
           "F5": "verdeStyle",
           "F6": "azulStyle",
@@ -27368,7 +27574,7 @@
           "F12": "verdeStyle",
           "F13": "verdeStyle",
           "G1": "azulStyle",
-          "G2": "verdeStyle",
+          "G2": "azulStyle",
           "G3": "verdeStyle",
           "G4": "verdeStyle",
           "G5": "verdeStyle",
@@ -27382,10 +27588,10 @@
           "G13": "verdeStyle",
           "H1": "azulStyle",
           "H2": "verdeStyle",
-          "H3": "verdeStyle",
-          "H4": "verdeStyle",
-          "H5": "verdeStyle",
-          "H6": "verdeStyle",
+          "H3": "",
+          "H4": "",
+          "H5": "",
+          "H6": "",
           "H7": "verdeStyle",
           "H8": "azulStyle",
           "H9": "verdeStyle",
@@ -27395,10 +27601,10 @@
           "H13": "verdeStyle",
           "I1": "azulStyle",
           "I2": "verdeStyle",
-          "I3": "verdeStyle",
-          "I6": "verdeStyle",
-          "I7": "verdeStyle",
-          "I8": "verdeStyle",
+          "I3": "",
+          "I6": "",
+          "I7": "",
+          "I8": "",
           "I9": "azulStyle",
           "I10": "verdeStyle",
           "I11": "verdeStyle",
@@ -27406,26 +27612,26 @@
           "I13": "verdeStyle",
           "J1": "azulStyle",
           "J2": "verdeStyle",
-          "J3": "verdeStyle",
-          "J8": "verdeStyle",
-          "J9": "verdeStyle",
+          "J3": "",
+          "J8": "",
+          "J9": "",
           "J10": "azulStyle",
           "J12": "verdeStyle",
           "J11": "verdeStyle",
           "J13": "verdeStyle",
           "K1": "azulStyle",
           "K2": "verdeStyle",
-          "K3": "verdeStyle",
-          "K10": "verdeStyle",
+          "K3": "",
+          "K10": "",
           "K11": "azulStyle",
           "K12": "verdeStyle",
           "K13": "verdeStyle",
           "L1": "azulStyle",
-          "L2": "verdeStyle",
+          "L2": "",
           "L12": "azulStyle",
           "L13": "verdeStyle",
           "M1": "azulStyle",
-          "M2": "verdeStyle",
+          "M2": "",
           "M13": "azulStyle"
         }
       }
@@ -27435,7 +27641,7 @@
     "blinds": [
       {
         "id": "blind185",
-        "name": "21++",
+        "name": "21+",
         "legends": {
           "legend": "11% de mãos (134 combos)",
           "values": [
@@ -27535,6 +27741,7 @@
           "A9": "verdeStyle",
           "B1": "verdeStyle",
           "B2": "verdeStyle",
+          "B3": "verdeStyle",
           "C1": "verdeStyle",
           "C3": "verdeStyle",
           "D1": "verdeStyle",
@@ -27683,6 +27890,7 @@
           "B3": "verdeStyle",
           "B4": "verdeStyle",
           "B5": "verdeStyle",
+          "B6": "verdeStyle",
           "C1": "verdeStyle",
           "C2": "verdeStyle",
           "C3": "verdeStyle",
@@ -27690,6 +27898,7 @@
           "D1": "verdeStyle",
           "D2": "verdeStyle",
           "D4": "verdeStyle",
+          "D5": "verdeStyle",
           "E1": "verdeStyle",
           "E5": "verdeStyle",
           "F1": "verdeStyle",
@@ -27700,6 +27909,7 @@
           "H8": "verdeStyle",
           "I1": "verdeStyle",
           "I9": "verdeStyle",
+          "J1": "verdeStyle",
           "J10": "verdeStyle",
           "K11": "verdeStyle",
           "L12": "verdeStyle"
