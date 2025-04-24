@@ -14,6 +14,20 @@ function App() {
   const dispatch = useAppDispatch();
 
   const authLoading = useAppSelector(state => state.auth.loading);
+  useEffect(() => {
+    console.log("App carregado. Estado inicial:", authLoading);
+  }, []);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (authLoading) {
+        console.warn("Login automático travado por mais de 10 segundos.");
+      }
+    }, 10000);
+
+    return () => clearTimeout(timeout);
+  }, [authLoading]);
+
+  const { loading, authChecked } = useAppSelector(state => state.auth);
 
 
   useEffect(() => {
@@ -38,7 +52,8 @@ function App() {
                 const docRef = userSnapshot.docs[0].ref;
                 const firestoreSession = userSnapshot.docs[0].data().currentSession;
 
-                if (firestoreSession !== parsedUser.currentSession) {
+                if (!firestoreSession || firestoreSession !== parsedUser.currentSession) {
+
                   toast.warn("Sua conta foi acessada em outro dispositivo.");
                   await signOut(auth);
                   localStorage.clear();
@@ -77,6 +92,16 @@ function App() {
             dispatch(loginFail("Erro na leitura da sessão."));
           }
         }
+        
+        if (!userDataStored || !levelAccessStored) {
+          console.warn("Dados da sessão ausentes. Logout forçado.");
+          await signOut(auth);
+          localStorage.clear();
+          sessionStorage.clear();
+          dispatch(clearUserData());
+          dispatch(loginFail("Sessão local não encontrada."));
+          return;
+        }
       } else {
         dispatch(clearUserData());
         dispatch(loginFail("Usuário não encontrado."));
@@ -90,6 +115,9 @@ function App() {
   }, [dispatch]);
 
   if (authLoading) {
+    return <Loading />;
+  }
+  if (!authChecked) {
     return <Loading />;
   }
 
