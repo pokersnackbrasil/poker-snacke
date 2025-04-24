@@ -27,7 +27,7 @@ function App() {
     return () => clearTimeout(timeout);
   }, [authLoading]);
 
-  const { loading, authChecked } = useAppSelector(state => state.auth);
+  const { authChecked } = useAppSelector(state => state.auth);
 
 
   useEffect(() => {
