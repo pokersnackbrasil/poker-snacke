@@ -3,7 +3,9 @@ import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from './hooks';
 import { auth, db } from "./Server/firebase";
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { collection, query, where, getDocs, doc, getDoc, onSnapshot } from 'firebase/firestore';
+import { collection, query, where, getDocs, doc, getDoc
+  // , onSnapshot 
+} from 'firebase/firestore';
 import { setUserData, setLevelAccess, clearUserData } from './slices';
 import { loginStart, loginSuccess, loginFail } from './slices/authSlice';
 import { Loading } from './componentes/Load';
@@ -30,7 +32,7 @@ function App() {
   }, [authLoading]);
 
   useEffect(() => {
-    let unsubscribeSnapshot: (() => void) | null = null;
+    // let unsubscribeSnapshot: (() => void) | null = null;
 
     const unsubscribeAuth = onAuthStateChanged(auth, async (user) => {
       setInternalLoading(true);
@@ -65,30 +67,30 @@ function App() {
             if (auth.currentUser?.uid === userData.id) {
               console.log("ok")
 
-              try{
-                unsubscribeSnapshot = onSnapshot(userDocRef,
-                  (snapshot) => {
-                    const data = snapshot.data();
-                    console.log("[Snapshot]", data?.currentSession, "vs local", parsedUser.currentSession);
+              // try{
+              //   unsubscribeSnapshot = onSnapshot(userDocRef,
+              //     (snapshot) => {
+              //       const data = snapshot.data();
+              //       console.log("[Snapshot]", data?.currentSession, "vs local", parsedUser.currentSession);
                 
-                    if (!data || data.currentSession !== parsedUser.currentSession) {
-                      if (document.visibilityState === 'visible') {
-                        toast.warn("Sua sessão foi encerrada.");
-                      }
-                      signOutUser();
-                    }
-                  },
-                  (error) => {
-                    console.error("[Firestore Snapshot Error]", error);
-                    toast.error("Erro ao escutar dados em tempo real. Verifique sua conexão.");
-                    // não forçar signOut aqui
-                  }
-                );
-                console.log("unsubscribeSnapshot",unsubscribeSnapshot)
+              //       if (!data || data.currentSession !== parsedUser.currentSession) {
+              //         if (document.visibilityState === 'visible') {
+              //           toast.warn("Sua sessão foi encerrada.");
+              //         }
+              //         signOutUser();
+              //       }
+              //     },
+              //     (error) => {
+              //       console.error("[Firestore Snapshot Error]", error);
+              //       toast.error("Erro ao escutar dados em tempo real. Verifique sua conexão.");
+              //       // não forçar signOut aqui
+              //     }
+              //   );
+              //   console.log("unsubscribeSnapshot",unsubscribeSnapshot)
 
-              }catch(error){
-                console.log("error--",error)
-              }
+              // }catch(error){
+              //   console.log("error--",error)
+              // }
 
 
                            
@@ -126,7 +128,7 @@ function App() {
 
     return () => {
       unsubscribeAuth();
-      if (unsubscribeSnapshot) unsubscribeSnapshot();
+      // if (unsubscribeSnapshot) unsubscribeSnapshot();
     };
   }, [dispatch]);
 
