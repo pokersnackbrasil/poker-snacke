@@ -2,7 +2,7 @@ import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../Server/firebase";
 
 export async function saveUserSession(user: any, accessLevel: string, persist: boolean) {
-  const sessionId = user.currentSession;
+  // const sessionId = user.currentSession;
 
   // Salva localmente
   if (persist) {
