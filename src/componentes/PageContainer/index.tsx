@@ -11,6 +11,7 @@ import { updateDinamico } from "../../Server/update";
 import { useDispatch } from "react-redux";
 import { setUserData } from "../../slices";
 import { saveUserSession } from "../../utils/saveUser";
+import { getGrupoRelacionado } from "./utils";
 // import Cookies from "js-cookie";
 
 
@@ -150,7 +151,7 @@ export const PageContainer = ({json}:Props) => {
           {Object.keys(objectsColors).map((pos) => (
             <button
               key={pos}
-              className={ position == pos ? Style.buttonPositionSelected:Style.buttonPosition}
+              className={ position == pos ? Style.buttonPositionSelected: getGrupoRelacionado(position,pos)?Style.family:Style.buttonPosition}
               onClick={() => setPosition(pos as PositionKey)}
             >
               {pos}
@@ -158,7 +159,6 @@ export const PageContainer = ({json}:Props) => {
           ))}
         </div>
       </div>
-
     </div>
     <div className={Style.bodyConteudo}>
       <div className={Style.menuBlinds}>
@@ -167,7 +167,7 @@ export const PageContainer = ({json}:Props) => {
           (item: { id: string; name: string; styles?: any }) => (
             <button
               key={item.id}
-              className={blind === item.id ? Style.buttonBlindsSelected : Style.buttonBlinds}
+              className={blind === item.id ? Style.buttonBlindsSelected:Style.buttonBlinds}
               onClick={() => setBlind(item.id)}
               style={{ backgroundColor: item.styles?.A1 || undefined }}
             >
