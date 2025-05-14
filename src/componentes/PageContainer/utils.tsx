@@ -50,8 +50,11 @@ const grupos = {
 export function getGrupoRelacionado(botaoSelecionado: string, botaoCheck:string) {
   for (const [grupo, botoes] of Object.entries(grupos)) {
     if (botoes.includes(botaoSelecionado)) {
+
       return botoes.includes(botaoCheck);
+    }else{
+      if(grupo != "") return false;
     }
   }
-  return [];
+  return false;
 }
