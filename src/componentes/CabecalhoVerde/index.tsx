@@ -1,6 +1,7 @@
 import React from 'react';
 import { signOut } from 'firebase/auth';
 import { useAppDispatch } from '../../hooks';
+import { useAppSelector } from '../../hooks';
 import { clearUserData } from '../../slices';
 import { logout } from '../../slices/authSlice';
 import { auth, db } from '../../Server/firebase';
@@ -13,12 +14,14 @@ type CardProps = {
 };
 
 export default function CabecalhoVerde({ children }: CardProps) {
+  const levelAccess = useAppSelector(state => state.user.levelAccess);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   const handleLogout = async () => {
     // console.log("Saindo - 1");
     try {
+
       const currentUser = auth.currentUser;
 
       if (currentUser?.email) {
@@ -56,10 +59,25 @@ export default function CabecalhoVerde({ children }: CardProps) {
 
   return (
     <div className={style.green_header__body}>
-      <span className={style.sair} style={{ cursor: 'pointer' }} onClick={handleLogout}>
+      <span
+        className={style.sair}
+        style={{ cursor: "pointer" }}
+        onClick={handleLogout}
+      >
         Sair
       </span>
+      
       {children}
+
+      {levelAccess?.includes("0") && (
+        <span
+          className={style.sair}
+          style={{ cursor: "pointer" }}
+          onClick={() => navigate("/register")}
+        >
+          Criar Usuário
+        </span>
+      )}
     </div>
   );
 }
