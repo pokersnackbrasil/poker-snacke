@@ -175,7 +175,7 @@ export const PageContainer = ({json}:Props) => {
             </button>
           )
         )}
-        <span className={Style.positionTitleVoltar} onClick={()=>navigate("/Home")}>Voltar</span>
+        <span className={Style.positionTitleVoltar} onClick={()=>navigate("/Home")}>Back</span>
       </div>
       <span className={Style.positionTitle}>{position}</span>
       <div className={Style.containerTable}>

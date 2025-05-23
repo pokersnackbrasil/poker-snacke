@@ -44,7 +44,7 @@ export function Home() {
         />
         <CardButton
           classe="btn_3"
-          text="Outras Modalidades"
+          text="-"
           action={() => handleAccess("3", "/bountybuilders")}
         />
       </div>
@@ -56,6 +56,14 @@ export function Home() {
           </span>
           <span className={styles.span3}>
             Por favor, entre em contato com a equipe para aquisição, Abraços!
+          </span>
+          <span style={{height:"4rem", color:'#ffffff'}}>------</span>
+          <span className={styles.span1}>Hello!</span>
+          <span className={styles.span2}>
+            You do not yet have access to this modality.
+          </span>
+          <span className={styles.span3}>
+            Please contact the team for purchase, Cheers!
           </span>
           <span
             className={styles.fechar}

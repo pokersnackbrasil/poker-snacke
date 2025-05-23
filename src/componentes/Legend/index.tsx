@@ -32,9 +32,9 @@ export function Legend ({objectLegends,highlightedClasses,dinamico,setDinamico}:
   return (
     <div className={styles.legenda}>
       <div className={styles.titleLegenda}>
-        <span>Legendas</span>
+        <span>SUBTITLES</span>
         <span style={{fontSize:'1rem', color:"#11110f"}}>
-          DINAMICO <input type="checkbox" checked={dinamico}  style={{cursor:'pointer'}} onChange={() => setDinamico()}/>
+          DYNAMIC <input type="checkbox" checked={dinamico}  style={{cursor:'pointer'}} onChange={() => setDinamico()}/>
         </span>
       </div>
       <div>

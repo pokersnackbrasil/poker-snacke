@@ -3,108 +3,66 @@ import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from './hooks';
 import { auth, db } from "./Server/firebase";
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { collection, query, where, getDocs, doc, getDoc
-  // , onSnapshot 
-} from 'firebase/firestore';
+import { collection, query, where, getDocs, doc, getDoc, onSnapshot } from 'firebase/firestore';
 import { setUserData, setLevelAccess, clearUserData } from './slices';
 import { loginStart, loginSuccess, loginFail } from './slices/authSlice';
 import { Loading } from './componentes/Load';
 import { ParseUserData } from './utils/ParseUserData';
 import { saveUserSession } from './utils/saveUser';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const dispatch = useAppDispatch();
   const [internalLoading, setInternalLoading] = useState(true);
-  const { loading: authLoading, authChecked } = useAppSelector(state => state.auth);
+  const { authChecked } = useAppSelector(state => state.auth);
 
   useEffect(() => {
-    console.log("App carregado. Estado inicial:", authLoading);
-  }, []);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (authLoading) {
-        console.warn("Login automático travado por mais de 10 segundos.");
-      }
-    }, 10000);
-    return () => clearTimeout(timeout);
-  }, [authLoading]);
-
-  useEffect(() => {
-    // let unsubscribeSnapshot: (() => void) | null = null;
+    let unsubscribeSnapshot: (() => void) | null = null;
 
     const unsubscribeAuth = onAuthStateChanged(auth, async (user) => {
       setInternalLoading(true);
 
       if (user) {
-        console.log("[AuthStateChanged] Usuário autenticado:", user.email);
         dispatch(loginStart());
 
         try {
-          console.log("user",user)
-          console.log("user.uid",user.uid)
           const userDocRef = doc(db, 'usuario', user.uid);
           const userSnapshot = await getDoc(userDocRef);
-
           const accessQuery = query(collection(db, 'acesso'), where('id', '==', user.uid));
           const accessSnapshot = await getDocs(accessQuery);
 
-          if (userSnapshot.exists() && !accessSnapshot.empty) {
-            const userData = userSnapshot.data();
-            const accessData = accessSnapshot.docs[0].data();
-            const parsedUser = ParseUserData(userData);
-
-            console.log("[Login] Parsed User:", parsedUser);
-            console.log("[Login] Access Level:", accessData.nivel);
-
-            dispatch(setUserData(parsedUser));
-            dispatch(setLevelAccess([accessData.nivel.toString()]));
-            dispatch(loginSuccess(parsedUser));
-
-            await saveUserSession(parsedUser, accessData.nivel.toString(), true);
-
-            if (auth.currentUser?.uid === userData.id) {
-              console.log("ok")
-
-              // try{
-              //   unsubscribeSnapshot = onSnapshot(userDocRef,
-              //     (snapshot) => {
-              //       const data = snapshot.data();
-              //       console.log("[Snapshot]", data?.currentSession, "vs local", parsedUser.currentSession);
-                
-              //       if (!data || data.currentSession !== parsedUser.currentSession) {
-              //         if (document.visibilityState === 'visible') {
-              //           toast.warn("Sua sessão foi encerrada.");
-              //         }
-              //         signOutUser();
-              //       }
-              //     },
-              //     (error) => {
-              //       console.error("[Firestore Snapshot Error]", error);
-              //       toast.error("Erro ao escutar dados em tempo real. Verifique sua conexão.");
-              //       // não forçar signOut aqui
-              //     }
-              //   );
-              //   console.log("unsubscribeSnapshot",unsubscribeSnapshot)
-
-              // }catch(error){
-              //   console.log("error--",error)
-              // }
-
-
-                           
-            } else {
-              console.error("Tentativa de acesso ao documento não autorizada.");
-              toast.error("Acesso negado.");
-              await signOutUser();
-            }
-          } else {
-            console.error("Usuário ou acesso não encontrados.");
+          if (!userSnapshot.exists() || accessSnapshot.empty) {
+            toast.error("Usuário ou acesso não encontrado.");
             await signOutUser();
+            return;
           }
+
+          const userData = userSnapshot.data();
+          const accessData = accessSnapshot.docs[0].data();
+          const parsedUser = ParseUserData(userData);
+
+          if (auth.currentUser?.uid !== userData.id) {
+            toast.error("Acesso negado.");
+            await signOutUser();
+            return;
+          }
+
+          dispatch(setUserData(parsedUser));
+          dispatch(setLevelAccess([accessData.nivel.toString()]));
+          dispatch(loginSuccess(parsedUser));
+          await saveUserSession(parsedUser, accessData.nivel.toString(), true);
+
+          unsubscribeSnapshot = onSnapshot(userDocRef, (snapshot) => {
+            const data = snapshot.data();
+            if (!data || data.currentSession !== parsedUser.currentSession) {
+              toast.warn("Sessão encerrada por login em outro dispositivo.");
+              signOutUser();
+            }
+          });
+
         } catch (error) {
-          console.error("Erro ao consultar dados do Firestore:", error);
+          console.error("Erro no login automático:", error);
           await signOutUser();
         }
       } else {
@@ -118,7 +76,7 @@ function App() {
       try {
         await signOut(auth);
       } catch (error) {
-        console.warn("Erro ao tentar fazer signOut:", error);
+        console.warn("Erro no signOut:", error);
       }
       localStorage.clear();
       sessionStorage.clear();
@@ -128,18 +86,141 @@ function App() {
 
     return () => {
       unsubscribeAuth();
-      // if (unsubscribeSnapshot) unsubscribeSnapshot();
+      if (unsubscribeSnapshot) unsubscribeSnapshot();
     };
   }, [dispatch]);
 
-  if (!authChecked || internalLoading) {
+  if (internalLoading || !authChecked) {
     return <Loading />;
   }
 
-  return <RoutesApp />;
+  return (
+    <>
+      <RoutesApp />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
+    </>
+  );
 }
 
 export default App;
+
+// import { RoutesApp } from './Routes';
+// import { useEffect, useState } from 'react';
+// import { useAppDispatch, useAppSelector } from './hooks';
+// import { auth, db } from "./Server/firebase";
+// import { onAuthStateChanged, signOut } from 'firebase/auth';
+// import { collection, query, where, getDocs, doc, getDoc} from 'firebase/firestore';
+// import { setUserData, setLevelAccess, clearUserData } from './slices';
+// import { loginStart, loginSuccess, loginFail } from './slices/authSlice';
+// import { Loading } from './componentes/Load';
+// import { ParseUserData } from './utils/ParseUserData';
+// import { saveUserSession } from './utils/saveUser';
+// import { toast } from 'react-toastify';
+
+// function App() {
+//   const dispatch = useAppDispatch();
+//   const [internalLoading, setInternalLoading] = useState(true);
+//   const { loading: authLoading, authChecked } = useAppSelector(state => state.auth);
+
+//   useEffect(() => {
+//     console.log("App carregado. Estado inicial:", authLoading);
+//   }, []);
+
+//   useEffect(() => {
+//     const timeout = setTimeout(() => {
+//       if (authLoading) {
+//         console.warn("Login automático travado por mais de 10 segundos.");
+//       }
+//     }, 10000);
+//     return () => clearTimeout(timeout);
+//   }, [authLoading]);
+
+//   useEffect(() => {
+
+//     const unsubscribeAuth = onAuthStateChanged(auth, async (user) => {
+//       setInternalLoading(true);
+
+//       if (user) {
+//         console.log("[AuthStateChanged] Usuário autenticado:", user.email);
+//         dispatch(loginStart());
+
+//         try {
+//           console.log("user",user)
+//           console.log("user.uid",user.uid)
+//           const userDocRef = doc(db, 'usuario', user.uid);
+//           const userSnapshot = await getDoc(userDocRef);
+
+//           const accessQuery = query(collection(db, 'acesso'), where('id', '==', user.uid));
+//           const accessSnapshot = await getDocs(accessQuery);
+
+//           if (userSnapshot.exists() && !accessSnapshot.empty) {
+//             const userData = userSnapshot.data();
+//             const accessData = accessSnapshot.docs[0].data();
+//             const parsedUser = ParseUserData(userData);
+
+//             console.log("[Login] Parsed User:", parsedUser);
+//             console.log("[Login] Access Level:", accessData.nivel);
+
+//             dispatch(setUserData(parsedUser));
+//             dispatch(setLevelAccess([accessData.nivel.toString()]));
+//             dispatch(loginSuccess(parsedUser));
+
+//             await saveUserSession(parsedUser, accessData.nivel.toString(), true);
+
+//             if (auth.currentUser?.uid === userData.id) {
+//               console.log("ok")                           
+//             } else {
+//               console.error("Tentativa de acesso ao documento não autorizada.");
+//               toast.error("Acesso negado.");
+//               await signOutUser();
+//             }
+//           } else {
+//             console.error("Usuário ou acesso não encontrados.");
+//             await signOutUser();
+//           }
+//         } catch (error) {
+//           console.error("Erro ao consultar dados do Firestore:", error);
+//           await signOutUser();
+//         }
+//       } else {
+//         await signOutUser();
+//       }
+
+//       setInternalLoading(false);
+//     });
+
+//     const signOutUser = async () => {
+//       try {
+//         await signOut(auth);
+//       } catch (error) {
+//         console.warn("Erro ao tentar fazer signOut:", error);
+//       }
+//       localStorage.clear();
+//       sessionStorage.clear();
+//       dispatch(clearUserData());
+//       dispatch(loginFail("Usuário não autenticado."));
+//     };
+
+//     return () => {
+//       unsubscribeAuth();
+//     };
+//   }, [dispatch]);
+
+//   if (!authChecked || internalLoading) {
+//     return <Loading />;
+//   }
+
+//   return <RoutesApp />;
+// }
+
+// export default App;
 
 
 // import { RoutesApp } from './Routes';

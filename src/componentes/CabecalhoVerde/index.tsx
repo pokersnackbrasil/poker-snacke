@@ -64,7 +64,7 @@ export default function CabecalhoVerde({ children }: CardProps) {
         style={{ cursor: "pointer" }}
         onClick={handleLogout}
       >
-        Sair
+        Exit
       </span>
       
       {children}

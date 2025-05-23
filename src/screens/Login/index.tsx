@@ -121,7 +121,8 @@ export default function Login() {
       navigate("/home");
       toast.success("Login realizado com sucesso!");
     } catch (error) {
-      console.error("Erro ao fazer login:", error);
+      console.error("Erro ao fazer login:-", error);
+      toast.warning("Por favor, preencha todos os campos.");
       HandleError(error);
       dispatch(loginFail("Erro inesperado no login."));
     }
@@ -149,7 +150,7 @@ export default function Login() {
         <div className={style.inputGroup}>
           <InputText
             type={showPassword ? "text" : "password"}
-            placeholder="Senha"
+            placeholder="Password"
             value={password}
             setValue={(it: string) => setPassword(it)}
           >
@@ -160,11 +161,11 @@ export default function Login() {
         </div>
 
         <div className={style.options}>
-          <a href="#" className={style.link}>Redefinir senha</a>
-          <a href="#" className={style.link}>Fale conosco</a>
+          {/* <a href="#" className={style.link}>Redefinir senha</a>
+          <a href="#" className={style.link}>Fale conosco</a> */}
         </div>
 
-        <button className={style.loginButton} type="submit">Entrar</button>
+        <button className={style.loginButton} type="submit">SEND</button>
       </form>
 
       {loadingLogin && (
