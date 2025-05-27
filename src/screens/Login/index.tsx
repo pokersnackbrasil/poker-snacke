@@ -60,18 +60,18 @@ export default function Login() {
       const { user } = await signInWithEmailAndPassword(auth, email, password);
 
       await verifyEmail(user);
-      console.log("user",user)
-      console.log("user.uid",user.uid)
+      // console.log("user",user)
+      // console.log("user.uid",user.uid)
       const userDocRef = doc(db, 'usuario', user.uid);
       const userSnapshot = await getDoc(userDocRef);
 
-      console.log("userSnapshot:",userSnapshot)
-      console.log("userSnapshot - data:",userSnapshot.data())
+      // console.log("userSnapshot:",userSnapshot)
+      // console.log("userSnapshot - data:",userSnapshot.data())
 
       const accessQuery = query(collection(db, 'acesso'), where('id', '==', user.uid), where('status', '==', true));
       const accessSnapshot = await getDocs(accessQuery);
-      console.log("accessSnapshot:",accessSnapshot)
-      console.log("accessSnapshot - data:",accessSnapshot.docs[0].data())
+      // console.log("accessSnapshot:",accessSnapshot)
+      // console.log("accessSnapshot - data:",accessSnapshot.docs[0].data())
 
       if (!userSnapshot.exists()) {
         toast.error("Usuário não encontrado no banco.");

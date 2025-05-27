@@ -53,13 +53,13 @@ function App() {
           dispatch(loginSuccess(parsedUser));
           await saveUserSession(parsedUser, accessData.nivel.toString(), true);
 
-          unsubscribeSnapshot = onSnapshot(userDocRef, (snapshot) => {
-            const data = snapshot.data();
-            if (!data || data.currentSession !== parsedUser.currentSession) {
-              toast.warn("Sessão encerrada por login em outro dispositivo.");
-              signOutUser();
-            }
-          });
+          // unsubscribeSnapshot = onSnapshot(userDocRef, (snapshot) => {
+          //   const data = snapshot.data();
+          //   if (!data || data.currentSession !== parsedUser.currentSession) {
+          //     toast.warn("Sessão encerrada por login em outro dispositivo.");
+          //     signOutUser();
+          //   }
+          // });
 
         } catch (error) {
           console.error("Erro no login automático:", error);

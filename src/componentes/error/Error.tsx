@@ -2,8 +2,8 @@ import { toast } from "react-toastify";
 import errorMessages from "./msgAlertFireBase.json";
 
 export function HandleError(error: unknown) {
-  console.log("======= HANDLE ERROR =======");
-  console.log("Error capturado:", error);
+  // console.log("======= HANDLE ERROR =======");
+  // console.log("Error capturado:", error);
 
   try {
     const firebaseError = error as { code?: string; message?: string };
@@ -17,8 +17,8 @@ export function HandleError(error: unknown) {
       (typeof error === "string" ? error : "") ||
       "Ocorreu um erro inesperado. Tente novamente.";
 
-    console.log("Código do erro:", code);
-    console.log("Mensagem encontrada:", finalMessage);
+    // console.log("Código do erro:", code);
+    // console.log("Mensagem encontrada:", finalMessage);
 
     toast.error(finalMessage);
   } catch (err) {

@@ -12,6 +12,7 @@ import { useDispatch } from "react-redux";
 import { setUserData } from "../../slices";
 import { saveUserSession } from "../../utils/saveUser";
 import { getGrupoRelacionado } from "./utils";
+import { checkSessionBeforeAction } from "../../utils/SectionCheck";
 // import Cookies from "js-cookie";
 
 
@@ -138,6 +139,22 @@ export const PageContainer = ({json}:Props) => {
       }
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dinamico]);
+
+
+    const handleButtonClick = async () => {
+      const user = JSON.parse(localStorage.getItem('userData') || '{}');
+      const session = user.currentSession;
+      // console.log("user",user)
+      const isSessionValid = await checkSessionBeforeAction(user.id, session);
+
+      if (!isSessionValid) {
+        // Não faz nada, usuário já foi deslogado pela função.
+        return;
+      }
+
+      // 🔥 Sessão válida, executa aqui sua ação normalmente:
+      // console.log("Executando a ação do botão...");
+    };
     
     
     
@@ -152,7 +169,10 @@ export const PageContainer = ({json}:Props) => {
             <button
               key={pos}
               className={ position == pos ? Style.buttonPositionSelected: getGrupoRelacionado(position,pos)?Style.family:Style.buttonPosition}
-              onClick={() => setPosition(pos as PositionKey)}
+              onClick={() => {
+                setPosition(pos as PositionKey)
+                handleButtonClick()
+              }}
             >
               {pos}
             </button>
@@ -168,7 +188,10 @@ export const PageContainer = ({json}:Props) => {
             <button
               key={item.id}
               className={blind === item.id ? Style.buttonBlindsSelected:Style.buttonBlinds}
-              onClick={() => setBlind(item.id)}
+              onClick={() => {
+                setBlind(item.id)
+                handleButtonClick()
+              }}
               style={{ backgroundColor: item.styles?.A1 || undefined }}
             >
               {item.name}
