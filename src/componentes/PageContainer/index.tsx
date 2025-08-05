@@ -9,7 +9,7 @@ import { RootState } from "../../store";
 import { useSelector } from "react-redux";
 import { updateDinamico } from "../../Server/update";
 import { useDispatch } from "react-redux";
-import { setUserData } from "../../slices";
+import { setUserData, UserState } from "../../slice/user";
 import { saveUserSession } from "../../utils/saveUser";
 import { getGrupoRelacionado } from "./utils";
 // import Cookies from "js-cookie";
@@ -39,16 +39,16 @@ export const PageContainer = ({json}:Props) => {
     }
     return mapped;
   }
-  
+
   // type RawObjectsColors = typeof json;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   type RawObjectsColors = Record<string, any>;;
   type RawPositionKey = keyof RawObjectsColors;
-  
+
   function mapObjectsColors(jsonData: RawObjectsColors, styleModule: typeof style) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const mappedData: Record<string, any> = {};
-  
+
     (Object.keys(jsonData) as RawPositionKey[]).forEach((position) => {
       mappedData[position] = {
         ...jsonData[position],
@@ -74,7 +74,7 @@ export const PageContainer = ({json}:Props) => {
         })),
       };
     });
-  
+
     return mappedData;
   }
   const objectsColors = mapObjectsColors(json, style);
@@ -84,15 +84,15 @@ export const PageContainer = ({json}:Props) => {
     const [listBlinds, setListBlinds] = useState(objectsColors[position]?.blinds || []);
     const [blind, setBlind] = useState(listBlinds[0]?.id || "");
     const [objectColors, setObjectColors] = useState(listBlinds[0] || {});
-  
-  
+
+
     useEffect(() => {
       const blinds = objectsColors[position]?.blinds || [];
       setListBlinds(blinds);
       setBlind(blinds[0]?.id || "");
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [position]);
-  
+
     useEffect(() => {
       const selectedBlind = objectsColors[position]?.blinds.find((b:{id:string}) => b.id === blind);
       if (selectedBlind) {
@@ -103,7 +103,7 @@ export const PageContainer = ({json}:Props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [blind, position]);
 
-    const userData = useSelector((state: RootState) => state.user.userData);
+    const userData = useSelector((state: RootState) => state.user);
 
     const [ dinamico,setDinamico]=useState(userData?.dinamico ?? true)
 
@@ -121,13 +121,23 @@ export const PageContainer = ({json}:Props) => {
         didMountRef.current = true;
         return;
       }
-    
-      if (userData && userData.dinamico !== dinamico) {
-        const updatedUser = { ...userData, dinamico };
-    
-        updateDinamico(userData.id, dinamico)
+
+      if (userData && userData.dinamico !== dinamico && userData.uid) {
+        const updatedUser: UserState = { ...userData, dinamico };
+
+        updateDinamico(userData.uid, dinamico)
           .then(() => {
-            dispatch(setUserData(updatedUser));
+            dispatch(setUserData(
+              {
+                dinamico: updatedUser.dinamico,
+                email: updatedUser.email||"",
+                telefone: updatedUser.telefone||"",
+                status: false,
+                uid: updatedUser.uid||"",
+                nome: updatedUser.nome||"",
+                role: updatedUser.role||[]
+              }
+            ));
             saveUserSession(
               updatedUser,
               localStorage.getItem("levelAccess") || "",
@@ -138,9 +148,9 @@ export const PageContainer = ({json}:Props) => {
       }
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dinamico]);
-    
-    
-    
+
+
+
 
  return (
   <div className={Style.home} style={{backgroundColor:"#ece9e9"}}>
@@ -175,7 +185,7 @@ export const PageContainer = ({json}:Props) => {
             </button>
           )
         )}
-        <span className={Style.positionTitleVoltar} onClick={()=>navigate("/Home")}>Voltar</span>
+        <span className={Style.positionTitleVoltar} onClick={()=>navigate("/Home")}>BACK</span>
       </div>
       <span className={Style.positionTitle}>{position}</span>
       <div className={Style.containerTable}>

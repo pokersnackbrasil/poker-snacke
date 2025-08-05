@@ -1,11 +1,11 @@
 {
-  "3W BTN": {
+  "3W BTN":{
     "blinds": [
       {
         "id": "blind1",
         "name": "22+",
         "legends": {
-          "legend": "40% de mãos (514 combos)",
+          "legend": "40% of hands (514 combos)",
           "values": [
             {
               "id": "color1",
@@ -215,7 +215,7 @@
         "id": "blind2",
         "name": "16-21",
         "legends": {
-          "legend": "38% de mãos (488 combos)",
+          "legend": "38% of hands (488 combos)",
           "values": [
             {
               "id": "color1",
@@ -423,7 +423,7 @@
         "id": "blind3",
         "name": "15",
         "legends": {
-          "legend": "36% de mãos (454 combos)",
+          "legend": "36% of hands (454 combos)",
           "values": [
             {
               "id": "color1",
@@ -531,7 +531,7 @@
           "F6": "marronStyle",
           "F7": "amareloStyle",
           "F8": "amareloStyle",
-         
+
           "F9": "",
           "F10": "",
           "F11": "",
@@ -634,7 +634,7 @@
         "id": "blind4",
         "name": "11-14",
         "legends": {
-          "legend": "31% de mãos (386 combos)",
+          "legend": "31% of hands (386 combos)",
           "values": [
             {
               "id": "color1",
@@ -844,7 +844,7 @@
         "id": "blind5",
         "name": "10",
         "legends": {
-          "legend": "33% de mãos (418 combos)",
+          "legend": "33% of hands (418 combos)",
           "values": [
             {
               "id": "color1",
@@ -1042,7 +1042,7 @@
         "id": "blind6",
         "name": "9",
         "legends": {
-          "legend": "33% de mãos (418 combos)",
+          "legend": "33% of hands (418 combos)",
           "values": [
             {
               "id": "color1",
@@ -1240,7 +1240,7 @@
         "id": "blind7",
         "name": "8",
         "legends": {
-          "legend": "34% de mãos (450 combos)",
+          "legend": "34% of hands (450 combos)",
           "values": [
             {
               "id": "color1",
@@ -1426,7 +1426,7 @@
         "id": "blind8",
         "name": "7",
         "legends": {
-          "legend": "37% de mãos (486 combos)",
+          "legend": "37% of hands (486 combos)",
           "values": [
             {
               "id": "color1",
@@ -1612,7 +1612,7 @@
         "id": "blind9",
         "name": "6",
         "legends": {
-          "legend": "39% de mãos (510 combos)",
+          "legend": "39% of hands (510 combos)",
           "values": [
             {
               "id": "color1",
@@ -1798,7 +1798,7 @@
         "id": "blind10",
         "name": "5",
         "legends": {
-          "legend": "41% de mãos (542 combos)",
+          "legend": "41% of hands (542 combos)",
           "values": [
             {
               "id": "color1",
@@ -1988,7 +1988,7 @@
         "id": "blind11",
         "name": "21+",
         "legends": {
-          "legend": "40.87% de mãos (542 combos)",
+          "legend": "40.87% of hands (542 combos)",
           "values": [
             {
               "id": "color1",
@@ -2105,7 +2105,7 @@
         "id": "blind12",
         "name": "16-20",
         "legends": {
-          "legend": "35.6% de mãos (906 combos)",
+          "legend": "35.6% of hands (906 combos)",
           "values": [
             {
               "id": "color1",
@@ -2285,7 +2285,7 @@
         "id": "blind13",
         "name": "15",
         "legends": {
-          "legend": "34.24% de mãos (454 combos)",
+          "legend": "34.24% of hands (454 combos)",
           "values": [
             {
               "id": "color1",
@@ -2398,7 +2398,7 @@
         "id": "blind14",
         "name": "13-14",
         "legends": {
-          "legend": "33.24% de mãos (454 combos)",
+          "legend": "33.24% of hands (454 combos)",
           "values": [
             {
               "id": "color1",
@@ -2501,7 +2501,7 @@
         "id": "blind15",
         "name": "11-12",
         "legends": {
-          "legend": "30.62% de mãos (454 combos)",
+          "legend": "30.62% of hands (454 combos)",
           "values": [
             {
               "id": "color1",
@@ -2609,7 +2609,7 @@
         "id": "blind16",
         "name": "9-10",
         "legends": {
-          "legend": "34.43% de mãos (454 combos)",
+          "legend": "34.43% of hands (454 combos)",
           "values": [
             {
               "id": "color1",
@@ -2725,7 +2725,7 @@
         "id": "blind17",
         "name": "7-8",
         "legends": {
-          "legend": "35.63% de mãos (472.4 combos)",
+          "legend": "35.63% of hands (472.4 combos)",
           "values": [
             {
               "id": "color1",
@@ -2832,7 +2832,7 @@
         "id": "blind18",
         "name": "1-6",
         "legends": {
-          "legend": "39.67% de mãos (472.4 combos)",
+          "legend": "39.67% of hands (472.4 combos)",
           "values": [
             {
               "id": "color1",
@@ -2952,7 +2952,7 @@
         "id": "blind19",
         "name": "21+",
         "legends": {
-          "legend": "87% de mãos (1222 combos)",
+          "legend": "87% of hands (1222 combos)",
           "values": [
             {
               "id": "color1",
@@ -3157,7 +3157,7 @@
         "id": "blind20",
         "name": "18-20",
         "legends": {
-          "legend": "88% de mãos (1122 combos)",
+          "legend": "88% of hands (1122 combos)",
           "values": [
             {
               "id": "color1",
@@ -3362,7 +3362,7 @@
         "id": "blind21",
         "name": "16-17",
         "legends": {
-          "legend": "87% de mãos (1122 combos)",
+          "legend": "87% of hands (1122 combos)",
           "values": [
             {
               "id": "color1",
@@ -3567,7 +3567,7 @@
         "id": "blind22",
         "name": "14-15",
         "legends": {
-          "legend": "86% de mãos (1106 combos)",
+          "legend": "86% of hands (1106 combos)",
           "values": [
             {
               "id": "color1",
@@ -3765,7 +3765,7 @@
         "id": "blind23",
         "name": "11-13",
         "legends": {
-          "legend": "77% de mãos (994 combos)",
+          "legend": "77% of hands (994 combos)",
           "values": [
             {
               "id": "color1",
@@ -3944,7 +3944,7 @@
         "id": "blind24",
         "name": "9-10",
         "legends": {
-          "legend": "73% de mãos (938 combos)",
+          "legend": "73% of hands (938 combos)",
           "values": [
             {
               "id": "color1",
@@ -4112,7 +4112,7 @@
         "id": "blind25",
         "name": "7-8",
         "legends": {
-          "legend": "74% de mãos (954 combos)",
+          "legend": "74% of hands (954 combos)",
           "values": [
             {
               "id": "color1",
@@ -4279,7 +4279,7 @@
         "id": "blind26",
         "name": "1-6",
         "legends": {
-          "legend": "69% de mãos (954 combos)",
+          "legend": "69% of hands (954 combos)",
           "values": [
             {
               "id": "color1",
@@ -4433,7 +4433,7 @@
         "id": "blind27",
         "name": "23+",
         "legends": {
-          "legend": "65,49% de mãos (882combos)",
+          "legend": "65,49% of hands (882combos)",
           "values": [
             {
               "id": "color1",
@@ -4639,7 +4639,7 @@
         "id": "blind28",
         "name": "20-22",
         "legends": {
-          "legend": "58% de mãos (984 combos)",
+          "legend": "58% of hands (984 combos)",
           "values": [
             {
               "id": "color1",
@@ -4842,7 +4842,7 @@
         "id": "blind29",
         "name": "16-19",
         "legends": {
-          "legend": "63,86% de mãos (854 combos)",
+          "legend": "63,86% of hands (854 combos)",
           "values": [
             {
               "id": "color1",
@@ -5047,7 +5047,7 @@
         "id": "blind30",
         "name": "14-15",
         "legends": {
-          "legend": "62.59% de mãos (830 combos)",
+          "legend": "62.59% of hands (830 combos)",
           "values": [
             {
               "id": "color1",
@@ -5234,7 +5234,7 @@
         "id": "blind31",
         "name": "12-13",
         "legends": {
-          "legend": "62,59% de mãos (830 combos)",
+          "legend": "62,59% of hands (830 combos)",
           "values": [
             {
               "id": "color1",
@@ -5427,7 +5427,7 @@
         "id": "blind32",
         "name": "10-11",
         "legends": {
-          "legend": "60.33% de mãos ( 800 combos)",
+          "legend": "60.33% of hands ( 800 combos)",
           "values": [
             {
               "id": "color1",
@@ -5581,7 +5581,7 @@
         "id": "blind33",
         "name": "8-9",
         "legends": {
-          "legend": "63.8% de mãos ( 846 combos)",
+          "legend": "63.8% of hands ( 846 combos)",
           "values": [
             {
               "id": "color1",
@@ -5731,7 +5731,7 @@
         "id": "blind34",
         "name": "6-7",
         "legends": {
-          "legend": "67.57% de mãos ( 896 combos)",
+          "legend": "67.57% of hands ( 896 combos)",
           "values": [
             {
               "id": "color1",
@@ -5888,7 +5888,7 @@
         "id": "blind35",
         "name": "5",
         "legends": {
-          "legend": "72.85% de mãos ( 966 combos)",
+          "legend": "72.85% of hands ( 966 combos)",
           "values": [
             {
               "id": "color1",
@@ -6042,7 +6042,7 @@
         "id": "blind36",
         "name": "24+",
         "legends": {
-          "legend": "9.8% de mãos ( 130 combos)",
+          "legend": "9.8% of hands ( 130 combos)",
           "values": [
             {
               "id": "color1",
@@ -6081,7 +6081,7 @@
         "id": "blind37",
         "name": "22-23",
         "legends": {
-          "legend": "11,92% de mãos ( 158 combos)",
+          "legend": "11,92% of hands ( 158 combos)",
           "values": [
             {
               "id": "color1",
@@ -6124,7 +6124,7 @@
         "id": "blind38",
         "name": "20-21",
         "legends": {
-          "legend": "11.92% de mãos ( 158 combos)",
+          "legend": "11.92% of hands ( 158 combos)",
           "values": [
             {
               "id": "color1",
@@ -6167,7 +6167,7 @@
         "id": "blind39",
         "name": "18-19",
         "legends": {
-          "legend": "11.92% de mãos ( 158 combos)",
+          "legend": "11.92% of hands ( 158 combos)",
           "values": [
             {
               "id": "color1",
@@ -6210,7 +6210,7 @@
         "id": "blind40",
         "name": "16-17",
         "legends": {
-          "legend": "12.97% de mãos ( 172 combos)",
+          "legend": "12.97% of hands ( 172 combos)",
           "values": [
             {
               "id": "color1",
@@ -6255,7 +6255,7 @@
         "id": "blind41",
         "name": "14-15",
         "legends": {
-          "legend": "15.08% de mãos ( 200 combos)",
+          "legend": "15.08% of hands ( 200 combos)",
           "values": [
             {
               "id": "color1",
@@ -6302,7 +6302,7 @@
         "id": "blind42",
         "name": "13",
         "legends": {
-          "legend": "15.69% de mãos ( 208 combos)",
+          "legend": "15.69% of hands ( 208 combos)",
           "values": [
             {
               "id": "color1",
@@ -6351,7 +6351,7 @@
         "id": "blind43",
         "name": "12",
         "legends": {
-          "legend": "16.29% de mãos ( 216 combos)",
+          "legend": "16.29% of hands ( 216 combos)",
           "values": [
             {
               "id": "color1",
@@ -6400,7 +6400,7 @@
         "id": "blind44",
         "name": "11",
         "legends": {
-          "legend": "18.25% de mãos ( 242 combos)",
+          "legend": "18.25% of hands ( 242 combos)",
           "values": [
             {
               "id": "color1",
@@ -6453,7 +6453,7 @@
         "id": "blind45",
         "name": "9-10",
         "legends": {
-          "legend": "19.16% de mãos ( 254 combos)",
+          "legend": "19.16% of hands ( 254 combos)",
           "values": [
             {
               "id": "color1",
@@ -6509,7 +6509,7 @@
         "id": "blind46",
         "name": "1-8",
         "legends": {
-          "legend": "22.47% de mãos ( 298 combos)",
+          "legend": "22.47% of hands ( 298 combos)",
           "values": [
             {
               "id": "color1",
@@ -6573,7 +6573,7 @@
         "id": "blind47",
         "name": "25-15",
         "legends": {
-          "legend": "12% de mãos ( 154 combos)",
+          "legend": "12% of hands ( 154 combos)",
           "values": [
             {
               "id": "color1",
@@ -6615,7 +6615,7 @@
         "id": "blind48",
         "name": "12-14",
         "legends": {
-          "legend": "12% de mãos ( 174 combos)",
+          "legend": "12% of hands ( 174 combos)",
           "values": [
             {
               "id": "color1",
@@ -6661,7 +6661,7 @@
         "id": "blind49",
         "name": "10-11",
         "legends": {
-          "legend": "15% de mãos ( 194 combos)",
+          "legend": "15% of hands ( 194 combos)",
           "values": [
             {
               "id": "color1",
@@ -6709,7 +6709,7 @@
         "id": "blind50",
         "name": "6-9",
         "legends": {
-          "legend": "23% de mãos ( 298 combos)",
+          "legend": "23% of hands ( 298 combos)",
           "values": [
             {
               "id": "color1",
@@ -6770,7 +6770,7 @@
         "id": "blind51",
         "name": "5",
         "legends": {
-          "legend": "33% de mãos ( 426 combos)",
+          "legend": "33% of hands ( 426 combos)",
           "values": [
             {
               "id": "color1",
@@ -6849,7 +6849,7 @@
         "id": "blind52",
         "name": "4",
         "legends": {
-          "legend": "35% de mãos ( 454 combos)",
+          "legend": "35% of hands ( 454 combos)",
           "values": [
             {
               "id": "color1",
@@ -6931,7 +6931,7 @@
         "id": "blind53",
         "name": "3",
         "legends": {
-          "legend": "48% de mãos ( 626 combos)",
+          "legend": "48% of hands ( 626 combos)",
           "values": [
             {
               "id": "color1",
@@ -7040,7 +7040,7 @@
         "id": "blind54",
         "name": "2",
         "legends": {
-          "legend": "73% de mãos ( 958 combos)",
+          "legend": "73% of hands ( 958 combos)",
           "values": [
             {
               "id": "color1",
@@ -7191,7 +7191,7 @@
         "id": "blind55",
         "name": "1,5",
         "legends": {
-          "legend": "87% de mãos ( 1146 combos)",
+          "legend": "87% of hands ( 1146 combos)",
           "values": [
             {
               "id": "color1",
@@ -7366,7 +7366,7 @@
         "id": "blind47",
         "name": "18+",
         "legends": {
-          "legend": "67% de mãos ( 870 combos)",
+          "legend": "67% of hands ( 870 combos)",
           "values": [
             {
               "id": "color1",
@@ -7533,7 +7533,7 @@
         "id": "blind48",
         "name": "13-17",
         "legends": {
-          "legend": "61% de mãos ( 774 combos)",
+          "legend": "61% of hands ( 774 combos)",
           "values": [
             {
               "id": "color1",
@@ -7697,7 +7697,7 @@
         "id": "blind49",
         "name": "1-13",
         "legends": {
-          "legend": "56% de mãos ( 730 combos)",
+          "legend": "56% of hands ( 730 combos)",
           "values": [
             {
               "id": "color1",
@@ -7844,7 +7844,7 @@
         "id": "blind50",
         "name": "18+",
         "legends": {
-          "legend": "35% de mãos ( 414 combos)",
+          "legend": "35% of hands ( 414 combos)",
           "values": [
             {
               "id": "color1",
@@ -7952,7 +7952,7 @@
         "id": "blind51",
         "name": "13-17",
         "legends": {
-          "legend": "30% de mãos ( 390 combos)",
+          "legend": "30% of hands ( 390 combos)",
           "values": [
             {
               "id": "color1",
@@ -8042,7 +8042,7 @@
         "id": "blind52",
         "name": "1-12",
         "legends": {
-          "legend": "26% de mãos ( 330 combos)",
+          "legend": "26% of hands ( 330 combos)",
           "values": [
             {
               "id": "color1",
@@ -8129,7 +8129,7 @@
         "id": "blind53",
         "name": "24+",
         "legends": {
-          "legend": "23.38% de mãos ( 310 combos)",
+          "legend": "23.38% of hands ( 310 combos)",
           "values": [
             {
               "id": "color1",
@@ -8227,7 +8227,7 @@
         "id": "blind54",
         "name": "21-23",
         "legends": {
-          "legend": "23.38% de mãos ( 310 combos)",
+          "legend": "23.38% of hands ( 310 combos)",
           "values": [
             {
               "id": "color1",
@@ -8313,7 +8313,7 @@
         "id": "blind55",
         "name": "14-20",
         "legends": {
-          "legend": "21.57% de mãos ( 286 combos)",
+          "legend": "21.57% of hands ( 286 combos)",
           "values": [
             {
               "id": "color1",
@@ -8392,7 +8392,7 @@
         "id": "blind56",
         "name": "10-14",
         "legends": {
-          "legend": "20.97% de mãos ( 278 combos)",
+          "legend": "20.97% of hands ( 278 combos)",
           "values": [
             {
               "id": "color1",
@@ -8457,7 +8457,7 @@
         "id": "blind57",
         "name": "1-9",
         "legends": {
-          "legend": "20.36% de mãos ( 270 combos)",
+          "legend": "20.36% of hands ( 270 combos)",
           "values": [
             {
               "id": "color1",
@@ -8519,7 +8519,7 @@
         "id": "blind53",
         "name": "18+",
         "legends": {
-          "legend": "35% de mãos ( 450 combos)",
+          "legend": "35% of hands ( 450 combos)",
           "values": [
             {
               "id": "color1",
@@ -8615,7 +8615,7 @@
         "id": "blind54",
         "name": "14-17",
         "legends": {
-          "legend": "31% de mãos ( 410 combos)",
+          "legend": "31% of hands ( 410 combos)",
           "values": [
             {
               "id": "color1",
@@ -8700,7 +8700,7 @@
         "id": "blind55",
         "name": "10-13",
         "legends": {
-          "legend": "28% de mãos ( 350 combos)",
+          "legend": "28% of hands ( 350 combos)",
           "values": [
             {
               "id": "color1",
@@ -8774,7 +8774,7 @@
         "id": "blind56",
         "name": "1-9",
         "legends": {
-          "legend": "27% de mãos ( 346 combos)",
+          "legend": "27% of hands ( 346 combos)",
           "values": [
             {
               "id": "color1",
@@ -8845,7 +8845,7 @@
         "id": "blind57",
         "name": "20+",
         "legends": {
-          "legend": "11% de mãos ( 134 combos)",
+          "legend": "11% of hands ( 134 combos)",
           "values": [
             {
               "id": "color1",
@@ -8882,7 +8882,7 @@
         "id": "blind58",
         "name": "16-19",
         "legends": {
-          "legend": "12% de mãos ( 150 combos)",
+          "legend": "12% of hands ( 150 combos)",
           "values": [
             {
               "id": "color1",
@@ -8921,7 +8921,7 @@
         "id": "blind59",
         "name": "13-15",
         "legends": {
-          "legend": "17% de mãos ( 214 combos)",
+          "legend": "17% of hands ( 214 combos)",
           "values": [
             {
               "id": "color1",
@@ -8970,7 +8970,7 @@
         "id": "blind60",
         "name": "11-12",
         "legends": {
-          "legend": "18% de mãos ( 236 combos)",
+          "legend": "18% of hands ( 236 combos)",
           "values": [
             {
               "id": "color1",
@@ -9026,7 +9026,7 @@
         "id": "blind61",
         "name": "10",
         "legends": {
-          "legend": "26% de mãos ( 342 combos)",
+          "legend": "26% of hands ( 342 combos)",
           "values": [
             {
               "id": "color1",
@@ -9092,7 +9092,7 @@
         "id": "blind62",
         "name": "9",
         "legends": {
-          "legend": "29% de mãos ( 382 combos)",
+          "legend": "29% of hands ( 382 combos)",
           "values": [
             {
               "id": "color1",
@@ -9162,7 +9162,7 @@
         "id": "blind63",
         "name": "8",
         "legends": {
-          "legend": "30% de mãos ( 386 combos)",
+          "legend": "30% of hands ( 386 combos)",
           "values": [
             {
               "id": "color1",
@@ -9233,7 +9233,7 @@
         "id": "blind64",
         "name": "7",
         "legends": {
-          "legend": "34% de mãos ( 442 combos)",
+          "legend": "34% of hands ( 442 combos)",
           "values": [
             {
               "id": "color1",
@@ -9312,7 +9312,7 @@
         "id": "blind65",
         "name": "6",
         "legends": {
-          "legend": "38% de mãos ( 492 combos)",
+          "legend": "38% of hands ( 492 combos)",
           "values": [
             {
               "id": "color1",
@@ -9400,7 +9400,7 @@
         "id": "blind66",
         "name": "5",
         "legends": {
-          "legend": "43% de mãos ( 558 combos)",
+          "legend": "43% of hands ( 558 combos)",
           "values": [
             {
               "id": "color1",
@@ -9496,7 +9496,7 @@
         "id": "blind67",
         "name": "4",
         "legends": {
-          "legend": "56% de mãos ( 730 combos)",
+          "legend": "56% of hands ( 730 combos)",
           "values": [
             {
               "id": "color1",
@@ -9613,14 +9613,14 @@
           "M1": "verdeStyle",
           "M2": "verdeStyle",
           "M13": "verdeStyle"
-          
+
         }
       },
       {
         "id": "blind68",
         "name": "1-3",
         "legends": {
-          "legend": "94% de mãos ( 1242 combos)",
+          "legend": "94% of hands ( 1242 combos)",
           "values": [
             {
               "id": "color1",
@@ -9803,7 +9803,7 @@
         "id": "blind69",
         "name": "20+",
         "legends": {
-          "legend": "100% de mãos ( 1326 combos)",
+          "legend": "100% of hands ( 1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -10007,7 +10007,7 @@
         "id": "blind70",
         "name": "15-19",
         "legends": {
-          "legend": "100% de mãos ( 1326 combos)",
+          "legend": "100% of hands ( 1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -10211,7 +10211,7 @@
         "id": "blind71",
         "name": "1-14",
         "legends": {
-          "legend": "100% de mãos ( 1326 combos)",
+          "legend": "100% of hands ( 1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -10413,7 +10413,7 @@
         "id": "blind72",
         "name": "21+",
         "legends": {
-          "legend": "70% de mãos ( 906 combos)",
+          "legend": "70% of hands ( 906 combos)",
           "values": [
             {
               "id": "color1",
@@ -10576,7 +10576,7 @@
         "id": "blind73",
         "name": "15-20",
         "legends": {
-          "legend": "67% de mãos ( 870 combos)",
+          "legend": "67% of hands ( 870 combos)",
           "values": [
             {
               "id": "color1",
@@ -10736,7 +10736,7 @@
         "id": "blind74",
         "name": "10-14",
         "legends": {
-          "legend": "60% de mãos ( 766 combos)",
+          "legend": "60% of hands ( 766 combos)",
           "values": [
             {
               "id": "color1",
@@ -10882,7 +10882,7 @@
         "id": "blind75",
         "name": "1-9",
         "legends": {
-          "legend": "50% de mãos ( 642 combos)",
+          "legend": "50% of hands ( 642 combos)",
           "values": [
             {
               "id": "color1",
@@ -11023,7 +11023,7 @@
         "id": "blind76",
         "name": "21+",
         "legends": {
-          "legend": "68.33% de mãos ( 906 combos)",
+          "legend": "68.33% of hands ( 906 combos)",
           "values": [
             {
               "id": "color1",
@@ -11192,7 +11192,7 @@
         "id": "blind77",
         "name": "17-20",
         "legends": {
-          "legend": "66.52% de mãos ( 882 combos)",
+          "legend": "66.52% of hands ( 882 combos)",
           "values": [
             {
               "id": "color1",
@@ -11359,7 +11359,7 @@
         "id": "blind78",
         "name": "14-17",
         "legends": {
-          "legend": "63% de mãos ( 846 combos)",
+          "legend": "63% of hands ( 846 combos)",
           "values": [
             {
               "id": "color1",
@@ -11529,7 +11529,7 @@
         "id": "blind79",
         "name": "12-13",
         "legends": {
-          "legend": "50.53% de mãos ( 670 combos)",
+          "legend": "50.53% of hands ( 670 combos)",
           "values": [
             {
               "id": "color1",
@@ -11668,7 +11668,7 @@
         "id": "blind80",
         "name": "10-11",
         "legends": {
-          "legend": "40.87% de mãos ( 542 combos)",
+          "legend": "40.87% of hands ( 542 combos)",
           "values": [
             {
               "id": "color1",
@@ -11786,7 +11786,7 @@
         "id": "blind81",
         "name": "21+",
         "legends": {
-          "legend": "6% de mãos ( 74 combos)",
+          "legend": "6% of hands ( 74 combos)",
           "values": [
             {
               "id": "color1",
@@ -11814,7 +11814,7 @@
         "id": "blind82",
         "name": "17-20",
         "legends": {
-          "legend": "7% de mãos ( 88 combos)",
+          "legend": "7% of hands ( 88 combos)",
           "values": [
             {
               "id": "color1",
@@ -11845,7 +11845,7 @@
         "id": "blind83",
         "name": "13-17",
         "legends": {
-          "legend": "8% de mãos ( 104 combos)",
+          "legend": "8% of hands ( 104 combos)",
           "values": [
             {
               "id": "color1",
@@ -11877,7 +11877,7 @@
         "id": "blind84",
         "name": "10-13",
         "legends": {
-          "legend": "10% de mãos ( 126 combos)",
+          "legend": "10% of hands ( 126 combos)",
           "values": [
             {
               "id": "color1",
@@ -11913,7 +11913,7 @@
         "id": "blind85",
         "name": "7-10",
         "legends": {
-          "legend": "15% de mãos ( 198 combos)",
+          "legend": "15% of hands ( 198 combos)",
           "values": [
             {
               "id": "color1",
@@ -11957,7 +11957,7 @@
         "id": "blind86",
         "name": "6",
         "legends": {
-          "legend": "25% de mãos ( 330 combos)",
+          "legend": "25% of hands ( 330 combos)",
           "values": [
             {
               "id": "color1",
@@ -12028,7 +12028,7 @@
         "id": "blind87",
         "name": "5",
         "legends": {
-          "legend": "37% de mãos ( 490 combos)",
+          "legend": "37% of hands ( 490 combos)",
           "values": [
             {
               "id": "color1",
@@ -12124,7 +12124,7 @@
         "id": "blind88",
         "name": "4",
         "legends": {
-          "legend": "53% de mãos ( 694 combos)",
+          "legend": "53% of hands ( 694 combos)",
           "values": [
             {
               "id": "color1",
@@ -12251,7 +12251,7 @@
         "id": "blind89",
         "name": "3",
         "legends": {
-          "legend": "73% de mãos ( 966 combos)",
+          "legend": "73% of hands ( 966 combos)",
           "values": [
             {
               "id": "color1",
@@ -12410,7 +12410,7 @@
         "id": "blind90",
         "name": "2",
         "legends": {
-          "legend": "100% de mãos ( 1326 combos)",
+          "legend": "100% of hands ( 1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -12600,7 +12600,7 @@
         "id": "blind92",
         "name": "20-25",
         "legends": {
-          "legend": "100% de mãos ( 1326 combos)",
+          "legend": "100% of hands ( 1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -12804,7 +12804,7 @@
         "id": "blind93",
         "name": "17-20",
         "legends": {
-          "legend": "100% de mãos ( 1326 combos)",
+          "legend": "100% of hands ( 1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -13008,7 +13008,7 @@
         "id": "blind94",
         "name": "14-17",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -13212,7 +13212,7 @@
         "id": "blind95",
         "name": "11-14",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -13416,7 +13416,7 @@
         "id": "blind96",
         "name": "1-10",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -13612,7 +13612,7 @@
         "id": "blind97",
         "name": "19+",
         "legends": {
-          "legend": "73% de mãos (954 combos)",
+          "legend": "73% of hands (954 combos)",
           "values": [
             {
               "id": "color1",
@@ -13773,7 +13773,7 @@
         "id": "blind98",
         "name": "1-18",
         "legends": {
-          "legend": "65% de mãos (846 combos)",
+          "legend": "65% of hands (846 combos)",
           "values": [
             {
               "id": "color1",
@@ -13929,7 +13929,7 @@
         "id": "blind99",
         "name": "23+",
         "legends": {
-          "legend": "71.04% de mãos (942 combos)",
+          "legend": "71.04% of hands (942 combos)",
           "values": [
             {
               "id": "color1",
@@ -14107,7 +14107,7 @@
         "id": "blind100",
         "name": "20-22",
         "legends": {
-          "legend": "62.44% de mãos (828 combos)",
+          "legend": "62.44% of hands (828 combos)",
           "values": [
             {
               "id": "color1",
@@ -14266,7 +14266,7 @@
         "id": "blind101",
         "name": "18-20",
         "legends": {
-          "legend": "58.37% de mãos (774 combos)",
+          "legend": "58.37% of hands (774 combos)",
           "values": [
             {
               "id": "color1",
@@ -14430,7 +14430,7 @@
         "id": "blind102",
         "name": "16-17",
         "legends": {
-          "legend": "52.04% de mãos (690 combos)",
+          "legend": "52.04% of hands (690 combos)",
           "values": [
             {
               "id": "color1",
@@ -14588,7 +14588,7 @@
         "id": "blind103",
         "name": "14-15",
         "legends": {
-          "legend": "47.21% de mãos (626 combos)",
+          "legend": "47.21% of hands (626 combos)",
           "values": [
             {
               "id": "color1",
@@ -14727,7 +14727,7 @@
         "id": "blind104",
         "name": "12-13",
         "legends": {
-          "legend": "41.48% de mãos (550 combos)",
+          "legend": "41.48% of hands (550 combos)",
           "values": [
             {
               "id": "color1",
@@ -14851,7 +14851,7 @@
         "id": "blind105",
         "name": "11",
         "legends": {
-          "legend": "35.14% de mãos (312 combos)",
+          "legend": "35.14% of hands (312 combos)",
           "values": [
             {
               "id": "color1",
@@ -14952,7 +14952,7 @@
         "id": "blind106",
         "name": "9-10",
         "legends": {
-          "legend": "26.09% de mãos (346 combos)",
+          "legend": "26.09% of hands (346 combos)",
           "values": [
             {
               "id": "color1",
@@ -15031,7 +15031,7 @@
         "id": "blind107",
         "name": "1-8",
         "legends": {
-          "legend": "24.28% de mãos (322 combos)",
+          "legend": "24.28% of hands (322 combos)",
           "values": [
             {
               "id": "color1",
@@ -15103,7 +15103,7 @@
         "id": "blind108",
         "name": "21+",
         "legends": {
-          "legend": "10% de mãos (128 combos)",
+          "legend": "10% of hands (128 combos)",
           "values": [
             {
               "id": "color1",
@@ -15139,7 +15139,7 @@
         "id": "blind128",
         "name": "19-20",
         "legends": {
-          "legend": "11% de mãos (138 combos)",
+          "legend": "11% of hands (138 combos)",
           "values": [
             {
               "id": "color1",
@@ -15177,7 +15177,7 @@
         "id": "blind109",
         "name": "17-18",
         "legends": {
-          "legend": "13% de mãos (170 combos)",
+          "legend": "13% of hands (170 combos)",
           "values": [
             {
               "id": "color1",
@@ -15219,7 +15219,7 @@
         "id": "blind110",
         "name": "15-16",
         "legends": {
-          "legend": "15% de mãos (190 combos)",
+          "legend": "15% of hands (190 combos)",
           "values": [
             {
               "id": "color1",
@@ -15264,7 +15264,7 @@
         "id": "blind111",
         "name": "13-14",
         "legends": {
-          "legend": "21% de mãos (268 combos)",
+          "legend": "21% of hands (268 combos)",
           "values": [
             {
               "id": "color1",
@@ -15319,7 +15319,7 @@
         "id": "blind112",
         "name": "12",
         "legends": {
-          "legend": "24% de mãos (308 combos)",
+          "legend": "24% of hands (308 combos)",
           "values": [
             {
               "id": "color1",
@@ -15381,7 +15381,7 @@
         "id": "blind113",
         "name": "10-11",
         "legends": {
-          "legend": "29% de mãos (382 combos)",
+          "legend": "29% of hands (382 combos)",
           "values": [
             {
               "id": "color1",
@@ -15451,7 +15451,7 @@
         "id": "blind114",
         "name": "9",
         "legends": {
-          "legend": "34% de mãos (438 combos)",
+          "legend": "34% of hands (438 combos)",
           "values": [
             {
               "id": "color1",
@@ -15529,7 +15529,7 @@
         "id": "blind115",
         "name": "8",
         "legends": {
-          "legend": "38% de mãos (498 combos)",
+          "legend": "38% of hands (498 combos)",
           "values": [
             {
               "id": "color1",
@@ -15616,7 +15616,7 @@
         "id": "blind116",
         "name": "7",
         "legends": {
-          "legend": "41% de mãos (534 combos)",
+          "legend": "41% of hands (534 combos)",
           "values": [
             {
               "id": "color1",
@@ -15708,7 +15708,7 @@
         "id": "blind117",
         "name": "6",
         "legends": {
-          "legend": "48% de mãos (630 combos)",
+          "legend": "48% of hands (630 combos)",
           "values": [
             {
               "id": "color1",
@@ -15812,7 +15812,7 @@
         "id": "blind118",
         "name": "5",
         "legends": {
-          "legend": "56% de mãos (730 combos)",
+          "legend": "56% of hands (730 combos)",
           "values": [
             {
               "id": "color1",
@@ -15929,7 +15929,7 @@
         "id": "blind119",
         "name": "4",
         "legends": {
-          "legend": "65% de mãos (858 combos)",
+          "legend": "65% of hands (858 combos)",
           "values": [
             {
               "id": "color1",
@@ -16064,7 +16064,7 @@
         "id": "blind120",
         "name": "1-3",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -16254,7 +16254,7 @@
         "id": "blind121",
         "name": "21+",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -16458,7 +16458,7 @@
         "id": "blind122",
         "name": "17-20",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -16662,7 +16662,7 @@
         "id": "blind123",
         "name": "14-16",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -16866,7 +16866,7 @@
         "id": "blind124",
         "name": "11-13",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -17070,7 +17070,7 @@
         "id": "blind125",
         "name": "9-10",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -17274,7 +17274,7 @@
         "id": "blind126",
         "name": "1-8",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -17482,7 +17482,7 @@
         "id": "blind127",
         "name": "23+",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -17686,7 +17686,7 @@
         "id": "blind128",
         "name": "20-22",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -17890,7 +17890,7 @@
         "id": "blind129",
         "name": "17-19",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -18094,7 +18094,7 @@
         "id": "blind130",
         "name": "14-16",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -18298,7 +18298,7 @@
         "id": "blind131",
         "name": "12-13",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -18502,7 +18502,7 @@
         "id": "blind132",
         "name": "1-11",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -18710,7 +18710,7 @@
         "id": "blind133",
         "name": "21+",
         "legends": {
-          "legend": "87% de mãos (1146 combos)",
+          "legend": "87% of hands (1146 combos)",
           "values": [
             {
               "id": "color1",
@@ -18893,7 +18893,7 @@
         "id": "blind134",
         "name": "16-20",
         "legends": {
-          "legend": "84% de mãos (1098 combos)",
+          "legend": "84% of hands (1098 combos)",
           "values": [
             {
               "id": "color1",
@@ -19072,7 +19072,7 @@
         "id": "blind135",
         "name": "13-15",
         "legends": {
-          "legend": "68% de mãos (890 combos)",
+          "legend": "68% of hands (890 combos)",
           "values": [
             {
               "id": "color1",
@@ -19219,7 +19219,7 @@
         "id": "blind136",
         "name": "10-12",
         "legends": {
-          "legend": "68% de mãos (890 combos)",
+          "legend": "68% of hands (890 combos)",
           "values": [
             {
               "id": "color1",
@@ -19366,7 +19366,7 @@
         "id": "blind137",
         "name": "1-9",
         "legends": {
-          "legend": "68% de mãos (890 combos)",
+          "legend": "68% of hands (890 combos)",
           "values": [
             {
               "id": "color1",
@@ -19517,7 +19517,7 @@
         "id": "blind138",
         "name": "21+",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -19751,7 +19751,7 @@
         "id": "blind139",
         "name": "18-20",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -19991,7 +19991,7 @@
         "id": "blind140",
         "name": "16-17",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -20219,7 +20219,7 @@
         "id": "blind141",
         "name": "14-15",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -20447,7 +20447,7 @@
         "id": "blind142",
         "name": "12-13",
         "legends": {
-          "legend": " % de mãos ( combos)",
+          "legend": " % of hands ( combos)",
           "values": [
             {
               "id": "color1",
@@ -20675,7 +20675,7 @@
         "id": "blind143",
         "name": "10-11",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -20885,7 +20885,7 @@
         "id": "blind144",
         "name": "9",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -21101,7 +21101,7 @@
         "id": "blind145",
         "name": "8",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -21305,7 +21305,7 @@
         "id": "blind146",
         "name": "7",
         "legends": {
-          "legend": "86% de mãos (1110 combos)",
+          "legend": "86% of hands (1110 combos)",
           "values": [
             {
               "id": "color1",
@@ -21485,7 +21485,7 @@
         "id": "blind147",
         "name": "6",
         "legends": {
-          "legend": "88% de mãos (1146 combos)",
+          "legend": "88% of hands (1146 combos)",
           "values": [
             {
               "id": "color1",
@@ -21668,7 +21668,7 @@
         "id": "blind148",
         "name": "5",
         "legends": {
-          "legend": "87% de mãos (1146 combos)",
+          "legend": "87% of hands (1146 combos)",
           "values": [
             {
               "id": "color1",
@@ -21851,7 +21851,7 @@
         "id": "blind149",
         "name": "1-4",
         "legends": {
-          "legend": "88% de mãos (1146 combos)",
+          "legend": "88% of hands (1146 combos)",
           "values": [
             {
               "id": "color1",
@@ -22038,7 +22038,7 @@
         "id": "blind150",
         "name": "22-25",
         "legends": {
-          "legend": "91.86% de mãos (1218 combos)",
+          "legend": "91.86% of hands (1218 combos)",
           "values": [
             {
               "id": "color1",
@@ -22263,7 +22263,7 @@
         "id": "blind151",
         "name": "19-21",
         "legends": {
-          "legend": "94.57% de mãos (1254 combos)",
+          "legend": "94.57% of hands (1254 combos)",
           "values": [
             {
               "id": "color1",
@@ -22497,7 +22497,7 @@
         "id": "blind152",
         "name": "15-18",
         "legends": {
-          "legend": "93.67% de mãos (1242 combos)",
+          "legend": "93.67% of hands (1242 combos)",
           "values": [
             {
               "id": "color1",
@@ -22730,7 +22730,7 @@
         "id": "blind153",
         "name": "13-14",
         "legends": {
-          "legend": "92.76% de mãos (1230 combos)",
+          "legend": "92.76% of hands (1230 combos)",
           "values": [
             {
               "id": "color1",
@@ -22962,7 +22962,7 @@
         "id": "blind154",
         "name": "12",
         "legends": {
-          "legend": "90.05% de mãos (1194 combos)",
+          "legend": "90.05% of hands (1194 combos)",
           "values": [
             {
               "id": "color1",
@@ -23173,7 +23173,7 @@
         "id": "blind155",
         "name": "11",
         "legends": {
-          "legend": "90.05% de mãos (1194 combos)",
+          "legend": "90.05% of hands (1194 combos)",
           "values": [
             {
               "id": "color1",
@@ -23377,7 +23377,7 @@
         "id": "blind156",
         "name": "10",
         "legends": {
-          "legend": "88.24% de mãos (1170 combos)",
+          "legend": "88.24% of hands (1170 combos)",
           "values": [
             {
               "id": "color1",
@@ -23574,7 +23574,7 @@
         "id": "blind157",
         "name": "9",
         "legends": {
-          "legend": "82.81% de mãos (1098 combos)",
+          "legend": "82.81% of hands (1098 combos)",
           "values": [
             {
               "id": "color1",
@@ -23765,7 +23765,7 @@
         "id": "blind158",
         "name": "7-8",
         "legends": {
-          "legend": "74.06% de mãos (982 combos)",
+          "legend": "74.06% of hands (982 combos)",
           "values": [
             {
               "id": "color1",
@@ -23937,7 +23937,7 @@
         "id": "blind159",
         "name": "6",
         "legends": {
-          "legend": "73.15% de mãos (970 combos)",
+          "legend": "73.15% of hands (970 combos)",
           "values": [
             {
               "id": "color1",
@@ -24111,7 +24111,7 @@
         "id": "blind160",
         "name": "1-5",
         "legends": {
-          "legend": "70.44% de mãos (934 combos)",
+          "legend": "70.44% of hands (934 combos)",
           "values": [
             {
               "id": "color1",
@@ -24276,7 +24276,7 @@
         "id": "blind161",
         "name": "21+",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -24480,7 +24480,7 @@
         "id": "blind162",
         "name": "16-20",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -24684,7 +24684,7 @@
         "id": "blind163",
         "name": "12-15",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -24888,7 +24888,7 @@
         "id": "blind164",
         "name": "10-11",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -25092,7 +25092,7 @@
         "id": "blind165",
         "name": "8-9",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -25296,7 +25296,7 @@
         "id": "blind166",
         "name": "6-7",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -25494,7 +25494,7 @@
         "id": "blind167",
         "name": "4-5",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -25686,7 +25686,7 @@
         "id": "blind168",
         "name": "1-3",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -25882,7 +25882,7 @@
         "id": "blind169",
         "name": "12-15+",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -26098,7 +26098,7 @@
         "id": "blind170",
         "name": "9-11",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -26314,7 +26314,7 @@
         "id": "blind171",
         "name": "7-8",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -26346,7 +26346,7 @@
               "text1": "ISO 3.5x - Fold",
               "text2": "4.52% (60 combos)"
             }
-           
+
           ]
         },
         "styles": {
@@ -26525,7 +26525,7 @@
         "id": "blind172",
         "name": "6-6",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -26729,7 +26729,7 @@
         "id": "blind173",
         "name": "4.5-5.5",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -26937,7 +26937,7 @@
         "id": "blind174",
         "name": "22+",
         "legends": {
-          "legend": "78% de mãos (1002 combos)",
+          "legend": "78% of hands (1002 combos)",
           "values": [
             {
               "id": "color1",
@@ -27108,7 +27108,7 @@
         "id": "blind175",
         "name": "18-21",
         "legends": {
-          "legend": "75% de mãos (978 combos)",
+          "legend": "75% of hands (978 combos)",
           "values": [
             {
               "id": "color1",
@@ -27275,7 +27275,7 @@
         "id": "blind176",
         "name": "14-17",
         "legends": {
-          "legend": "73% de mãos (954 combos)",
+          "legend": "73% of hands (954 combos)",
           "values": [
             {
               "id": "color1",
@@ -27438,7 +27438,7 @@
         "id": "blind177",
         "name": "11-13",
         "legends": {
-          "legend": "72% de mãos (942 combos)",
+          "legend": "72% of hands (942 combos)",
           "values": [
             {
               "id": "color1",
@@ -27598,7 +27598,7 @@
         "id": "blind178",
         "name": "7-10",
         "legends": {
-          "legend": "62% de mãos (814 combos)",
+          "legend": "62% of hands (814 combos)",
           "values": [
             {
               "id": "color1",
@@ -27741,7 +27741,7 @@
         "id": "blind179",
         "name": "1-6",
         "legends": {
-          "legend": "57% de mãos (742 combos)",
+          "legend": "57% of hands (742 combos)",
           "values": [
             {
               "id": "color1",
@@ -27879,7 +27879,7 @@
         "id": "blind180",
         "name": "21+",
         "legends": {
-          "legend": "73% de mãos (954 combos)",
+          "legend": "73% of hands (954 combos)",
           "values": [
             {
               "id": "color1",
@@ -28053,7 +28053,7 @@
         "id": "blind181",
         "name": "17-20",
         "legends": {
-          "legend": "72.85% de mãos (966 combos)",
+          "legend": "72.85% of hands (966 combos)",
           "values": [
             {
               "id": "color1",
@@ -28221,7 +28221,7 @@
         "id": "blind182",
         "name": "14-16",
         "legends": {
-          "legend": "71.95% de mãos (954 combos)",
+          "legend": "71.95% of hands (954 combos)",
           "values": [
             {
               "id": "color1",
@@ -28388,7 +28388,7 @@
         "id": "blind183",
         "name": "11-13",
         "legends": {
-          "legend": "71.95% de mãos (954 combos)",
+          "legend": "71.95% of hands (954 combos)",
           "values": [
             {
               "id": "color1",
@@ -28555,7 +28555,7 @@
         "id": "blind184",
         "name": "10",
         "legends": {
-          "legend": "58,37% de mãos (774 combos)",
+          "legend": "58,37% of hands (774 combos)",
           "values": [
             {
               "id": "color1",
@@ -28723,7 +28723,7 @@
         "id": "blind185",
         "name": "21+",
         "legends": {
-          "legend": "11% de mãos (134 combos)",
+          "legend": "11% of hands (134 combos)",
           "values": [
             {
               "id": "color1",
@@ -28760,7 +28760,7 @@
         "id": "blind186",
         "name": "18-20",
         "legends": {
-          "legend": "12% de mãos (150 combos)",
+          "legend": "12% of hands (150 combos)",
           "values": [
             {
               "id": "color1",
@@ -28799,7 +28799,7 @@
         "id": "blind187",
         "name": "17",
         "legends": {
-          "legend": "15% de mãos (186 combos)",
+          "legend": "15% of hands (186 combos)",
           "values": [
             {
               "id": "color1",
@@ -28843,7 +28843,7 @@
         "id": "blind188",
         "name": "16",
         "legends": {
-          "legend": "15% de mãos (198 combos)",
+          "legend": "15% of hands (198 combos)",
           "values": [
             {
               "id": "color1",
@@ -28888,7 +28888,7 @@
         "id": "blind189",
         "name": "14-15",
         "legends": {
-          "legend": "19% de mãos (252 combos)",
+          "legend": "19% of hands (252 combos)",
           "values": [
             {
               "id": "color1",
@@ -28942,7 +28942,7 @@
         "id": "blind190",
         "name": "13",
         "legends": {
-          "legend": "21% de mãos (272 combos)",
+          "legend": "21% of hands (272 combos)",
           "values": [
             {
               "id": "color1",
@@ -28999,7 +28999,7 @@
         "id": "blind191",
         "name": "12",
         "legends": {
-          "legend": "25% de mãos (320 combos)",
+          "legend": "25% of hands (320 combos)",
           "values": [
             {
               "id": "color1",
@@ -29062,7 +29062,7 @@
         "id": "blind192",
         "name": "11",
         "legends": {
-          "legend": "29% de mãos (378 combos)",
+          "legend": "29% of hands (378 combos)",
           "values": [
             {
               "id": "color1",
@@ -29131,7 +29131,7 @@
         "id": "blind193",
         "name": "10",
         "legends": {
-          "legend": "31% de mãos (402 combos)",
+          "legend": "31% of hands (402 combos)",
           "values": [
             {
               "id": "color1",
@@ -29204,7 +29204,7 @@
         "id": "blind194",
         "name": "9",
         "legends": {
-          "legend": "35% de mãos (462 combos)",
+          "legend": "35% of hands (462 combos)",
           "values": [
             {
               "id": "color1",
@@ -29284,7 +29284,7 @@
         "id": "blind195",
         "name": "8",
         "legends": {
-          "legend": "38% de mãos (498 combos)",
+          "legend": "38% of hands (498 combos)",
           "values": [
             {
               "id": "color1",
@@ -29371,7 +29371,7 @@
         "id": "blind196",
         "name": "7",
         "legends": {
-          "legend": "40% de mãos (518 combos)",
+          "legend": "40% of hands (518 combos)",
           "values": [
             {
               "id": "color1",
@@ -29461,7 +29461,7 @@
         "id": "blind197",
         "name": "6",
         "legends": {
-          "legend": "45% de mãos (594 combos)",
+          "legend": "45% of hands (594 combos)",
           "values": [
             {
               "id": "color1",
@@ -29560,7 +29560,7 @@
         "id": "blind198",
         "name": "5",
         "legends": {
-          "legend": "55% de mãos (722 combos)",
+          "legend": "55% of hands (722 combos)",
           "values": [
             {
               "id": "color1",
@@ -29675,7 +29675,7 @@
         "id": "blind199",
         "name": "4",
         "legends": {
-          "legend": "65% de mãos (858 combos)",
+          "legend": "65% of hands (858 combos)",
           "values": [
             {
               "id": "color1",
@@ -29810,7 +29810,7 @@
         "id": "blind200",
         "name": "3",
         "legends": {
-          "legend": "93% de mãos (1230 combos)",
+          "legend": "93% of hands (1230 combos)",
           "values": [
             {
               "id": "color1",
@@ -29988,7 +29988,7 @@
         "id": "blind201",
         "name": "1-2",
         "legends": {
-          "legend": "100% de mãos (1326 combos)",
+          "legend": "100% of hands (1326 combos)",
           "values": [
             {
               "id": "color1",
@@ -30178,7 +30178,7 @@
         "id": "blind202",
         "name": "18+",
         "legends": {
-          "legend": "46% de mãos (586 combos)",
+          "legend": "46% of hands (586 combos)",
           "values": [
             {
               "id": "color1",
@@ -30292,7 +30292,7 @@
         "id": "blind203",
         "name": "14-17",
         "legends": {
-          "legend": "34% de mãos (440 combos)",
+          "legend": "34% of hands (440 combos)",
           "values": [
             {
               "id": "color1",
@@ -30377,7 +30377,7 @@
           "J11": "verdebrancoStyle",
           "K1": "verdeStyle",
           "K11": "azulStyle",
-          
+
           "L1": "verdeStyle",
           "L12": "azulStyle",
           "M1": "verdeStyle",
@@ -30388,7 +30388,7 @@
         "id": "blind204",
         "name": "10-13",
         "legends": {
-          "legend": "35% de mãos (458 combos)",
+          "legend": "35% of hands (458 combos)",
           "values": [
             {
               "id": "color1",
@@ -30475,7 +30475,7 @@
         "id": "blind205",
         "name": "1-9",
         "legends": {
-          "legend": "32% de mãos (420 combos)",
+          "legend": "32% of hands (420 combos)",
           "values": [
             {
               "id": "color2",
@@ -30552,4 +30552,3 @@
   }
 }
 
-    

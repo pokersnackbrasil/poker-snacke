@@ -15,9 +15,9 @@ type LegendProps = {
 };
 export function Legend ({objectLegends,highlightedClasses,dinamico,setDinamico}: LegendProps) {
   // console.log("highlightedClasses: ",highlightedClasses)
-  
+
  if(objectLegends === null) {
-   return <div>Loading...</div>; 
+   return <div>Loading...</div>;
  }else if(objectLegends !== null) {
   const values = Array.isArray(objectLegends.values)
     ? objectLegends.values
@@ -28,13 +28,13 @@ export function Legend ({objectLegends,highlightedClasses,dinamico,setDinamico}:
     }
   };
 
-  
+
   return (
     <div className={styles.legenda}>
       <div className={styles.titleLegenda}>
-        <span>Legendas</span>
-        <span style={{fontSize:'1rem', color:"#11110f"}}>
-          DINAMICO <input type="checkbox" checked={dinamico}  style={{cursor:'pointer'}} onChange={() => setDinamico()}/>
+        <span>Legends</span>
+        <span style={{fontSize:'1.5rem', color:"#575756"}}>
+          Dinamic <input type="checkbox" checked={dinamico}  style={{cursor:'pointer', height:"1rem",width:"1rem"}} onChange={() => setDinamico()}/>
         </span>
       </div>
       <div>

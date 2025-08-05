@@ -106,7 +106,279 @@
   background-color: #ffffff;
 }
 
+
+
+
+/* --------------- */
+/* .verdeStyle {
+  color: #ffffff;
+  background-color: #2ecc71;
+}
+
+.marronStyle {
+  color: #ffffff;
+  background-color: #e67e22;
+}
+
+.marronvermelhoStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, #e67e22 50%, #c0392b 50%);
+}
+
+.roxovermelhoStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, #9b59b6 50%, #c0392b 50%);
+}
+
+.pinkStyle {
+  color: #ffffff;
+  background-color: #ff6f61;
+}
+
+.amareloStyle {
+  color: #333333;
+  background-color: #f1c40f;
+}
+
+.laranjaStyle {
+  color: #ffffff;
+  background-color: #e74c3c;
+}
+
+.amarelo1Style {
+  color: #333333;
+  background: linear-gradient(to top, #f1c40f 50%, #ffffff 50%);
+}
+
+.roxolaranjaStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, #e74c3c 50%, #9b59b6 50%);
+}
+
+.roxoStyle {
+  color: #ffffff;
+  background-color: #9b59b6;
+}
+
+.vermelhoescuroStyle {
+  color: #ffffff;
+  background-color: #c0392b;
+}
+
 .verdeStyle {
+  color: #ffffff;
+  background-color: #27ae60;
+}
+
+.azulmStyle {
+  color: #333333;
+  background-color: #7f8c8d;
+}
+
+.roxomarronStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, #e67e22 50%, #9b59b6 50%);
+}
+
+.roxopinkStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, #9b59b6 50%, #ff6f61 50%);
+}
+
+.roxoamareloStyle {
+  color: #333333;
+  background: linear-gradient(to top, #9b59b6 50%, #f1c40f 50%);
+}
+
+.roxobrancoStyle {
+  color: #333333;
+  background: linear-gradient(to top, #9b59b6 50%, #ffffff 50%);
+}
+
+.azulclaroStyle {
+  color: #333333;
+  background-color: #3498db;
+}
+
+.cinzaStyle {
+  color: #ffffff;
+  background-color: #95a5a6;
+}
+
+.azulStyle {
+  color: #ffffff;
+  background-color: #2980b9;
+}
+
+.azulmarinhoStyle {
+  color: #ffffff;
+  background-color: #34495e;
+}
+
+.azulamareloStyle {
+  color: #333333;
+  background: linear-gradient(to top, #f1c40f 50%, #3498db 50%);
+}
+
+.roxoverdeStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, #27ae60 50%, #9b59b6 50%);
+}
+
+.rosabebeStyle {
+  color: #ffffff;
+  background-color: #f7cac9;
+}
+
+.verdebrancoStyle {
+  color: #333333;
+  background: linear-gradient(to top, #27ae60 50%, #ffffff 50%);
+}
+
+.azulbrancoStyle {
+  color: #333333;
+  background: linear-gradient(to top, #2980b9 50%, #ffffff 50%);
+} */
+
+/* --------------- */
+
+
+
+
+
+/* ---------------- */
+
+
+.verdeStyle {
+  color: #ffffff;
+  background-color: #6f00ff;
+}
+
+.marronStyle {
+  color: #000000;
+  background-color: #ff9100;
+}
+
+.marronvermelhoStyle {
+  color: #000000;
+  background: linear-gradient(to top, #ff9100 50%, #cc0000 50%);
+}
+
+.roxovermelhoStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, #e100ff 50%, #cc0000 50%);
+}
+
+.pinkStyle {
+  color: #ffffff;
+  background-color: #ff0080;
+}
+
+.amareloStyle {
+  color: #000000;
+  background-color: #00b7ff;
+}
+
+.laranjaStyle {
+  color: #000000;
+  background-color: #00ff94;
+}
+
+.amarelo1Style {
+  color: #000000;
+  background: linear-gradient(to top, #00b7ff 50%, #ffffff 50%);
+}
+
+.roxolaranjaStyle {
+  color: #000000;
+  background: linear-gradient(to top, #00ff94 50%, #e100ff 50%);
+}
+
+.roxoStyle {
+  color: #ffffff;
+  background-color: #e100ff;
+}
+
+.vermelhoescuroStyle {
+  color: #ffffff;
+  background-color: #cc0000;
+}
+
+.azulmStyle {
+  color: #000000;
+  background-color: #ffc400;
+}
+
+.roxomarronStyle {
+  color: #000000;
+  background: linear-gradient(to top, #ff9100 50%, #e100ff 50%);
+}
+
+.roxopinkStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, #e100ff 50%, #ff0080 50%);
+}
+
+.roxoamareloStyle {
+  color: #000000;
+  background: linear-gradient(to top, #e100ff 50%, #00b7ff 50%);
+}
+
+.roxobrancoStyle {
+  color: #000000;
+  background: linear-gradient(to top, #e100ff 50%, #ffffff 50%);
+}
+
+.azulclaroStyle {
+  color: #000000;
+  background-color: #ffc400;
+}
+
+.cinzaStyle {
+  color: #ffffff;
+  background-color: #4b4b4b; 
+}
+
+.azulStyle {
+  color: #ffffff;
+  background-color: #ff3d00;
+}
+
+.azulmarinhoStyle {
+  color: #000000;
+  background-color: #00ffea;
+}
+
+.azulamareloStyle {
+  color: #000000;
+  background: linear-gradient(to top, #00b7ff 50%, #ffc400 50%);
+}
+
+.roxoverdeStyle {
+  color: #ffffff;
+  background: linear-gradient(to top, #6f00ff 50%, #e100ff 50%);
+}
+
+.rosabebeStyle {
+  color: #000000;
+  background-color: #a3ff00; 
+}
+
+.verdebrancoStyle {
+  color: #000000;
+  background: linear-gradient(to top, #6f00ff 50%, #ffffff 50%);
+}
+
+.azulbrancoStyle {
+  color: #000000;
+  background: linear-gradient(to top, #ff3d00 50%, #ffffff 50%);
+} 
+
+
+
+/* ---------- */
+
+/* .verdeStyle {
   color: #fff;
   background-color: #4CAF50;
 }
@@ -234,7 +506,7 @@
 .azulbrancoStyle {
   color: #000000;
   background: linear-gradient(to top,  rgb(4, 0, 255)  50%, rgb(255, 255, 255) 50%);
-}
+} */
 
 
 
