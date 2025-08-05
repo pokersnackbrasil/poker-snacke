@@ -81,24 +81,26 @@ export const loginWithEmail = createAsyncThunk(
 	}
 );
 
-export const observeAuthState = createAsyncThunk<{ uid: string; email: string | null } | null>(
-	"auth/observeAuthState",
-	async (_, { dispatch }) => {
-		return new Promise((resolve) => {
-			// console.log(dispatch)
-			onAuthStateChanged(auth, (user) => {
-				if (user) {
-					resolve({
-						uid: user.uid,
-						email: user.email,
-					});
-				} else {
-					resolve(null);
-				}
-			});
-		});
-	}
-);
+export const observeAuthState = createAsyncThunk<
+  { uid: string; email: string | null } | null
+>("auth/observeAuthState", async () => {
+  const user = await new Promise<{ uid: string; email: string | null } | null>(
+    (resolve) => {
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          resolve({
+            uid: user.uid,
+            email: user.email,
+          });
+        } else {
+          resolve(null);
+        }
+      });
+    }
+  );
+
+  return user;
+});
 
 export const logout = createAsyncThunk("auth/logout", async (_, { dispatch }) => {
 	try {
