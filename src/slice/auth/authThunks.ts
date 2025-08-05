@@ -58,7 +58,7 @@ export const loginWithEmail = createAsyncThunk(
 				const usuario = {
 					uid: user.uid,
 					nome: dados.name,
-					email: user.email,
+					email: user.email??"",
 					telefone: dados.telefone,
 					role: accessSnapShot.docs[0].data().nivel,
 					status: dados.status,
@@ -114,8 +114,8 @@ export const resetPassword = createAsyncThunk("auth/resetPassword", async (email
 	try {
 		await sendPasswordResetEmail(auth, email);
 		return "E-mail de redefinição enviado com sucesso.";
-	} catch (error: any) {
+	} catch (error) {
 		HandleError(error);
-		return rejectWithValue(error.message || "Erro ao redefinir senha.");
+		return rejectWithValue(error || "Erro ao redefinir senha.");
 	}
 });
