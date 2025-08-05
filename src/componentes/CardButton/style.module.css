@@ -1,67 +1,73 @@
 .btn {
- position: relative;
- height: 70%;
- aspect-ratio: 0.6;
- background-image: url('../../assets/3.png');
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
- border: none;
- background-color: transparent;
- cursor: pointer;
- display: flex;
- justify-content: center;
- align-items: center;
- cursor: pointer;
- border-radius: 10px;
- max-height: 25vw;
- margin-bottom: -10%;
+	position: relative;
+	height: 60%;
+	aspect-ratio: 0.6;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+	min-height: 250px;
+	margin-bottom: -10%;
+
 }
 
-.btn img { 
- width: 200px;
- background-color: transparent;
+.fundo, .carta {
+	position: absolute;
+	/* width: 100%; */
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: opacity 0.3s ease;
+	object-fit: cover;
+}
+.carta {
+	opacity: 0;
+	z-index: 2;
 }
 
-.btn_1:hover {
- background-image: url('../../assets/4.png');
+.btn:hover .fundo {
+	opacity: 0;
+}
+.btn:hover .carta {
+	opacity: 1;
 }
 
-.btn_2:hover {
- background-image: url('../../assets/5.png');
-}
-.btn_3:hover {
- background-image: url('../../assets/6.png');
-}
+
 .btnText {
- position: absolute;
- top: -2rem;
- left: 50%;
- transform: translateX(-50%);
- font-size: 1.5rem;
- color: #fff;
- font-family: 'Cinzel', serif;
- text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
- overflow: hidden; /* Importante para esconder o brilho fora do texto */
- cursor: pointer;
- width: 100%;
+	position: absolute;
+	top: -2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 1.5rem;
+	color: #fff;
+	font-family: "Cinzel", serif;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	overflow: hidden; /* Importante para esconder o brilho fora do texto */
+	cursor: pointer;
+	width: max-content;
+	flex-wrap: nowrap;
+
 }
 
 /* Adiciona esse código para o efeito de luz */
 .btnText::after {
- content: '';
- position: absolute;
- top: 0;
- left: -75%;
- width: 50%;
- height: 100%;
- background: linear-gradient(
-   120deg,
-   rgba(255, 255, 255, 0) 0%,
-   rgba(255, 255, 255, 0.6) 50%,
-   rgba(255, 255, 255, 0) 100%
- );
- transform: skewX(-20deg);
- animation: shine 2s infinite;
- cursor: pointer;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -75%;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(
+		120deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 0.6) 50%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	transform: skewX(-20deg);
+	animation: shine 2s infinite;
+	cursor: pointer;
 }
