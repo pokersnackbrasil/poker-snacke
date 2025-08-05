@@ -26,6 +26,7 @@
   align-items: center;
   border-radius: 1rem;
   padding: 1rem;
+  gap:0.5rem;
 }
 
 .title {
@@ -34,16 +35,38 @@
   font-weight: bold;
   margin-bottom: 2rem;
   color: #1f1717be;
-  height: 3rem;
+  height: 2rem;
   margin-top: 2rem;
 }
 
 .inputGroup {
   width: 80%;
   min-width: 280px;
-  height: 4rem;
-  margin-bottom: 1.5rem;
+  height: 3rem;
+  /* margin-bottom: 1.5rem; */
   position: relative;
+}
+.inputGroupSenha {
+  width: 80%;
+  min-width: 280px;
+  height: 3rem;
+  /* margin-bottom: 1.5rem; */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.5rem
+}
+.inputGroupSenhaInput {
+  /* width: 40%; */
+  flex: 1;
+  /* min-width: 280px; */
+  height: 3rem;
+  /* margin-bottom: 1.5rem; */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  /* gap: 1rem */
 }
 
 .input {
@@ -144,7 +167,7 @@
   width: 80%;
   min-width: 280px;
   height: 3rem;
-  margin-bottom: 0.7rem;
+  /* margin-bottom: 0.7rem; */
 }
 
 .imagemIconInput {

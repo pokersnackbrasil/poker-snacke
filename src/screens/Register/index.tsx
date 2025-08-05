@@ -5,205 +5,216 @@ import InputText from "../../componentes/IputText";
 import PersonIcon from "../../assets/person_24px.png";
 import Eye from "../../assets/eye.png";
 import Hidden from "../../assets/hidden.png";
-import { collection, doc, addDoc, setDoc, serverTimestamp } from "firebase/firestore";
-import { auth, db } from "../../Server/firebase";
+import { auth } from "../../Server/firebase";
 import { toast } from "react-toastify";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { getIdToken } from "firebase/auth";
+import { globalValues } from "../../globalValues";
 
 export function Register() {
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    email: "",
-    senha: "",
-    confirmarSenha: "",
-    nome: "",
-    nivel: "",
-    observacao: ""
-  });
+	const navigate = useNavigate();
+	const [formData, setFormData] = useState({
+		email: "",
+		senha: "",
+		confirmarSenha: "",
+		nome: "",
+		nivel: "",
+		observacao: "",
+		telefone: "",
+	});
 
-  const [showPassword, setShowPassword] = useState(false);
+	const [showPassword, setShowPassword] = useState(false);
+	const [loading, setLoading] = useState(false);
 
-  const handleChange = (field: string, value: string) => {
-    setFormData({ ...formData, [field]: value });
-  };
+	const handleChange = (field: string, value: string) => {
+		setFormData({ ...formData, [field]: value });
+	};
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const { email, senha, confirmarSenha, nome, nivel, observacao } = formData;
+	const handleSubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
+		const { email, senha, confirmarSenha, nome, nivel, observacao, telefone } = formData;
 
-    if (!email || !senha || !confirmarSenha || !nome || !nivel) {
-      toast.warning("Preencha todos os campos obrigatórios.");
-      return;
-    }
+		if (!email || !senha || !confirmarSenha || !nome || !nivel) {
+			toast.warning("Preencha todos os campos obrigatórios.");
+			return;
+		}
 
-    if (senha !== confirmarSenha) {
-      toast.error("As senhas não coincidem.");
-      return;
-    }
+		if (senha !== confirmarSenha) {
+			toast.error("As senhas não coincidem.");
+			return;
+		}
 
-    if (!/^[0-9]+$/.test(nivel)) {
-      toast.error("O nível de acesso deve conter apenas números inteiros.");
-      return;
-    }
+		if (!/^[0-9]+$/.test(nivel)) {
+			toast.error("O nível de acesso deve conter apenas números inteiros.");
+			return;
+		}
 
-    try {
-      const currentUser = auth.currentUser;
-      if (!currentUser) {
-        toast.error("Você precisa estar logado para cadastrar novos usuários.");
-        return;
-      }
+		try {
+			setLoading(true);
+			const usuarioAtual = auth.currentUser;
+			if (!usuarioAtual) {
+				toast.error("Você precisa estar logado para cadastrar novos usuários.");
+				setLoading(false);
+				return;
+			}
 
-      // Criar novo usuário temporariamente
-      const secondaryApp = await import("firebase/app").then(({ initializeApp, getApps }) => {
-        const config = auth.app.options;
-        const name = "Secondary";
-        const apps = getApps();
-        return apps.find(app => app.name === name) || initializeApp(config, name);
-      });
+			const token = await getIdToken(usuarioAtual);
 
-      const { getAuth, signOut: secondarySignOut, createUserWithEmailAndPassword: createInSecondary } = await import("firebase/auth");
-      const secondaryAuth = getAuth(secondaryApp);
+			const usuario = {
+				email,
+				nome,
+				password: senha,
+				nivel,
+				observacao,
+				telefone: telefone || "",
+			};
 
-      const { user } = await createInSecondary(secondaryAuth, email, senha);
-      const uid = user.uid;
+			const resposta = await fetch(`${globalValues.URLBASE}/criarUsuarios`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					Authorization: `Bearer ${token}`,
+				},
+				body: JSON.stringify({
+					usuario,
+				}),
+			});
 
-      await secondarySignOut(secondaryAuth); // desconecta usuário criado e mantém sessão principal
+			if (!resposta.ok) {
+				const errorText = await resposta.text();
+				throw new Error(`Erro ${resposta.status}: ${errorText}`);
+			}
 
-      const usuarioDoc = {
-        id: uid,
-        nome,
-        email,
-        status: true,
-        currentSession: "",
-        dinamico: true,
-        dataCadastro: serverTimestamp()
-      };
+			const contentType = resposta.headers.get("content-type");
+			const resultado = contentType?.includes("application/json") ? await resposta.json() : await resposta.text();
 
-      const acessoDoc = {
-        id: uid,
-        nivel,
-        status: true,
-        observacao,
-        dataCadastro: serverTimestamp(),
-        dataInicio: serverTimestamp(),
-        dataFim: null
-      };
+			if (!resultado.sucesso) {
+				throw new Error(resultado.erro || "Erro ao cadastrar usuário.");
+			}
 
-      await setDoc(doc(db, "usuario", uid), usuarioDoc);
-      await addDoc(collection(db, "acesso"), acessoDoc);
+			toast.success("Usuário cadastrado com sucesso!");
+			setFormData({
+				email: "",
+				senha: "",
+				confirmarSenha: "",
+				nome: "",
+				nivel: "",
+				observacao: "",
+				telefone: "",
+			});
+			navigate("/home");
+		} catch (error: any) {
+			console.error("Erro ao cadastrar:", error);
+			toast.error(error.message || "Erro ao cadastrar usuário.");
+		} finally {
+			setLoading(false);
+		}
+	};
 
-      toast.success("Usuário cadastrado com sucesso!");
-      setFormData({
-        email: "",
-        senha: "",
-        confirmarSenha: "",
-        nome: "",
-        nivel: "",
-        observacao: ""
-      });
-    } catch (error) {
-      console.error("Erro ao cadastrar:", error);
-      toast.error("Erro ao cadastrar usuário.");
-    }
-  };
+	return (
+		<div
+			className={style.container}
+			style={{
+				backgroundImage: `url(${Fundo})`,
+				backgroundSize: "cover",
+				backgroundPosition: "center",
+				backgroundRepeat: "no-repeat",
+			}}
+		>
+			<form className={style.formulario} onSubmit={handleSubmit}>
+				<h2 className={style.title}>Cadastro</h2>
 
-  return (
-    <div
-      className={style.container}
-      style={{
-        backgroundImage: `url(${Fundo})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
-      }}
-    >
-      <form className={style.formulario} onSubmit={handleSubmit}>
-        <h2 className={style.title}>Cadastro</h2>
+				<div className={style.inputGroup}>
+					<InputText
+						type="text"
+						placeholder="Nome"
+						value={formData.nome}
+						setValue={(val: string) => handleChange("nome", val)}
+					>
+						<img src={PersonIcon} alt="" className={style.imagemIconInput} />
+					</InputText>
+				</div>
 
-        <div className={style.inputGroup}>
-          <InputText
-            type="text"
-            placeholder="Nome"
-            value={formData.nome}
-            setValue={(val: string) => handleChange("nome", val)}
-          >
-            <img src={PersonIcon} alt="" className={style.imagemIconInput} />
-          </InputText>
-        </div>
+				<div className={style.inputGroup}>
+					<InputText
+						type="email"
+						placeholder="E-mail"
+						value={formData.email}
+						setValue={(val: string) => handleChange("email", val)}
+					>
+						<img src={PersonIcon} alt="" className={style.imagemIconInput} />
+					</InputText>
+				</div>
 
-        <div className={style.inputGroup}>
-          <InputText
-            type="email"
-            placeholder="E-mail"
-            value={formData.email}
-            setValue={(val: string) => handleChange("email", val)}
-          >
-            <img src={PersonIcon} alt="" className={style.imagemIconInput} />
-          </InputText>
-        </div>
+				<div className={style.inputGroupSenha}>
+					<div className={style.inputGroupSenhaInput}>
+						<InputText
+							type={showPassword ? "text" : "password"}
+							placeholder="Senha"
+							value={formData.senha}
+							setValue={(val: string) => handleChange("senha", val)}
+						>
+							<span onClick={() => setShowPassword(!showPassword)} style={{ cursor: "pointer" }}>
+								<img src={showPassword ? Eye : Hidden} alt="" className={style.imagemIconInput} />
+							</span>
+						</InputText>
+					</div>
+					<div className={style.inputGroupSenhaInput}>
+						<InputText
+							type={showPassword ? "text" : "password"}
+							placeholder="Confirmar Senha"
+							value={formData.confirmarSenha}
+							setValue={(val: string) => handleChange("confirmarSenha", val)}
+						>
+							<span onClick={() => setShowPassword(!showPassword)} style={{ cursor: "pointer" }}>
+								<img src={showPassword ? Eye : Hidden} alt="" className={style.imagemIconInput} />
+							</span>
+						</InputText>
+					</div>
+				</div>
 
-        <div className={style.inputGroup}>
-          <InputText
-            type={showPassword ? "text" : "password"}
-            placeholder="Senha"
-            value={formData.senha}
-            setValue={(val: string) => handleChange("senha", val)}
-          >
-            <span
-              onClick={() => setShowPassword(!showPassword)}
-              style={{ cursor: "pointer" }}
-            >
-              <img
-                src={showPassword ? Eye : Hidden}
-                alt=""
-                className={style.imagemIconInput}
-              />
-            </span>
-          </InputText>
-        </div>
+				<div className={style.inputGroup}>
+					<InputText
+						type="tel"
+						placeholder="Telefone"
+						value={formData.telefone}
+						setValue={(val: string) => handleChange("telefone", val)}
+					>
+						<img src={PersonIcon} alt="" className={style.imagemIconInput} />
+					</InputText>
+				</div>
 
-        <div className={style.inputGroup}>
-          <InputText
-            type={showPassword ? "text" : "password"}
-            placeholder="Confirmar Senha"
-            value={formData.confirmarSenha}
-            setValue={(val: string) => handleChange("confirmarSenha", val)}
-          >
-            <span
-              onClick={() => setShowPassword(!showPassword)}
-              style={{ cursor: "pointer" }}
-            >
-              <img
-                src={showPassword ? Eye : Hidden}
-                alt=""
-                className={style.imagemIconInput}
-              />
-            </span>
-          </InputText>
-        </div>
+				<div className={style.inputGroup}>
+					<InputText
+						type="text"
+						placeholder="Nível de Acesso (somente números)"
+						value={formData.nivel}
+						setValue={(val: string) => handleChange("nivel", val)}
+					/>
+				</div>
 
-        <div className={style.inputGroup}>
-          <InputText
-            type="text"
-            placeholder="Nível de Acesso (somente números)"
-            value={formData.nivel}
-            setValue={(val: string) => handleChange("nivel", val)}
-          />
-        </div>
-
-        <div className={style.inputGroup}>
-          <InputText
-            type="text"
-            placeholder="Observação"
-            value={formData.observacao}
-            setValue={(val: string) => handleChange("observacao", val)}
-          />
-        </div>
-        <div style={{ display: "flex", justifyContent: "space-between" ,width:"80%"}}>
-          <button className={style.voltarloginButton} type = 'button' onClick={() => navigate("/home")}>Voltar</button>
-          <button className={style.loginButton} type="submit">Cadastrar</button>
-        </div>
-      </form>
-    </div>
-  );
+				<div className={style.inputGroup}>
+					<InputText
+						type="text"
+						placeholder="Observação"
+						value={formData.observacao}
+						setValue={(val: string) => handleChange("observacao", val)}
+					/>
+				</div>
+				<div style={{ display: "flex", justifyContent: "space-between", width: "80%" }}>
+					<button
+						className={style.voltarloginButton}
+						type="button"
+						onClick={() => navigate("/home")}
+						disabled={loading}
+					>
+						Voltar
+					</button>
+					<button className={style.loginButton} type="submit" disabled={loading}>
+						{loading ? "Cadastrando..." : "Cadastrar"}
+					</button>
+				</div>
+			</form>
+		</div>
+	);
 }

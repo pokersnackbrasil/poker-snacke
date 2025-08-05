@@ -6,6 +6,7 @@ import { HandleError } from "../../error";
 import { clearUserData, setUserData } from "../user";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { setLoadData } from "../load";
+import { globalValues } from "../../globalValues";
 
 export const loginWithEmail = createAsyncThunk(
 	"auth/loginWithEmail",
@@ -31,7 +32,11 @@ export const loginWithEmail = createAsyncThunk(
 			const userRef = doc(db, "usuario", user.uid);
 			const docSnap = await getDoc(userRef);
 
-			const acessQuery = query(collection(db,"acesso"),where("id","==",user.uid),where("status","==",true));
+			const acessQuery = query(
+				collection(db, "acesso"),
+				where("id", "==", user.uid),
+				where("status", "==", true)
+			);
 			const accessSnapShot = await getDocs(acessQuery);
 
 			if (!docSnap.exists() || !docSnap.data()) {
@@ -46,7 +51,6 @@ export const loginWithEmail = createAsyncThunk(
 				return rejectWithValue("Dados de acesso do usuario não encontrados!");
 			}
 
-
 			if (!docSnap.data().status) {
 				HandleError("Usuário inativo na plataforma!");
 				await dispatch(logout());
@@ -59,7 +63,7 @@ export const loginWithEmail = createAsyncThunk(
 				const usuario = {
 					uid: user.uid,
 					nome: dados.name,
-					email: user.email??"",
+					email: user.email ?? "",
 					telefone: dados.telefone,
 					role: accessSnapShot.docs[0].data().nivel,
 					status: dados.status,
@@ -68,40 +72,44 @@ export const loginWithEmail = createAsyncThunk(
 				};
 
 				dispatch(setUserData(usuario));
+
+				const idTokenResult = await user.getIdTokenResult(true);
+				const claimAdmin = idTokenResult.claims?.admin === true;
+				const firestoreAdmin = accessSnapShot.docs[0].data().nivel === "0";
+
+				if (claimAdmin !== firestoreAdmin) {
+					console.warn("Desalinhamento entre claim e Firestore. Sincronizando...");
+					await SincronizarPermissao(user.uid);
+					await user.getIdToken(true);
+				}
+
 				return usuario;
 			}
 		} catch (error: unknown) {
-			// console.error("Erro real de login:", error.code || "", error.message || "", error);
-			// console.log("Erro detalhado", JSON.stringify(error, null, 2));
-
-			// HandleError(error)
-
-			// await dispatch(logout());
-			return rejectWithValue(error|| "Erro ao fazer login");
+			return rejectWithValue(error || "Erro ao fazer login");
 		}
 	}
 );
 
-export const observeAuthState = createAsyncThunk<
-  { uid: string; email: string | null } | null
->("auth/observeAuthState", async () => {
-  const user = await new Promise<{ uid: string; email: string | null } | null>(
-    (resolve) => {
-      onAuthStateChanged(auth, (user) => {
-        if (user) {
-          resolve({
-            uid: user.uid,
-            email: user.email,
-          });
-        } else {
-          resolve(null);
-        }
-      });
-    }
-  );
+export const observeAuthState = createAsyncThunk<{ uid: string; email: string | null } | null>(
+	"auth/observeAuthState",
+	async () => {
+		const user = await new Promise<{ uid: string; email: string | null } | null>((resolve) => {
+			onAuthStateChanged(auth, (user) => {
+				if (user) {
+					resolve({
+						uid: user.uid,
+						email: user.email,
+					});
+				} else {
+					resolve(null);
+				}
+			});
+		});
 
-  return user;
-});
+		return user;
+	}
+);
 
 export const logout = createAsyncThunk("auth/logout", async (_, { dispatch }) => {
 	try {
@@ -113,16 +121,47 @@ export const logout = createAsyncThunk("auth/logout", async (_, { dispatch }) =>
 	}
 });
 
-export const resetPassword = createAsyncThunk("auth/resetPassword", async (email: string,{dispatch}) => {
-	dispatch(setLoadData({status:true}))
+export const resetPassword = createAsyncThunk("auth/resetPassword", async (email: string, { dispatch }) => {
+	dispatch(setLoadData({ status: true }));
 	try {
-		console.log("Enviando...")
+		console.log("Enviando...");
 		await sendPasswordResetEmail(auth, email);
-		dispatch(setLoadData({status:false}))
+		dispatch(setLoadData({ status: false }));
 		return true;
 	} catch (error) {
 		HandleError(error);
-		dispatch(setLoadData({status:false}))
+		dispatch(setLoadData({ status: false }));
 		return false;
 	}
 });
+
+export const SincronizarPermissao = async (uid: string): Promise<boolean> => {
+	const token = await auth.currentUser?.getIdToken();
+	try {
+		const resposta = await fetch(`${globalValues.URLBASE}/syncClaims`, {
+			method: "POST",
+			headers: {
+				Authorization: `Bearer ${token}`,
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ uid }),
+		});
+
+		console.log("Resposta: -", resposta);
+
+		const mensagem = await resposta.text();
+		console.log("Resposta do servidor:", mensagem);
+
+		if (!resposta.ok) {
+			const erro = await resposta.text();
+			console.error("Erro ao sincronizar claims:", erro);
+			return false;
+		}
+
+		return true;
+	} catch (e) {
+		console.error("Erro ao sincronizar claims:", e);
+		HandleError(e);
+		return false;
+	}
+};
