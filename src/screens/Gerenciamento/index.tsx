@@ -3,7 +3,7 @@ import { collection, getDocs, query, where, updateDoc, doc } from "firebase/fire
 import CabecalhoVerde from "../../componentes/CabecalhoVerde";
 import { db } from "../../Server/firebase";
 import style from "./style.module.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { ConfirmModal, DateModal } from "../../componentes/Modal";
 
 interface UserInfo {
