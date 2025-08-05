@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { signInWithEmailAndPassword, onAuthStateChanged, signOut, sendEmailVerification, User } from "firebase/auth";
+import { signInWithEmailAndPassword, onAuthStateChanged, signOut, sendEmailVerification } from "firebase/auth";
 import { auth, db } from "../../Server/firebase";
 import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
 import { HandleError } from "../../error";
