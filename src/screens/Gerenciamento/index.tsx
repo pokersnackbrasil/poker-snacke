@@ -29,7 +29,7 @@ export default function Gerenciamento() {
 		onSave: (date: string) => void;
 		onCancel: () => void;
 	} | null>(null);
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 
 	useEffect(() => {
 		const fetchUsers = async () => {
