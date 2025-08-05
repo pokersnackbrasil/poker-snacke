@@ -7,14 +7,16 @@ import { clearUserData, setUserData } from "../user";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { setLoadData } from "../load";
 import { globalValues } from "../../globalValues";
+import { toast } from "react-toastify";
+import { FirebaseError } from "firebase/app";
 
 export const loginWithEmail = createAsyncThunk(
 	"auth/loginWithEmail",
 	async ({ email, password }: { email: string; password: string }, { dispatch, rejectWithValue }) => {
 		const verifyEmail = async (user: User) => {
 			if (!user.emailVerified) {
-				await sendEmailVerification(user);
-				throw new Error("Conta não confirmada, verifique o link enviado em seu e-mail antes de continuar!");
+
+				throw new Error("Unconfirmed account. Please check the link sent to your email before continuing!");
 			}
 		};
 
@@ -24,9 +26,11 @@ export const loginWithEmail = createAsyncThunk(
 			const user = userCredential.user;
 
 			if (!user.emailVerified) {
-				await verifyEmail(user);
+				await sendEmailVerification(user);
 				await dispatch(logout());
-				return rejectWithValue("E-mail não verificado. Verifique seu e-mail e tente novamente.");
+				const msg = "Email not verified. Please check your email and try again."
+				toast.error(msg)
+				return rejectWithValue(msg);
 			}
 
 			const userRef = doc(db, "usuario", user.uid);
@@ -40,21 +44,21 @@ export const loginWithEmail = createAsyncThunk(
 			const accessSnapShot = await getDocs(acessQuery);
 
 			if (!docSnap.exists() || !docSnap.data()) {
-				HandleError("Dados do usuário não encontrados!");
+				toast.error("User data not found!");
 				await dispatch(logout());
-				return rejectWithValue("Dados do usuário não encontrados!");
+				return rejectWithValue("User data not found!");
 			}
 
 			if (!accessSnapShot.docs[0]) {
-				HandleError("Dados de acesso do usuario não encontrados!");
+				toast.error("User access data not found!");
 				await dispatch(logout());
-				return rejectWithValue("Dados de acesso do usuario não encontrados!");
+				return rejectWithValue("User access data not found!");
 			}
 
 			if (!docSnap.data().status) {
-				HandleError("Usuário inativo na plataforma!");
+				toast.error("User inactive on the platform!");
 				await dispatch(logout());
-				return rejectWithValue("Usuário inativo na plataforma!");
+				return rejectWithValue("User inactive on the platform!");
 			}
 
 			if (docSnap.data().status && accessSnapShot.docs[0].data().status) {
@@ -72,21 +76,29 @@ export const loginWithEmail = createAsyncThunk(
 				};
 
 				dispatch(setUserData(usuario));
+				try{
+					const idTokenResult = await user.getIdTokenResult(true);
+					const claimAdmin = idTokenResult.claims?.admin === true;
+					const firestoreAdmin = accessSnapShot.docs[0].data().nivel === "0";
 
-				const idTokenResult = await user.getIdTokenResult(true);
-				const claimAdmin = idTokenResult.claims?.admin === true;
-				const firestoreAdmin = accessSnapShot.docs[0].data().nivel === "0";
-
-				if (claimAdmin !== firestoreAdmin) {
-					console.warn("Desalinhamento entre claim e Firestore. Sincronizando...");
-					await SincronizarPermissao(user.uid);
-					await user.getIdToken(true);
+					if (claimAdmin !== firestoreAdmin) {
+						console.warn("Desalinhamento entre claim e Firestore. Sincronizando...");
+						await SincronizarPermissao(user.uid);
+						await user.getIdToken(true);
+					}
 				}
+				catch{
+					console.error("User admin, não verificado!")
+				}
+
+				console.log(usuario)
+
 
 				return usuario;
 			}
 		} catch (error: unknown) {
-			return rejectWithValue(error || "Erro ao fazer login");
+			HandleError(error)
+			return rejectWithValue((error as FirebaseError).message || "Erro ao fazer login");
 		}
 	}
 );

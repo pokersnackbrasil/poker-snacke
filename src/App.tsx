@@ -16,7 +16,6 @@ function App() {
 
 	useEffect(() => {
 		if (!rehydrated) return;
-
 		const syncClaimsIfNeeded = async () => {
 			const user = auth.currentUser;
 			if (!user) return;
@@ -68,8 +67,14 @@ function App() {
 		};
 
 		dispatch(observeAuthState());
-		syncClaimsIfNeeded();
+		try{
+			syncClaimsIfNeeded();
+		}catch{
+			console.log("Erro ao verificar usuario Admin!")
+		}
+
 	}, [rehydrated]);
+
 
 	return (
 		<>
