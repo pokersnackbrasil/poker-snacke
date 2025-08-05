@@ -1,49 +1,47 @@
-import React from 'react';
-import { useAppDispatch } from '../../hooks';
-import { useAppSelector } from '../../hooks';
-import { logout } from '../../slice/auth/authThunks';
-import { useNavigate } from 'react-router-dom';
-import style from './style.module.css';
-import { HandleError } from '../../error';
+import React from "react";
+import { useAppDispatch } from "../../hooks";
+import { useAppSelector } from "../../hooks";
+import { logout } from "../../slice/auth/authThunks";
+import { useNavigate } from "react-router-dom";
+import style from "./style.module.css";
+import { HandleError } from "../../error";
 
 type CardProps = {
-  children?: React.ReactNode;
+	children?: React.ReactNode;
 };
 
 export default function CabecalhoVerde({ children }: CardProps) {
-  const levelAccess = useAppSelector(state => state.user.role);
-  const dispatch = useAppDispatch();
-  const navigate = useNavigate();
+	const levelAccess = useAppSelector((state) => state.user.role);
+	const dispatch = useAppDispatch();
+	const navigate = useNavigate();
 
-  const handleLogout = async () => {
+	const handleLogout = async () => {
 		try {
-		await dispatch(logout()).unwrap();
+			await dispatch(logout()).unwrap();
 		} catch (error) {
 			HandleError(error);
 		}
 	};
 
-  return (
-    <div className={style.green_header__body}>
-      <span
-        className={style.sair}
-        style={{ cursor: "pointer" }}
-        onClick={handleLogout}
-      >
-        EXIT
-      </span>
+	return (
+		<div className={style.green_header__body}>
+			<span className={style.sair} style={{ cursor: "pointer" }} onClick={handleLogout}>
+				EXIT
+			</span>
 
-      {children}
+			{children}
 
-      {levelAccess?.includes("0") && (
-        <span
-          className={style.sair}
-          style={{ cursor: "pointer" }}
-          onClick={() => navigate("/register")}
-        >
-          CREAT USER
-        </span>
-      )}
-    </div>
-  );
+			{levelAccess?.includes("0") && (
+				<span
+					className={style.sair}
+					style={{ cursor: "pointer" }}
+					onClick={() =>
+						location.pathname === "/gerenciamento" ? navigate("/Home") : navigate("/gerenciamento")
+					}
+				>
+					{location.pathname === "/gerenciamento" ? "Home" : "Manager"}
+				</span>
+			)}
+		</div>
+	);
 }

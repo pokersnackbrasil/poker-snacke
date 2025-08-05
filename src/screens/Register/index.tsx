@@ -200,7 +200,7 @@ export function Register() {
           />
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" ,width:"80%"}}>
-          <button className={style.voltarloginButton} onClick={() => navigate("/home")}>Voltar</button>
+          <button className={style.voltarloginButton} type = 'button' onClick={() => navigate("/home")}>Voltar</button>
           <button className={style.loginButton} type="submit">Cadastrar</button>
         </div>
       </form>

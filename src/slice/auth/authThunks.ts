@@ -5,6 +5,7 @@ import { collection, doc, getDoc, getDocs, query, where } from "firebase/firesto
 import { HandleError } from "../../error";
 import { clearUserData, setUserData } from "../user";
 import { sendPasswordResetEmail } from "firebase/auth";
+import { setLoadData } from "../load";
 
 export const loginWithEmail = createAsyncThunk(
 	"auth/loginWithEmail",
@@ -69,14 +70,14 @@ export const loginWithEmail = createAsyncThunk(
 				dispatch(setUserData(usuario));
 				return usuario;
 			}
-		} catch (error: any) {
-			console.error("Erro real de login:", error.code || "", error.message || "", error);
+		} catch (error: unknown) {
+			// console.error("Erro real de login:", error.code || "", error.message || "", error);
 			// console.log("Erro detalhado", JSON.stringify(error, null, 2));
 
 			// HandleError(error)
 
 			// await dispatch(logout());
-			return rejectWithValue(error.message || "Erro ao fazer login");
+			return rejectWithValue(error|| "Erro ao fazer login");
 		}
 	}
 );
@@ -112,12 +113,16 @@ export const logout = createAsyncThunk("auth/logout", async (_, { dispatch }) =>
 	}
 });
 
-export const resetPassword = createAsyncThunk("auth/resetPassword", async (email: string, { rejectWithValue }) => {
+export const resetPassword = createAsyncThunk("auth/resetPassword", async (email: string,{dispatch}) => {
+	dispatch(setLoadData({status:true}))
 	try {
+		console.log("Enviando...")
 		await sendPasswordResetEmail(auth, email);
-		return "E-mail de redefinição enviado com sucesso.";
+		dispatch(setLoadData({status:false}))
+		return true;
 	} catch (error) {
 		HandleError(error);
-		return rejectWithValue(error || "Erro ao redefinir senha.");
+		dispatch(setLoadData({status:false}))
+		return false;
 	}
 });

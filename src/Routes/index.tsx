@@ -7,13 +7,14 @@ import { Register } from "../screens/Register";
 import ProtectedRoute from "./ProtectedRouter";
 import RoleRoute from "./RooleRouter";
 import RedirectByRole from "./RedirectByRole";
+import Gerenciamento from "../screens/Gerenciamento";
 
 export const RoutesApp = () => {
 //   const levelAccess = useSelector((state) => state.user.userData?.data?.acesso);
 
   return (
 
-  
+
     <Routes>
 
 
@@ -42,7 +43,7 @@ export const RoutesApp = () => {
         }
       />
       <Route
-        path="/spin&go&reg"
+        path="/register"
         element={
           <ProtectedRoute>
             <RoleRoute allowedRoles={["0"]}>
@@ -51,7 +52,17 @@ export const RoutesApp = () => {
           </ProtectedRoute>
         }
       />
-      
+      <Route
+        path="/gerenciamento"
+        element={
+          <ProtectedRoute>
+            <RoleRoute allowedRoles={["0"]}>
+              <Gerenciamento/>
+            </RoleRoute>
+          </ProtectedRoute>
+        }
+      />
+
       <Route path="*" element={<Login />} />
       <Route path="/" element={<Login />} />
 
