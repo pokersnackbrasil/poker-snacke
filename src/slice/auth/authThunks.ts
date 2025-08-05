@@ -13,12 +13,6 @@ import { FirebaseError } from "firebase/app";
 export const loginWithEmail = createAsyncThunk(
 	"auth/loginWithEmail",
 	async ({ email, password }: { email: string; password: string }, { dispatch, rejectWithValue }) => {
-		const verifyEmail = async (user: User) => {
-			if (!user.emailVerified) {
-
-				throw new Error("Unconfirmed account. Please check the link sent to your email before continuing!");
-			}
-		};
 
 		try {
 			const userCredential = await signInWithEmailAndPassword(auth, email, password);
@@ -98,6 +92,7 @@ export const loginWithEmail = createAsyncThunk(
 			}
 		} catch (error: unknown) {
 			HandleError(error)
+			await dispatch(logout());
 			return rejectWithValue((error as FirebaseError).message || "Erro ao fazer login");
 		}
 	}
