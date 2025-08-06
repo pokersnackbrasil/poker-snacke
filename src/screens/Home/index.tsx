@@ -9,6 +9,7 @@ import { useState } from "react";
 
 import carta4 from "../../assets/4.png";
 import carta5 from "../../assets/5.png";
+import fundo from "../../assets/pk5.png";
 
 export function Home() {
 	const navigate = useNavigate();
@@ -32,6 +33,7 @@ export function Home() {
 
 	return (
 		<>
+			<img className={styles.backGroundImage} src={fundo} alt="AAAAA" />
 			<div className={styles.background}>
 				<CabecalhoVerde>
 					{userData && <span style={{ color: "#ffff", fontSize: "2rem" }}>{userData.nome}</span>}
