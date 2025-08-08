@@ -113,7 +113,7 @@ function App() {
 	}, []);
 
 	useEffect(() => {
-		const handleKeyDown = (e) => {
+		const handleKeyDown = (e:any) => {
 			if (e.key === "PrintScreen") {
 				navigator.clipboard.writeText(""); // apaga o conteúdo
 				alert("Captura de tela desativada!");
@@ -157,7 +157,7 @@ function App() {
 	}, []);
 
 	useEffect(() => {
-		const handleKeyDown = (e) => {
+		const handleKeyDown = (e:any) => {
 			// Se for tecla PrintScreen
 			if (e.key === "PrintScreen") {
 				// Dispara ação genérica
