@@ -161,7 +161,13 @@ export const PageContainer = ({json}:Props) => {
           {Object.keys(objectsColors).map((pos) => (
             <button
               key={pos}
-              className={ position == pos ? Style.buttonPositionSelected: getGrupoRelacionado(position,pos)?Style.family:Style.buttonPosition}
+              className={
+				// position == pos ? Style.buttonPositionSelected:
+				getGrupoRelacionado(position,pos) === "BTN"?(position == pos ? `${Style.familyBTN} ${Style.selected}` :Style.familyBTN) :
+				getGrupoRelacionado(position,pos) === "SB"?(position == pos ? `${Style.familySB} ${Style.selected}` :Style.familySB) :
+				getGrupoRelacionado(position,pos) === "BB"?(position == pos ? `${Style.familyBB} ${Style.selected}` :Style.familyBB) :
+				getGrupoRelacionado(position,pos) === "HU"?(position == pos ? `${Style.familyHU} ${Style.selected}` :Style.familyHU)
+				:Style.buttonPosition}
               onClick={() => setPosition(pos as PositionKey)}
             >
               {pos}
