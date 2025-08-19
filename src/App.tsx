@@ -74,46 +74,46 @@ function App() {
 		}
 	}, [rehydrated]);
 
+	// useEffect(() => {
+	// 	const blockContextMenu = (e: any) => e.preventDefault();
+	// 	const blockKeys = (e: any) => {
+	// 		if (e.key === "PrintScreen") {
+	// 			navigator.clipboard.writeText(""); // limpa clipboard
+	// 			alert("Captura de tela desativada!");
+	// 		}
+	// 		if (e.ctrlKey && (e.key === "s" || e.key === "u")) {
+	// 			e.preventDefault();
+	// 		}
+	// 	};
+
+	// 	document.addEventListener("contextmenu", blockContextMenu);
+	// 	document.addEventListener("keydown", blockKeys);
+
+	// 	return () => {
+	// 		document.removeEventListener("contextmenu", blockContextMenu);
+	// 		document.removeEventListener("keydown", blockKeys);
+	// 	};
+	// }, []);
+
+	// useEffect(() => {
+	// 	const handleBlur = () => {
+	// 		document.body.style.filter = "blur(10px)";
+	// 	};
+	// 	const handleFocus = () => {
+	// 		document.body.style.filter = "none";
+	// 	};
+
+	// 	window.addEventListener("blur", handleBlur);
+	// 	window.addEventListener("focus", handleFocus);
+
+	// 	return () => {
+	// 		window.removeEventListener("blur", handleBlur);
+	// 		window.removeEventListener("focus", handleFocus);
+	// 	};
+	// }, []);
+
 	useEffect(() => {
-		const blockContextMenu = (e: any) => e.preventDefault();
-		const blockKeys = (e: any) => {
-			if (e.key === "PrintScreen") {
-				navigator.clipboard.writeText(""); // limpa clipboard
-				alert("Captura de tela desativada!");
-			}
-			if (e.ctrlKey && (e.key === "s" || e.key === "u")) {
-				e.preventDefault();
-			}
-		};
-
-		document.addEventListener("contextmenu", blockContextMenu);
-		document.addEventListener("keydown", blockKeys);
-
-		return () => {
-			document.removeEventListener("contextmenu", blockContextMenu);
-			document.removeEventListener("keydown", blockKeys);
-		};
-	}, []);
-
-	useEffect(() => {
-		const handleBlur = () => {
-			document.body.style.filter = "blur(10px)";
-		};
-		const handleFocus = () => {
-			document.body.style.filter = "none";
-		};
-
-		window.addEventListener("blur", handleBlur);
-		window.addEventListener("focus", handleFocus);
-
-		return () => {
-			window.removeEventListener("blur", handleBlur);
-			window.removeEventListener("focus", handleFocus);
-		};
-	}, []);
-
-	useEffect(() => {
-		const handleKeyDown = (e:any) => {
+		const handleKeyDown = (e: any) => {
 			if (e.key === "PrintScreen") {
 				navigator.clipboard.writeText(""); // apaga o conteúdo
 				alert("Captura de tela desativada!");
@@ -124,72 +124,97 @@ function App() {
 		return () => document.removeEventListener("keydown", handleKeyDown);
 	}, []);
 
-	useEffect(() => {
-		const blur = () => (document.body.style.filter = "blur(10px)");
-		const focus = () => (document.body.style.filter = "none");
+	// useEffect(() => {
+	// 	const blur = () => (document.body.style.filter = "blur(10px)");
+	// 	const focus = () => (document.body.style.filter = "none");
 
-		window.addEventListener("blur", blur);
-		window.addEventListener("focus", focus);
+	// 	window.addEventListener("blur", blur);
+	// 	window.addEventListener("focus", focus);
 
-		return () => {
-			window.removeEventListener("blur", blur);
-			window.removeEventListener("focus", focus);
-		};
-	}, []);
+	// 	return () => {
+	// 		window.removeEventListener("blur", blur);
+	// 		window.removeEventListener("focus", focus);
+	// 	};
+	// }, []);
 
-	useEffect(() => {
-		const appElement = document.getElementById("root"); // ou o id do seu container principal
+	// useEffect(() => {
+	// 	const appElement = document.getElementById("root"); // ou o id do seu container principal
 
-		const blur = () => (document.body.style.filter = "blur(10px)");
-		const focus = () => (document.body.style.filter = "none");
+	// 	const blur = () => (document.body.style.filter = "blur(10px)");
+	// 	const focus = () => (document.body.style.filter = "none");
 
-		if (appElement) {
-			appElement.addEventListener("mouseleave", blur);
-			appElement.addEventListener("mouseenter", focus);
-		}
+	// 	if (appElement) {
+	// 		appElement.addEventListener("mouseleave", blur);
+	// 		appElement.addEventListener("mouseenter", focus);
+	// 	}
 
-		return () => {
-			if (appElement) {
-				appElement.removeEventListener("mouseleave", blur);
-				appElement.removeEventListener("mouseenter", focus);
-			}
-		};
-	}, []);
+	// 	return () => {
+	// 		if (appElement) {
+	// 			appElement.removeEventListener("mouseleave", blur);
+	// 			appElement.removeEventListener("mouseenter", focus);
+	// 		}
+	// 	};
+	// }, []);
 
-	useEffect(() => {
-		const handleKeyDown = (e:any) => {
-			// Se for tecla PrintScreen
-			if (e.key === "PrintScreen") {
-				// Dispara ação genérica
-				alert("Captura de tela detectada!");
-				document.body.innerHTML = "<h1>Conteúdo protegido</h1>";
+	// useEffect(() => {
+	// 	const handleKeyDown = (e: any) => {
+	// 		// Se for tecla PrintScreen
+	// 		if (e.key === "PrintScreen") {
+	// 			// Dispara ação genérica
+	// 			alert("Captura de tela detectada!");
+	// 			document.body.innerHTML = "<h1>Conteúdo protegido</h1>";
 
-				// Opcional: limpa clipboard para impedir colar o print
-				navigator.clipboard.writeText("");
-			}
-		};
+	// 			// Opcional: limpa clipboard para impedir colar o print
+	// 			navigator.clipboard.writeText("");
+	// 		}
+	// 	};
 
-		document.addEventListener("keydown", handleKeyDown);
-		return () => document.removeEventListener("keydown", handleKeyDown);
-	}, []);
+	// 	document.addEventListener("keydown", handleKeyDown);
+	// 	return () => document.removeEventListener("keydown", handleKeyDown);
+	// }, []);
 
-	useEffect(() => {
-		const blur = () => {
-			document.body.style.filter = "blur(10px)";
-			console.log("Possível tentativa de captura");
-		};
-		const focus = () => {
-			document.body.style.filter = "none";
-		};
+	// useEffect(() => {
+	// 	const blur = () => {
+	// 		document.body.style.filter = "blur(10px)";
+	// 		console.log("Possível tentativa de captura");
+	// 	};
+	// 	const focus = () => {
+	// 		document.body.style.filter = "none";
+	// 	};
 
-		window.addEventListener("blur", blur);
-		window.addEventListener("focus", focus);
+	// 	window.addEventListener("blur", blur);
+	// 	window.addEventListener("focus", focus);
 
-		return () => {
-			window.removeEventListener("blur", blur);
-			window.removeEventListener("focus", focus);
-		};
-	}, []);
+	// 	return () => {
+	// 		window.removeEventListener("blur", blur);
+	// 		window.removeEventListener("focus", focus);
+	// 	};
+	// }, []);
+	// useEffect(() => {
+	// 	const handleVisibilityChange = () => {
+	// 		if (document.visibilityState !== "visible") {
+	// 			document.body.style.filter = "blur(10px)";
+	// 		} else {
+	// 			document.body.style.filter = "none";
+	// 		}
+	// 	};
+
+	// 	document.addEventListener("visibilitychange", handleVisibilityChange);
+	// 	return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
+	// }, []);
+
+	// useEffect(() => {
+	// 	const blur = () => (document.body.style.filter = "blur(10px)");
+	// 	const focus = () => (document.body.style.filter = "none");
+
+	// 	window.addEventListener("blur", blur);
+	// 	window.addEventListener("focus", focus);
+
+	// 	return () => {
+	// 		window.removeEventListener("blur", blur);
+	// 		window.removeEventListener("focus", focus);
+	// 	};
+	// }, []);
 
 	return (
 		<>
